@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'SF-Pro';
+    src: url('/fonts/SF-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
@@ -65,5 +72,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'SF-Pro', sans-serif;
   }
 }
