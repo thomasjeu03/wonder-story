@@ -1,0 +1,43 @@
+{
+    "background_color": "#332633 ",
+    "categories": [
+        "Wonder Story",
+        "Générateur d’histoires",
+        "Histoires pour enfants",
+        "Contes merveilleux",
+        "IA pour enfants",
+        "Récits interactifs",
+        "Contes personnalisés",
+        "Histoires éducatives",
+        "Générateur de contes",
+        "Histoires en ligne",
+        "Récits IA",
+        "Littérature enfantine"
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "description": "Découvrez Wonder Story, un générateur d’histoires pour enfants. Des histoires merveilleuses pour offrir à vos enfants des récits uniques et captivants à chaque lecture.",
+    "scope": "./",
+    "name": "Wonder Story",
+    "short_name": "Wonder Story",
+    "icons": [
+        {
+            "src": "/img/icon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/icon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#332633",
+    "orientation": "any",
+    "display_override": [
+        "fullscreen",
+        "minimal-ui",
+        "window-controls-overlay"
+    ],
+    "display": "standalone"
+}
