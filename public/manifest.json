@@ -18,7 +18,7 @@
     "start_url": "/?source=pwa",
     "description": "Découvrez Wonder Story, un générateur d’histoires pour enfants. Des histoires merveilleuses pour offrir à vos enfants des récits uniques et captivants à chaque lecture.",
     "scope": "./",
-    "name": "Wonder Story",
+    "name": "Wonder Story - Les meilleures des histoires conçues pour vos enfants",
     "short_name": "Wonder Story",
     "icons": [
         {
