@@ -9,10 +9,19 @@ export const authOptions = {
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            authorization: {
+                params: {
+                    scope: "openid profile email",
+                },
+            },
         }),
     ],
     callbacks: {
         signIn: async (user) => {
+            if (!user.email) {
+                return false;
+            }
+
             const isUserExist = await prisma.user.findUnique({
                 where: { email: user.email },
             });
