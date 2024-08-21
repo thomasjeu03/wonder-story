@@ -1,9 +1,7 @@
-import Link from 'next/link';
-import {Button} from "@/components/ui/button";
-
 import generateMetadata from '@/lib/metadata';
 import {H1} from "@/components/typo/H1";
 import {H2} from "@/components/typo/H2";
+import LoginComponent from "@/components/loginComponent";
 
 export const metadata = generateMetadata({});
 
@@ -11,9 +9,7 @@ export default function Home() {
     return (
         <>
             <main className="flex min-h-screen flex-col items-center justify-between p-8">
-                <Button variant="outline">
-                    <Link href="/login">Se connecter</Link>
-                </Button>
+                <LoginComponent />
                 <br/>
                 <div className='max-w-4xl'>
                     <H1 className='text-fuchsia-500'>The Joke Tax Chronicles</H1>
