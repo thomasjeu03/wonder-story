@@ -17,34 +17,37 @@ export const authOptions = {
         }),
     ],
     callbacks: {
-        signIn: async (user) => {
-            // if (!user.email) {
-            //     return false;
-            // }
-
-            const isUserExist = await prisma.user.findUnique({
-                where: { email: user.email },
-            });
-
-            if (!isUserExist) {
-                await prisma.user.create({
-                    data: {
-                        email: user.email,
-                        name: user.name,
-                        image: user.picture,
-                    },
-                });
+        signIn: async ({account}) => {
+            if (account.provider === 'google') {
+                return true;
             }
-
-            return true;
+            return false;
         },
         session: async ({ session, token }) => {
             session.user.id = token.id;
+            session.user.email = token.email;
             return session;
         },
         jwt: async ({ user, token }) => {
+            // Le `user` est disponible uniquement lors de la première connexion
             if (user) {
                 token.id = user.id;
+                token.email = user.email;
+                
+                // Vérifier si l'utilisateur existe déjà dans la DB
+                const isUserExist = await prisma.user.findUnique({
+                    where: { email: user.email },
+                });
+    
+                if (!isUserExist) {
+                    await prisma.user.create({
+                        data: {
+                            email: user.email,
+                            name: user.name,
+                            image: user.image,
+                        },
+                    });
+                }
             }
             return token;
         },
