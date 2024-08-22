@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import AppleProvider from "next-auth/providers/apple";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 
@@ -15,10 +16,24 @@ export const authOptions = {
                 },
             },
         }),
+        AppleProvider({
+            clientId: process.env.APPLE_CLIENT_ID,
+            clientSecret: {
+                appleId: process.env.APPLE_CLIENT_ID,
+                privateKey: process.env.APPLE_PRIVATE_KEY,
+                keyId: process.env.APPLE_KEY_ID,
+                teamId: process.env.APPLE_TEAM_ID,
+            },
+            authorization: {
+                params: {
+                    scope: "name email",
+                },
+            },
+        }),
     ],
     callbacks: {
         signIn: async ({account}) => {
-            if (account.provider === 'google') {
+            if (account.provider === 'google' || account.provider === 'apple') {
                 return true;
             }
             return false;
