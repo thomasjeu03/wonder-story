@@ -14,7 +14,15 @@ export async function createCheckoutSession({ userId }) {
         throw new Error("User not found or does not have a Stripe customer ID");
     }
 
+    if (user?.plan === "PREMIUM") {
+        throw new Error("User already Premium");
+    }
+
     const stripeCustomerId = user?.stripeCustomerId ?? undefined;
+
+    if (!stripeCustomerId) {
+        throw new Error("Stripe customer ID is missing");
+    }
 
     const session = await stripe.checkout.sessions.create({
         customer: stripeCustomerId,

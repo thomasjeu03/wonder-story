@@ -5,6 +5,7 @@ import {Button} from "@/components/ui/button";
 import {H2} from "@/components/typo/H2";
 import Image from 'next/image';
 import {BuyButton} from "@/components/buy/BuyButton";
+import {AccountSettingsButton} from "@/components/buy/UserSettings";
 
 export default function LoginComponent() {
     const { data: session } = useSession();
@@ -25,6 +26,7 @@ export default function LoginComponent() {
                 <H2 className='text-center'>Welcome, {session?.user?.name}</H2>
                 <p className='text-center'>{session?.user?.email}</p>
                 <BuyButton />
+                <AccountSettingsButton />
                 <Button variant='destructive' onClick={() => signOut()}>
                     Sign out
                 </Button>
