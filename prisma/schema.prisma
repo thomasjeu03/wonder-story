@@ -9,13 +9,15 @@ datasource db {
 }
 
 model User {
-  id            Int      @id @default(autoincrement())
-  email         String   @unique
-  name          String?
-  image         String?
-  emailVerified DateTime?
-  accounts      Account[]
-  sessions      Session[]
+  id               Int      @id @default(autoincrement())
+  email            String   @unique
+  name             String?
+  image            String?
+  emailVerified    DateTime?
+  accounts         Account[]
+  sessions         Session[]
+
+  stripeCustomerId String?
 }
 
 model Account {
