@@ -9,11 +9,6 @@ export const authOptions = {
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            authorization: {
-                params: {
-                    scope: "openid profile email",
-                },
-            },
         }),
     ],
     callbacks: {
@@ -31,7 +26,7 @@ export const authOptions = {
                     data: {
                         email: user.email,
                         name: user.name,
-                        image: user.image,
+                        image: user.picture,
                     },
                 });
             }
