@@ -34,8 +34,8 @@ export async function createCheckoutSession({ userId }) {
                 quantity: 1
             }
         ],
-        success_url: `http://localhost:3000/success`,
-        cancel_url: `http://localhost:3000/cancel`,
+        success_url: `https://wonder-story.app/success`,
+        cancel_url: `https://wonder-story.app/cancel`,
     });
 
     if (!session.url) {
