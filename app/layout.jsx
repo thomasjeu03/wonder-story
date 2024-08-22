@@ -13,7 +13,6 @@ export default function RootLayout({ children, session }) {
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="system"
-                        enableSystem
                         disableTransitionOnChange
                     >
                         {children}
