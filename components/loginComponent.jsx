@@ -2,9 +2,9 @@
 
 import { useSession, signIn, signOut } from "next-auth/react";
 import {Button} from "@/components/ui/button";
-import {H1} from "@/components/typo/H1";
 import {H2} from "@/components/typo/H2";
 import Image from 'next/image';
+import {BuyButton} from "@/components/buy/BuyButton";
 
 export default function LoginComponent() {
     const { data: session } = useSession();
@@ -24,6 +24,7 @@ export default function LoginComponent() {
                 )}
                 <H2 className='text-center'>Welcome, {session?.user?.name}</H2>
                 <p className='text-center'>{session?.user?.email}</p>
+                <BuyButton />
                 <Button variant='destructive' onClick={() => signOut()}>
                     Sign out
                 </Button>
