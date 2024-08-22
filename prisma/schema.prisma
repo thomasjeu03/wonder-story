@@ -18,6 +18,12 @@ model User {
   sessions         Session[]
 
   stripeCustomerId String?
+  plan             UserPlan @default(FREE)
+}
+
+enum UserPlan {
+  FREE
+  PREMIUM
 }
 
 model Account {
