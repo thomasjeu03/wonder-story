@@ -32,7 +32,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#bf40bf",
+    "theme_color": "#312831",
     "orientation": "any",
     "display_override": [
         "fullscreen",
