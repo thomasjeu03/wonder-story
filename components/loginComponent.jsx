@@ -19,8 +19,8 @@ export default function LoginComponent() {
             Not signed in <br />
             <br />
             <Button variant='secondary' onClick={() => signIn("google")}>Sign in with Google</Button>
-            <br />
-            <Button variant='outline' onClick={() => signIn("apple")}>Sign in with Apple</Button>
+            {/* <br />
+            <Button variant='outline' onClick={() => signIn("apple")}>Sign in with Apple</Button> */}
         </>
     );
 }
