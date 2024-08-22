@@ -23,18 +23,18 @@ export const authOptions = {
             }
             return false;
         },
-        jwt: async ({ user, token, account }) => {
-            if (account) {
+        jwt: async ({ user, token }) => {
+            if (user) {
                 const existingUser = await prisma.user.findUnique({
-                    where: { email: account.email },
+                    where: { email: user.email },
                 });
     
                 if (!existingUser) {
                     const newUser = await prisma.user.create({
                         data: {
-                            email: account.email,
-                            name: account.name,
-                            image: account.image,
+                            email: user.email,
+                            name: user.name,
+                            image: user.image,
                         },
                     });
                     token.id = newUser.id;
