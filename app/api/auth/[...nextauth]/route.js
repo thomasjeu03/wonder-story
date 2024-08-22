@@ -17,41 +17,19 @@ export const authOptions = {
         }),
     ],
     callbacks: {
-        signIn: async ({account}) => {
-            if (account.provider === 'google') {
-                return true;
-            }
-            return false;
-        },
-        jwt: async ({ user, token }) => {
-            if (user) {
-                const existingUser = await prisma.user.findUnique({
-                    where: { email: user.email },
-                });
-    
-                if (!existingUser) {
-                    const newUser = await prisma.user.create({
-                        data: {
-                            email: user.email,
-                            name: user.name,
-                            image: user.image,
-                        },
-                    });
-                    token.id = newUser.id;
-                    token.email = newUser.email;
-                } else {
-                    token.id = existingUser.id;
-                    token.email = existingUser.email;
-                }
-            }
-            return token;
-        },
-        session: async ({ session, token }) => {
-            if (session.user) {
+        async session({ session, token, user }) {
+            if (session?.user && user?.id) {
+                session.user.id = user.id;
+            } else if (session?.user && token?.id) {
                 session.user.id = token.id;
-                session.user.email = token.email;
             }
             return session;
+        },
+        async jwt({ token, user }) {
+            if (user) {
+                token.id = user.id;
+            }
+            return token;
         },
     },
     secret: process.env.NEXTAUTH_SECRET,
