@@ -23,33 +23,33 @@ export const authOptions = {
             }
             return false;
         },
-        session: async ({ session, token }) => {
-            session.user.id = token.id;
-            session.user.email = token.email;
-            return session;
-        },
         jwt: async ({ user, token }) => {
-            // Le `user` est disponible uniquement lors de la première connexion
             if (user) {
-                token.id = user.id;
-                token.email = user.email;
-                
-                // Vérifier si l'utilisateur existe déjà dans la DB
-                const isUserExist = await prisma.user.findUnique({
+                const existingUser = await prisma.user.findUnique({
                     where: { email: user.email },
                 });
     
-                if (!isUserExist) {
-                    await prisma.user.create({
+                if (!existingUser) {
+                    const newUser = await prisma.user.create({
                         data: {
                             email: user.email,
                             name: user.name,
                             image: user.image,
                         },
                     });
+                    token.id = newUser.id;
+                    token.email = newUser.email;
+                } else {
+                    token.id = existingUser.id;
+                    token.email = existingUser.email;
                 }
             }
             return token;
+        },
+        session: async ({ session, token }) => {
+            session.user.id = token.id;
+            session.user.email = token.email;
+            return session;
         },
     },
     secret: process.env.NEXTAUTH_SECRET,
