@@ -2,10 +2,10 @@ import generateMetadata from '@/lib/metadata';
 
 export const metadata = generateMetadata({});
 
-export default function Home() {
+export default function Erreur() {
     return (
         <>
-            Home Page
+            Erreur 404 page
         </>
     );
 }

@@ -9,7 +9,7 @@ import {AccountSettingsButton} from "@/components/buy/UserSettings";
 import {useUser} from "@/app/contexts/UserContext";
 import { Skeleton } from "@/components/ui/skeleton"
 import {TrialEndTemplate} from "@/components/email/trial-end-template";
-import {resend} from "@/lib/resend";
+// import {resend} from "@/lib/resend";
 
 export default function LoginComponent() {
     const { data: session, status: sessionStatus } = useSession();
@@ -60,7 +60,7 @@ export default function LoginComponent() {
                             className="rounded-full"
                         />
                     )}
-                    <H2 className='text-center'>Welcome, {user?.name}</H2>
+                    <H2 className='text-center'>{user?.name}</H2>
                     <p className='text-center'>{user?.email}</p>
                     <p className={`rounded-md px-4 py-1 text-white 
                     ${isPremium ? 'bg-yellow-600' : 'bg-green-600'}`}
