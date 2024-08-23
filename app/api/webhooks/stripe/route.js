@@ -1,5 +1,7 @@
 import prisma from "../../../../lib/prisma";
 import {NextResponse} from "next/server";
+import {resend} from "@/lib/resend";
+import {TrialEndTemplate} from "@/components/email/trial-end-template";
 
 exports.POST = async (req) => {
     const body = await req.json();
@@ -22,7 +24,6 @@ exports.POST = async (req) => {
                     plan: 'PREMIUM'
                 }
             });
-            console.log("Checkout session completed", session);
             break;
         }
         case "invoice.paid": {
@@ -42,7 +43,6 @@ exports.POST = async (req) => {
                     plan: 'PREMIUM'
                 }
             });
-            console.log("Payment completed", invoice);
             break;
         }
         case "invoice.payment_failed": {
@@ -62,7 +62,6 @@ exports.POST = async (req) => {
                     plan: 'FREE'
                 }
             });
-            console.log("Payment failed", invoice);
             break;
         }
         case "customer.subscription.deleted": {
@@ -82,7 +81,18 @@ exports.POST = async (req) => {
                     plan: 'FREE'
                 }
             });
-            console.log("Subscription deleted", subscription);
+            break;
+        }
+        case "customer.subscription.trial_will_end": {
+            const subscription = body.data.object;
+            const stripeCustomerId = subscription.customer;
+            const user = await findUserFromCustomer(stripeCustomerId);
+
+            if (!user?.id) {
+                break;
+            }
+
+            await sendTrialEndNotification(user.email, user.name);
             break;
         }
         default:
@@ -104,4 +114,29 @@ const findUserFromCustomer = async (stripeCustomerId) => {
             stripeCustomerId
         }
     });
+};
+
+// TODO: Envoi email notification when:
+//  -customer.subscription.created
+//  -checkout.session.completed
+const sendTrialEndNotification = async (email, name) => {
+    if (!email) {
+        return;
+    }
+
+    const msg = {
+        from: 'Thomas <contact@wonder-story.app>',
+        to: [email],
+        subject: 'Votre période d’essai se termine bientôt',
+        react: TrialEndTemplate({ name: name }),
+    };
+
+    try {
+        await resend.emails.send(msg);
+    } catch (error) {
+        console.error("Error sending trial end notification", error);
+        if (error.response) {
+            console.error(error.response.body);
+        }
+    }
 };
