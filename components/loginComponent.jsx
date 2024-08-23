@@ -10,17 +10,17 @@ import {useUser} from "@/app/contexts/UserContext";
 
 export default function LoginComponent() {
     const { data: session} = useSession();
-    const { user, status } = useUser();
+    const { user, status, isPremium } = useUser();
 
     if (status === 'loading') {
         return <div>Loading...</div>;
     }
 
-    if (!session) {
+    if (!session || !user ) {
         return (
             <>
                 <H2 className='text-center'>Not signed in</H2>
-                <Button variant='default' onClick={() => signIn("google")}>Sign in with Google</Button>
+                <Button variant='secondary' onClick={() => signIn("google")}>Sign in with Google</Button>
             </>
         );
     }
@@ -30,23 +30,29 @@ export default function LoginComponent() {
             <Image
                 src={user?.image}
                 alt={user?.name || 'User Image'}
-                width={96}
-                height={96}
+                width={60}
+                height={60}
                 unoptimized
                 className="rounded-full"
             />
         )}
             <H2 className='text-center'>Welcome, {user?.name}</H2>
             <p className='text-center'>{user?.email}</p>
-            <p>plan : {user?.plan}</p>
-            {user?.plan === "PREMIUM" ? (
-                <AccountSettingsButton />
-            ):(
-                <BuyButton />
-            )}
-            <Button variant='destructive' onClick={() => signOut()}>
-                Sign out
-            </Button>
+            <p className={`rounded-md px-4 py-1 text-white 
+            ${isPremium ? 'bg-yellow-600' : 'bg-green-600'}`}
+            >
+                {user?.plan}
+            </p>
+            <div className='flex gap-2'>
+                {isPremium ? (
+                    <AccountSettingsButton />
+                ):(
+                    <BuyButton />
+                )}
+                <Button variant='link' className='text-destructive' onClick={() => signOut()}>
+                    Sign out
+                </Button>
+            </div>
         </>
     );
 }

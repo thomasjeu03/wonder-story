@@ -16,7 +16,7 @@ export const AccountSettingsButton = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <Button type="submit" variant="outline" size="lg">
+            <Button type="submit" variant="outline">
                 Settings Stripe
             </Button>
         </form>

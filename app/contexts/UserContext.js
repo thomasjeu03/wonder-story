@@ -7,6 +7,7 @@ const UserContext = createContext();
 export const UserProvider = ({ children }) => {
     const { data: session, status } = useSession();
     const [user, setUser] = useState(null);
+    const [isPremium, setIsPremium] = useState(null);
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -17,6 +18,7 @@ export const UserProvider = ({ children }) => {
                     if (response.status === 200) {
                         const userData = response.data.user;
                         setUser(userData);
+                        setIsPremium(userData?.plan === 'PREMIUM');
                         localStorage.setItem('user', JSON.stringify(userData));
                     } else {
                         console.error('Failed to fetch user');
@@ -36,7 +38,7 @@ export const UserProvider = ({ children }) => {
     }, [session, status]);
 
     return (
-        <UserContext.Provider value={{ user, status }}>
+        <UserContext.Provider value={{ user, status, isPremium }}>
             {children}
         </UserContext.Provider>
     );
