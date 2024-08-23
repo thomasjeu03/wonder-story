@@ -7,7 +7,7 @@ import {useUser} from "@/app/contexts/UserContext";
 import {Skeleton} from "@/components/ui/skeleton";
 
 export default function MenuBar() {
-    const { user, status, isPremium } = useUser();
+    const { user, isPremium } = useUser();
 
     return (
         <nav className="w-full">

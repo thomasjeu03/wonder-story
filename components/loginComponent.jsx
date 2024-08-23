@@ -8,8 +8,6 @@ import {BuyButton} from "@/components/buy/BuyButton";
 import {AccountSettingsButton} from "@/components/buy/UserSettings";
 import {useUser} from "@/app/contexts/UserContext";
 import { Skeleton } from "@/components/ui/skeleton"
-import {TrialEndTemplate} from "@/components/email/trial-end-template";
-// import {resend} from "@/lib/resend";
 
 export default function LoginComponent() {
     const { data: session, status: sessionStatus } = useSession();
@@ -27,24 +25,6 @@ export default function LoginComponent() {
             </>
         );
     }
-
-    const handleSubmit = async () => {
-        const msg = {
-            from: 'Thomas <contact@wonder-story.app>',
-            to: ['jeuthomas03@gmail.com'],
-            subject: 'Votre période d’essai se termine bientôt',
-            react: TrialEndTemplate({ name: 'Thomas JEU' }),
-        };
-
-        try {
-            await resend.emails.send(msg);
-        } catch (error) {
-            console.error("Error sending trial end notification", error);
-            if (error.response) {
-                console.error(error.response.body);
-            }
-        }
-    };
 
     return (
         <>
@@ -77,11 +57,6 @@ export default function LoginComponent() {
                             Sign out
                         </Button>
                     </div>
-                    <form onSubmit={handleSubmit}>
-                        <Button type="submit" variant='default'>
-                            Send Email test
-                        </Button>
-                    </form>
                 </>
             ):(
                 <Skeleton className="w-[300px] h-[300px] rounded-lg" />
