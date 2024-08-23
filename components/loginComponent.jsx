@@ -8,8 +8,8 @@ import {BuyButton} from "@/components/buy/BuyButton";
 import {AccountSettingsButton} from "@/components/buy/UserSettings";
 import {useUser} from "@/app/contexts/UserContext";
 import { Skeleton } from "@/components/ui/skeleton"
-import {TrialEndTemplate} from "@/components/email/trial-end-template";
-import {resend} from "@/lib/resend";
+// import {TrialEndTemplate} from "@/components/email/trial-end-template";
+// import {resend} from "@/lib/resend";
 
 export default function LoginComponent() {
     const { data: session, status: sessionStatus } = useSession();
