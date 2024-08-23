@@ -30,7 +30,7 @@
     --border: 300 10% 81%;
     --input: 300 10% 81%;
     --ring: 300 10% 17%;
-    --radius: 20px;
+    --radius: 16px;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -73,5 +73,17 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'SF-Pro', sans-serif;
+  }
+  ::selection {
+    @apply bg-accent-foreground text-accent;
+  }
+  ::-webkit-scrollbar{
+    width: 6px !important;
+    height: 6px !important;
+    background: rgba(0,0,0,0.01) !important;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: var(--radius) !important;
+    @apply bg-accent-foreground;
   }
 }

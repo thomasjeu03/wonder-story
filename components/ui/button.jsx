@@ -4,12 +4,12 @@ import { cva } from "class-variance-authority";
 import {cn} from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center gap-3 justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center gap-3 justify-center whitespace-nowrap rounded-sm text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+          "bg-foreground text-background shadow hover:bg-foreground/90",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
@@ -20,10 +20,10 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        sm: "rounded-md px-2 py-2 text-xs",
+        sm: "rounded-xs px-2 py-2 text-xs",
         default: "px-3 py-3",
-        lg: "rounded-xxl px-6 py-6 text-xl font-semibold",
-        icon: "px-1 py-1",
+        lg: "rounded-lg px-4 py-4 text-xl font-semibold",
+        icon: "h-10 rounded-xs px-2",
       },
     },
     defaultVariants: {

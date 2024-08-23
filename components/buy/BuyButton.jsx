@@ -16,7 +16,7 @@ export const BuyButton = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <Button type="submit" variant="secondary">
+            <Button type="submit" variant='secondary'>
                 Upgrade to Premium
             </Button>
         </form>

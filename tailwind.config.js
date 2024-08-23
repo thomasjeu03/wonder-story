@@ -60,9 +60,13 @@ module.exports = {
                 },
             },
             borderRadius: {
-                lg: "var(--radius)",
-                md: "calc(var(--radius) - 2px)",
+                xxl: "calc(var(--radius) + 12px)",
+                xl: "calc(var(--radius) + 8px)",
+                lg: "calc(var(--radius) + 4px)",
+                md: "var(--radius)",
                 sm: "calc(var(--radius) - 4px)",
+                xs: "calc(var(--radius) - 8px)",
+                xxs: "calc(var(--radius) - 12px)",
             },
             keyframes: {
                 "accordion-down": {
