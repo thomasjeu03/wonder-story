@@ -7,6 +7,7 @@ import {SessionProvider} from "next-auth/react";
 import {UserProvider} from "@/app/contexts/UserContext";
 import {useTheme} from "next-themes";
 import ContainerIsLogin from "@/components/containerIsLogin";
+import {LocaleProvider} from "@/app/contexts/LocaleContext";
 
 export default function RootLayout({ children, session }) {
     const { theme } = useTheme()
@@ -20,11 +21,13 @@ export default function RootLayout({ children, session }) {
                         enableSystem
                         disableTransitionOnChange
                     >
-                        <UserProvider>
-                            <ContainerIsLogin>
-                                {children}
-                            </ContainerIsLogin>
-                        </UserProvider>
+                        <LocaleProvider>
+                            <UserProvider>
+                                <ContainerIsLogin>
+                                    {children}
+                                </ContainerIsLogin>
+                            </UserProvider>
+                        </LocaleProvider>
                     </ThemeProvider>
                 </SessionProvider>
             </body>
