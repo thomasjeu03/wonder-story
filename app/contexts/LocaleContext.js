@@ -6,37 +6,27 @@ import translationsData from "../../public/translations/translation.json";
 const LocaleContext = createContext(null);
 
 export const LocaleProvider = (props) => {
-    const [langue, setLangue] = useState(() => {
-        const storedLangue = localStorage.getItem("langue");
-        return storedLangue
-            ? JSON.parse(storedLangue)
-            : "fr";
-    });
+    const [langue, setLangue] = useState('fr')
 
-    const [languesDisponibles, setLanguesDisponibles] = useState([
+    const localeAllowed = [
         { code: "en", label: "English" },
         { code: "fr", label: "Français" },
         { code: "it", label: "Italiano" },
-        { code: "de", label: "Italiano" },
-    ]);
+        { code: "de", label: "Deutsch" },
+    ]
 
     useEffect(() => {
-        const userLangue = navigator.language.split('-')[0];
+        const userLocale = navigator.language.split('-')[0];
 
-        const langueExistante = languesDisponibles.find(lang => lang.code === userLangue);
+        const localeExist = localeAllowed.find(loc => loc.code === userLocale);
 
-        setLangue(langueExistante ? userLangue : "fr");
-    }, [languesDisponibles]);
-
-    useEffect(() => {
-        localStorage.setItem("langue", JSON.stringify(langue));
-    }, [langue]);
-
+        setLangue(localeExist ? userLocale : "fr");
+    }, []);
 
     const t = (tag) => {
-        const translationEntry = translationsData.translations.find(entry => entry.tag === tag);
+        const translationEntry = translationsData.t.find(entry => entry.tag === tag);
         if (translationEntry) {
-            return translationEntry.translations[langue] || translationEntry.translations.en;
+            return translationEntry.t[langue] || translationEntry.t.fr;
         }
         return tag;
     };

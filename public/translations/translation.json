@@ -1,8 +1,8 @@
 {
-  "translations": [
+  "t": [
     {
       "tag": "home-page",
-      "translations": {
+      "t": {
         "en": "Home page",
         "fr": "Page d'accueil",
         "it": "Pagina iniziale",
