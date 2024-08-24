@@ -6,7 +6,7 @@ import {ThemeProvider} from "@/components/theme-provider";
 import {SessionProvider} from "next-auth/react";
 import {UserProvider} from "@/app/contexts/UserContext";
 import {useTheme} from "next-themes";
-import MenuBar from "@/components/menuBar/MenuBar";
+import ContainerIsLogin from "@/components/containerIsLogin";
 
 export default function RootLayout({ children, session }) {
     const { theme } = useTheme()
@@ -21,10 +21,9 @@ export default function RootLayout({ children, session }) {
                         disableTransitionOnChange
                     >
                         <UserProvider>
-                            <MenuBar/>
-                            <main className="flex flex-col items-center gap-6 w-full">
+                            <ContainerIsLogin>
                                 {children}
-                            </main>
+                            </ContainerIsLogin>
                         </UserProvider>
                     </ThemeProvider>
                 </SessionProvider>

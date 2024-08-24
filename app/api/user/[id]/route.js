@@ -10,11 +10,6 @@ export async function GET(request, { params }) {
         return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401 });
     }
 
-    // TODO: blocker access to other users
-    // if (session?.user?.id !== id) {
-    //     return new Response(JSON.stringify({ error: 'Forbidden' }), { status: 403 });
-    // }
-
     try {
         const user = await prisma.user.findFirst({
             where: { id: Number(id) },
