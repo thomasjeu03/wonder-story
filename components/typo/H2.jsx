@@ -1,6 +1,6 @@
 export function H2({ children, className, style }) {
     return (
-        <h2 className={`text-gray-500 mt-2 text-3xl transition-colors first:mt-0 ${className}`}
+        <h2 className={`font-bold text-2xl lg:text-3xl ${className}`}
             style={style}>
             {children}
         </h2>

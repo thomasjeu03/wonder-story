@@ -8,6 +8,69 @@
         "it": "Pagina iniziale",
         "de": "Startseite"
       }
+    },
+    {
+      "tag": "wonderful-stories-start-here",
+      "t": {
+        "en": "Wonderful stories start here",
+        "fr": "Des histoires merveilleuses commencent ici",
+        "it": "Qui iniziano storie meravigliose",
+        "de": "Wunderbare Geschichten beginnen hier"
+      }
+    },
+    {
+      "tag": "create-now",
+      "t": {
+        "en": "Create now",
+        "fr": "Créer maintenant",
+        "it": "Crea ora",
+        "de": "Jetzt erstellen"
+      }
+    },
+    {
+      "tag": "choose-your-caracters",
+      "t": {
+        "en": "Choose your favorite hero to experience magical adventures!",
+        "fr": "Choisis ton héros préféré pour vivre des aventures magiques !",
+        "it": "Scegli il tuo eroe preferito per vivere magiche avventure!",
+        "de": "Wählen Sie Ihren Lieblingshelden, um magische Abenteuer zu erleben!"
+      }
+    },
+    {
+      "tag": "choose-your-caracters-description",
+      "t": {
+        "en": "Select your favorite characters to start a story full of mysteries, laughter and surprises! Make your choice and let the story come to life!",
+        "fr": "Sélectionne tes personnages préférés pour commencer une histoire pleine de mystères, de rires et de surprises ! Fais ton choix et laisse l’histoire prendre vie !",
+        "it": "Seleziona i tuoi personaggi preferiti per iniziare una storia piena di misteri, risate e sorprese! Fai la tua scelta e lascia che la storia prenda vita!",
+        "de": "Wählen Sie Ihre Lieblingscharaktere aus, um eine Geschichte voller Geheimnisse, Gelächter und Überraschungen zu beginnen! Treffen Sie Ihre Wahl und lassen Sie die Geschichte zum Leben erwachen!"
+      }
+    },
+    {
+      "tag": "choose-your-main-caracters",
+      "t": {
+        "en": "Who will be the main hero of your story?",
+        "fr": "Quel sera le hero principal de ton histoire ?",
+        "it": "Chi sarà l'eroe principale della tua storia?",
+        "de": "Wer wird der Hauptheld Ihrer Geschichte sein?"
+      }
+    },
+    {
+      "tag": "choose-your-main-caracters-description",
+      "t": {
+        "en": "The story will be based on this particular character",
+        "fr": "L'histoire sera basé sur ce personnage en particulier",
+        "it": "La storia sarà basata su questo particolare personaggio",
+        "de": "Die Geschichte wird auf dieser besonderen Figur basieren"
+      }
+    },
+    {
+      "tag": "select-caracter",
+      "t": {
+        "en": "Select character",
+        "fr": "Sélectionner un personnage",
+        "it": "Seleziona personaggio",
+        "de": "Charakter auswählen"
+      }
     }
   ]
 }

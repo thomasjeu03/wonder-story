@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from "next/image";
-import logo from "../../public/img/logo.png";
+import logo from "../../public/img/logo-white.png";
 import {Button} from "@/components/ui/button";
 import {SquareLibrary} from "lucide-react";
 import {useUser} from "@/app/contexts/UserContext";
@@ -10,7 +10,7 @@ export default function MenuBar() {
     const { user, isPremium } = useUser();
 
     return (
-        <nav className="w-full">
+        <nav className="w-full fixed top-2 sm:top-3 z-50 left-0 px-2 sm:px-3">
             <ul className="flex flex-nowrap gap-3 justify-between w-full h-9 items-center">
                 <li>
                     <Link href="/library" aria-label="Ma librairie">

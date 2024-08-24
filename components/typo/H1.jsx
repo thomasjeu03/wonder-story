@@ -1,6 +1,6 @@
 export function H1({ children, className, style }) {
     return (
-        <h1 className={`scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ${className}`}
+        <h1 className={`font-bold text-center text-3xl lg:text-4xl ${className}`}
             style={style}>
             {children}
         </h1>
