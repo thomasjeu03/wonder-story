@@ -21,6 +21,7 @@ export default function AccountContent() {
                     height={60}
                     unoptimized
                     className="rounded-full"
+                    quality={80}
                 />
             )}
             <H2 className='text-center'>{user?.name}</H2>

@@ -71,6 +71,87 @@
         "it": "Seleziona personaggio",
         "de": "Charakter auswählen"
       }
+    },
+    {
+      "tag": "Nina la Petite Fée",
+      "t": {
+        "en": "Nina the Little Fairy",
+        "fr": "Nina la Petite Fée",
+        "it": "Nina la piccola fata",
+        "de": "Nina die kleine Fee"
+      }
+    },
+    {
+      "tag": "Milo le Chaton Magicien",
+      "t": {
+        "en": "Milo the Magician Kitten",
+        "fr": "Milo le Chaton Magicien",
+        "it": "Milo il gattino mago",
+        "de": "Milo das Zauberkätzchen"
+      }
+    },
+    {
+      "tag": "Pablo le Dinosaure Courageux",
+      "t": {
+        "en": "Pablo the Brave Dinosaur",
+        "fr": "Pablo le Dinosaure Courageux",
+        "it": "Pablo il Dinosauro Coraggioso",
+        "de": "Pablo der tapfere Dinosaurier"
+      }
+    },
+    {
+      "tag": "Oscar le Robot Rêveur",
+      "t": {
+        "en": "Oscar the Dreaming Robot",
+        "fr": "Oscar le Robot Rêveur",
+        "it": "Oscar il Robot Sognatore",
+        "de": "Oscar der träumende Roboter"
+      }
+    },
+    {
+      "tag": "Luna la Sorcière Mystérieuse",
+      "t": {
+        "en": "Luna the Mysterious Witch",
+        "fr": "Luna la Sorcière Mystérieuse",
+        "it": "Luna la Strega Misteriosa",
+        "de": "Luna die geheimnisvolle Hexe"
+      }
+    },
+    {
+      "tag": "Zacharie le Zèbre",
+      "t": {
+        "en": "Zacharie the Zebra",
+        "fr": "Zacharie le Zèbre",
+        "it": "Zacharie la Zebra",
+        "de": "Zacharie das Zebra"
+      }
+    },
+    {
+      "tag": "Pico le Pingouin Inventeur",
+      "t": {
+        "en": "Pico the Inventive Penguin",
+        "fr": "Pico le Pingouin Inventeur",
+        "it": "Pico il pinguino inventore",
+        "de": "Pico der erfinderische Pinguin"
+      }
+    },
+    {
+      "tag": "Lola la Licorne Volante",
+      "t": {
+        "en": "Lola the Flying Unicorn",
+        "fr": "Lola la Licorne Volante",
+        "it": "Lola l'Unicorno Volante",
+        "de": "Lola das fliegende Einhorn"
+      }
+    },
+    {
+      "tag": "Gaspard le Hérisson Jardinier",
+      "t": {
+        "en": "Gaspard the Gardening Hedgehog",
+        "fr": "Gaspard le Hérisson Jardinier",
+        "it": "Gaspard il Riccio Giardiniere",
+        "de": "Gaspard der Gartenigel"
+      }
     }
   ]
 }

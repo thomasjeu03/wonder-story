@@ -11,7 +11,7 @@ import {LocaleProvider} from "@/app/contexts/LocaleContext";
 export default function RootLayout({ children, session }) {
     return (
         <html lang="fr" className="dark">
-            <body className={cn("min-h-dvh bg-background text-foreground font-sans antialiased p-3 flex flex-col gap-3")}>
+            <body className={cn("min-h-dvh bg-background text-foreground font-sans antialiased p-3 pb-9")}>
                 <SessionProvider session={session}>
                     <ThemeProvider
                         attribute="class"
