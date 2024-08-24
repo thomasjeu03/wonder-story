@@ -84,6 +84,6 @@
   }
   ::-webkit-scrollbar-thumb{
     border-radius: var(--radius) !important;
-    @apply bg-accent-foreground border-2 border-background border-solid;
+    @apply bg-accent-foreground/30 border-2 border-background border-solid;
   }
 }
