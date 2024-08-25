@@ -45,6 +45,8 @@ export default function HomeContent() {
         inputCustom: '',
     })
 
+    console.log(data?.caracters)
+
     return (
         <>
             <section
@@ -76,42 +78,44 @@ export default function HomeContent() {
                 </Button>
         </section>
 
-
-        <section className="min-h-min w-full flex flex-col items-center justify-center gap-8 sm:gap-12 lg:gap-16" style={{height: 'calc(100dvh - 24px)'}}>
+        <section id="caracters" className="min-h-min w-full flex flex-col items-center justify-center gap-6 sm:gap-12" style={{height: 'calc(100dvh - 24px)'}}>
             <div className="flex flex-col gap-3 w-full max-w-4xl">
                 <H2>{t('choose-your-caracters')}</H2>
                     <p className="text-xs sm:text-sm text-gray-400">{t('choose-your-caracters-description')}</p>
                 </div>
 
-                <div className="flex overflow-x-scroll sm:overflow-x-initial sm:grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full gap-2 sm:gap-3 md:gap-4 max-w-6xl">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full gap-2 sm:gap-3 md:gap-4 max-w-5xl">
                     {caracters.map((caracter) => (
-                        <CaracterCard key={caracter?.index} caracter={caracter}/>
+                        <CaracterCard key={caracter?.index} caracter={caracter} data={data} setData={setData}/>
                     ))}
                 </div>
 
-                <div className="flex flex-col flex-nowrap items-center sm:flex-row gap-6 w-full max-w-4xl p-4 lg:p-6 rounded-md lg:rounded-lg bg-gradient-to-r from-fuchsia-950/40 to-fuchsia-950/0 border border-fuchsia-800/30">
-                    <div className="flex flex-col gap-2.5 lg:gap-3 w-full">
-                        <H3>{t('choose-your-main-caracters')}</H3>
-                        <p className="text-fuchsia-50/70 text-xs sm:text-sm">{t('choose-your-main-caracters-description')}</p>
-                    </div>
+                {data?.caracters.length > 0 && (
+                    <div
+                        className="flex flex-col flex-nowrap items-center sm:flex-row gap-6 w-full max-w-4xl p-4 lg:p-6 rounded-md lg:rounded-lg bg-gradient-to-r from-fuchsia-950/40 to-fuchsia-950/0 border border-fuchsia-800/30">
+                        <div className="flex flex-col gap-2.5 lg:gap-3 w-full">
+                            <H3>{t('choose-your-main-caracters')}</H3>
+                            <p className="text-fuchsia-50/70 text-xs sm:text-sm">{t('choose-your-main-caracters-description')}</p>
+                        </div>
 
-                    {/*TODO:*/}
-                    <Select>
-                        <SelectTrigger className="max-w-60">
-                            <SelectValue placeholder={t('select-caracter')}/>
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                {caracters.map((caracter) => (
-                                    <SelectItem key={caracter?.index} value={caracter?.value}>
-                                        {t(caracter?.label)}
-                                    </SelectItem>
-                                ))}
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
-                </div>
-            </section>
+                        {/*TODO:*/}
+                        <Select>
+                            <SelectTrigger className="max-w-60">
+                                <SelectValue placeholder={t('select-caracter')}/>
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    {data?.caracters.map((caracter) => (
+                                        <SelectItem key={caracter?.index} value={caracter}>
+                                            {t(caracter)}
+                                        </SelectItem>
+                                    ))}
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                    </div>
+                )}
+        </section>
         </>
     );
 }
