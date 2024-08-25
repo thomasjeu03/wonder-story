@@ -43,10 +43,11 @@ export default function CaracterCard({ caracter, data, setData }) {
             <Image
                 src={caracter?.img}
                 alt={caracter?.label}
-                className="w-full aspect-square object-cover"
+                className="w-full object-cover"
                 width={200}
                 priority
                 height={200}
+                style={{ aspectRatio: '5/4' }}
                 quality={80}
             />
             {selected && (
