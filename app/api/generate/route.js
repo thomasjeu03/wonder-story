@@ -12,7 +12,11 @@ export async function POST(request) {
                 messages: [
                     {
                         role: 'system',
-                        content: 'Tu es un assistant pour creer des histoires et contes pour enfants. Répond moi toujours en créer une histoire sous format markdown, je ne veux que le contenu de l histoire en incorporant toutes les données du prompte, fait bien attention à la traduction choisie',
+                        content: 'Tu es un assistant pour creer des histoires et contes pour enfants. ' +
+                            'Répond moi toujours en créer une histoire sous format markdown, de plus lorsqu il y a des dialogues de personnages tu les mets dans des balises < code >. ' +
+                            'Tu es un expert dans la mise en forme MarkDown pour ces histoires. ' +
+                            'Je ne veux que le contenu de l histoire en incorporant toutes les données du prompte. ' +
+                            'ATTENTION: Tu sais faire attention à choisir la bonne traduction en fonction du locale situé en fin de prompt, il est obligatoire de prendre cela en compte',
                     },
                     {
                         role: 'user',

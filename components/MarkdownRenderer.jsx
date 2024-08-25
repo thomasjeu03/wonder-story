@@ -16,7 +16,7 @@ function MarkdownRenderer({ story }) {
 
     return (
         <div
-            className='markdown w-full max-w-lg'
+            className='markdown w-full max-w-3xl'
             dangerouslySetInnerHTML={{ __html: html }}
         />
     );

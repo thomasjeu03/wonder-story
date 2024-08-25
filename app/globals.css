@@ -357,4 +357,50 @@
       outline-offset: 2px !important;
     }
   }
+
+  /*MarkDown*/
+  .markdown{
+    h1{
+      @apply text-3xl font-bold mt-10 w-full text-center;
+    }
+    h2{
+      @apply text-2xl font-bold mt-10 w-full text-center;
+    }
+    h3{
+      @apply text-xl font-bold mt-6 w-full text-center;
+    }
+    h4{
+      @apply text-lg font-bold mt-4 w-full text-center;
+    }
+    h5{
+      @apply text-base font-bold mt-4 w-full text-center;
+    }
+    h6{
+      @apply text-sm font-bold mt-3 w-full text-center;
+    }
+    p{
+      @apply text-base mt-3;
+    }
+    a{
+      @apply text-primary underline;
+    }
+    ul{
+      @apply list-disc my-3;
+    }
+    ol{
+      @apply list-decimal my-3;
+    }
+    li{
+      @apply list-inside pl-3 mb-2;
+    }
+    blockquote{
+      @apply border-l-4 border-accent-foreground pl-4 mt-3;
+    }
+    code{
+      @apply text-base font-sans font-medium mt-3 bg-fuchsia-950/30 p-3 rounded-md block;
+    }
+    pre{
+      @apply text-sm mt-3;
+    }
+  }
 }
