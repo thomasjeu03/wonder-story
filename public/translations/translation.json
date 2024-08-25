@@ -30,19 +30,37 @@
     {
       "tag": "choose-your-caracters",
       "t": {
-        "en": "Choose your favorite hero to experience magical adventures!",
-        "fr": "Choisis ton héros préféré pour vivre des aventures magiques !",
-        "it": "Scegli il tuo eroe preferito per vivere magiche avventure!",
-        "de": "Wählen Sie Ihren Lieblingshelden, um magische Abenteuer zu erleben!"
+        "en": "The heroes of the dream",
+        "fr": "Les héros du rêve",
+        "it": "Gli eroi del sogno",
+        "de": "Die Helden des Traums"
       }
     },
     {
       "tag": "choose-your-caracters-description",
       "t": {
-        "en": "Select your favorite characters to start a story full of mysteries, laughter and surprises! Make your choice and let the story come to life!",
-        "fr": "Sélectionne tes personnages préférés pour commencer une histoire pleine de mystères, de rires et de surprises ! Fais ton choix et laisse l’histoire prendre vie !",
-        "it": "Seleziona i tuoi personaggi preferiti per iniziare una storia piena di misteri, risate e sorprese! Fai la tua scelta e lascia che la storia prenda vita!",
-        "de": "Wählen Sie Ihre Lieblingscharaktere aus, um eine Geschichte voller Geheimnisse, Gelächter und Überraschungen zu beginnen! Treffen Sie Ihre Wahl und lassen Sie die Geschichte zum Leben erwachen!"
+        "en": "Who will be your adventure companions?",
+        "fr": "Qui seront tes compagnons d’aventure ?",
+        "it": "chi saranno i vostri compagni di avventure?",
+        "de": "Wer werden Ihre Abenteuerbegleiter sein?"
+      }
+    },
+    {
+      "tag": "choose-your-places",
+      "t": {
+        "en": "Explore enchanted worlds",
+        "fr": "Explore des mondes enchantés",
+        "it": "Esplora mondi incantati",
+        "de": "Entdecken sie verzauberte welten"
+      }
+    },
+    {
+      "tag": "choose-your-places-description",
+      "t": {
+        "en": "Where will your story begin?",
+        "fr": "Où commencera ton histoire ?",
+        "it": "dove inizierà la tua storia?",
+        "de": "Wo beginnt ihre Geschichte?"
       }
     },
     {
@@ -187,6 +205,87 @@
         "fr": "Chargement...",
         "it": "Caricamento...",
         "de": "Laden..."
+      }
+    },
+    {
+      "tag": "prehistory",
+      "t": {
+        "en": "Prehistory",
+        "fr": "Préhistoire",
+        "it": "Preistoria",
+        "de": "Vorgeschichte"
+      }
+    },
+    {
+      "tag": "middle-age",
+      "t": {
+        "en": "Middle Ages",
+        "fr": "Moyen-Age",
+        "it": "Medioevo",
+        "de": "Mittelalter"
+      }
+    },
+    {
+      "tag": "present",
+      "t": {
+        "en": "Present",
+        "fr": "Présent",
+        "it": "Presente",
+        "de": "Gegenwärtig"
+      }
+    },
+    {
+      "tag": "distant-future",
+      "t": {
+        "en": "Distant future",
+        "fr": "Futur lointain",
+        "it": "Futuro lontano",
+        "de": "Ferne Zukunft"
+      }
+    },
+    {
+      "tag": "monde_subaquatique_de_lumis",
+      "t": {
+        "en": "Subaquatic World of Lumis",
+        "fr": "Monde Subaquatique de Lumis",
+        "it": "Mondo Subacqueo di Lumis",
+        "de": "Unterwasserwelt von Lumis"
+      }
+    },
+    {
+      "tag": "royaume_des_grottes_luminescentes",
+      "t": {
+        "en": "Kingdom of Luminous Caves",
+        "fr": "Royaume des Grottes Luminescentes",
+        "it": "Regno delle Grotte Luminose",
+        "de": "Königreich der Leuchtenden Höhlen"
+      }
+    },
+    {
+      "tag": "pole_des_glaces_eternelles",
+      "t": {
+        "en": "Pole of Eternal Ice",
+        "fr": "Pôle des Glaces Éternelles",
+        "it": "Polo dei Ghiacci Eterni",
+        "de": "Pol des Ewigen Eises"
+      }
+    },
+    {
+      "tag": "royaume_des_arc_en_ciels",
+      "t": {
+        "en": "Kingdom of Rainbows",
+        "fr": "Royaume des Arc-en-Ciels",
+        "it": "Regno degli Arcobaleni",
+        "de": "Königreich der Regenbogen"
+      }
+    },
+    {
+      "tag": "foret_enchantee",
+      "t": {
+        "en": "Enchanted Forest",
+        "fr": "Forêt Enchantée",
+        "it": "Foresta Incantata",
+        "de": "Verzauberter Wald"
       }
     }
   ]

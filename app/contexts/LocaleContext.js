@@ -32,7 +32,7 @@ export const LocaleProvider = (props) => {
     };
 
     return (
-        <LocaleContext.Provider value={{t}}>
+        <LocaleContext.Provider value={{langue, t}}>
             {props.children}
         </LocaleContext.Provider>
     );

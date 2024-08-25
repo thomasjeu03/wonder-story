@@ -233,4 +233,18 @@
     outline: 2px solid rgba(255,0,255,.5) !important;
     outline-offset: 2px !important;
   }
+
+  /*Place CARD*/
+  .place-card{
+    img{
+      transition: .3s ease-in-out;
+    }
+  }
+  .place-card--selected{
+    img{
+      transition: .3s ease-in-out;
+      outline: 2px solid rgba(255,0,255,.5) !important;
+      outline-offset: 2px !important;
+    }
+  }
 }

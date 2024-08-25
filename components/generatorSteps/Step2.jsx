@@ -1,8 +1,9 @@
 import { H2 } from "@/components/typo/H2";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import CaracterCard from "@/components/caracter/CaracterCard";
+
 import { useLocale } from "@/app/contexts/LocaleContext";
 import {H3} from "@/components/typo/H3";
+import CaracterCard from "@/components/cards/CaracterCard";
 
 const caracters= [
     {index: 0, label: 'Nina la Petite Fée', value: 'nina', img: '/img/caracters/0.jpg'},
@@ -23,7 +24,7 @@ export default function Step2({ data, setData }) {
         <>
             <div className="flex flex-col gap-3 w-full max-w-4xl">
                 <H2>{t('choose-your-caracters')}</H2>
-                <p className="text-xs sm:text-sm text-gray-400">{t('choose-your-caracters-description')}</p>
+                <H3 className="text-gray-400">{t('choose-your-caracters-description')}</H3>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full gap-2 sm:gap-3 md:gap-4 max-w-5xl">

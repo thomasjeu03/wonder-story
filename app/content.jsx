@@ -10,9 +10,10 @@ import {motion} from "framer-motion";
 import axios from "axios";
 import {Skeleton} from "@/components/ui/skeleton";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
+import Step3 from "@/components/generatorSteps/Step3";
 
 export default function HomeContent() {
-    const { t } = useLocale();
+    const { t, langue } = useLocale();
 
     const [data, setData] = useState({
         ageRange: '',
@@ -24,6 +25,7 @@ export default function HomeContent() {
         genres: [],
         moral: false,
         inputCustom: '',
+        locale: langue
     });
 
     const [currentStep, setCurrentStep] = useState(0);
@@ -33,7 +35,8 @@ export default function HomeContent() {
 
     const steps = [
         {id: 1, content: <Step1 />},
-        {id: 2, content: <Step2 data={data} setData={setData} currentStep={currentStep} setCurrentStep={setCurrentStep} />}
+        {id: 2, content: <Step2 data={data} setData={setData} />},
+        {id: 3, content: <Step3 data={data} setData={setData} />}
     ];
 
     const handleNext = () => {
