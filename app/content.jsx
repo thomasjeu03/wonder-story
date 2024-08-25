@@ -1,34 +1,15 @@
 "use client"
 
-import {useLocale} from "@/app/contexts/LocaleContext";
-import {H1} from "@/components/typo/H1";
-import {Button} from "@/components/ui/button";
-import {Sparkles} from "lucide-react";
-import {H2} from "@/components/typo/H2";
-import {H3} from "@/components/typo/H3";
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
 import {useState} from "react";
-import CaracterCard from "@/components/caracter/CaracterCard";
-import { motion } from 'framer-motion';
-
-const caracters= [
-    {index: 0, label: 'Nina la Petite Fée', value: 'nina', img: '/img/caracters/0.jpg'},
-    {index: 1, label: 'Milo le Chaton Magicien', value: 'milo', img: '/img/caracters/1.jpg'},
-    {index: 2, label: 'Pablo le Dinosaure Courageux', value: 'pablo', img: '/img/caracters/2.jpg'},
-    {index: 3, label: 'Oscar le Robot Rêveur', value: 'oscar', img: '/img/caracters/3.jpg'},
-    {index: 4, label: 'Luna la Sorcière Mystérieuse', value: 'luna', img: '/img/caracters/4.jpg'},
-    {index: 5, label: 'Zacharie le Zèbre', value: 'zacharie', img: '/img/caracters/5.jpg'},
-    {index: 6, label: 'Pico le Pingouin Inventeur', value: 'pico', img: '/img/caracters/6.jpg'},
-    {index: 7, label: 'Lola la Licorne Volante', value: 'lola', img: '/img/caracters/7.jpg'},
-    {index: 8, label: 'Gaspard le Hérisson Jardinier', value: 'gaspard', img: '/img/caracters/8.jpg'}
-]
+import {Button} from "@/components/ui/button";
+import Step1 from "@/components/generatorSteps/Step1";
+import Step2 from "@/components/generatorSteps/Step2";
+import {useLocale} from "@/app/contexts/LocaleContext";
+import {ArrowLeft, ArrowRight, Sparkles} from "lucide-react";
+import {motion} from "framer-motion";
+import axios from "axios";
+import {Skeleton} from "@/components/ui/skeleton";
+import MarkdownRenderer from "@/components/MarkdownRenderer";
 
 export default function HomeContent() {
     const { t } = useLocale();
@@ -43,20 +24,54 @@ export default function HomeContent() {
         genres: [],
         moral: false,
         inputCustom: '',
-    })
+    });
 
-    console.log(data?.caracters)
+    const [currentStep, setCurrentStep] = useState(0);
+    const [error, setError] = useState('');
+    const [newStory, setNewStory] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const steps = [
+        {id: 1, content: <Step1 />},
+        {id: 2, content: <Step2 data={data} setData={setData} currentStep={currentStep} setCurrentStep={setCurrentStep} />}
+    ];
+
+    const handleNext = () => {
+        if (currentStep < steps.length - 1) {
+            setCurrentStep(currentStep + 1);
+        }
+    };
+
+    const handlePrev = () => {
+        if (currentStep > 0) {
+            setCurrentStep(currentStep - 1);
+        }
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError('');
+        setLoading(true);
+        try {
+            const response = await axios.post('/api/generate', { data });
+            setNewStory(response.data.story);
+        } catch (err) {
+            setError('Error processing the data');
+        } finally {
+            setLoading(false)
+        }
+    };
 
     return (
-        <>
-            <section
-                className="min-h-min w-full flex flex-col items-center justify-center gap-12 sm:gap-16"
-                style={{height: 'calc(100dvh - 24px)'}}
-            >
-                <h1 className="sr-only">Wonder Story</h1>
-                <H1>{t('wonderful-stories-start-here')}</H1>
+        <section className="min-h-min w-full flex flex-col items-center justify-center gap-6 sm:gap-12"
+                 style={{height: 'calc(100dvh - 48px)'}}>
+
+            {steps[currentStep].content}
+
+            {currentStep === 0 ? (
                 <Button
                     size="lg"
+                    onClick={handleNext}
                     className="shadow-lg shadow-amber-500"
                     style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
                 >
@@ -76,46 +91,58 @@ export default function HomeContent() {
                     </motion.p>
                     <Sparkles/>
                 </Button>
-        </section>
-
-        <section id="caracters" className="min-h-min w-full flex flex-col items-center justify-center gap-6 sm:gap-12" style={{height: 'calc(100dvh - 24px)'}}>
-            <div className="flex flex-col gap-3 w-full max-w-4xl">
-                <H2>{t('choose-your-caracters')}</H2>
-                    <p className="text-xs sm:text-sm text-gray-400">{t('choose-your-caracters-description')}</p>
+            ): (
+                <div className="absolute z-30 bottom-10 left-0 flex w-full gap-3 items-center justify-center">
+                    {currentStep !== 0 && (
+                        <Button
+                            disabled={currentStep === 0}
+                            onClick={handlePrev}
+                            variant="secondary"
+                            size="lg"
+                        >
+                            <ArrowLeft />
+                            {t('come-back')}
+                        </Button>
+                    )}
+                    {currentStep !== steps.length - 1 ? (
+                        <Button
+                            disabled={currentStep === steps.length - 1}
+                            onClick={handleNext}
+                            size="lg"
+                        >
+                            {t('next')}
+                            <ArrowRight />
+                        </Button>
+                    ):(
+                        <Button
+                            size="lg"
+                            onClick={handleSubmit}
+                            className="shadow-lg shadow-amber-500"
+                            style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
+                        >
+                            <motion.p
+                                initial={{width: 0, marginRight: 0}}
+                                animate={{width: 'auto', marginRight: 12}}
+                                transition={{
+                                    type: 'spring',
+                                    ease: "easeOut",
+                                    duration: 1,
+                                    bounce: 0.5,
+                                    delay: 0.5
+                                }}
+                                style={{overflow: "hidden"}}
+                            >
+                                {loading ? t('loading') : t('create')}
+                            </motion.p>
+                            {loading ? <Skeleton className="h-6 w-6 bg-gray-800 rounded-full" /> : <Sparkles/>}
+                        </Button>
+                    )}
                 </div>
+            )}
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full gap-2 sm:gap-3 md:gap-4 max-w-5xl">
-                    {caracters.map((caracter) => (
-                        <CaracterCard key={caracter?.index} caracter={caracter} data={data} setData={setData}/>
-                    ))}
-                </div>
+            {error && <p className="text-red-500">{error}</p>}
 
-                {data?.caracters.length > 0 && (
-                    <div
-                        className="flex flex-col flex-nowrap items-center sm:flex-row gap-6 w-full max-w-4xl p-4 lg:p-6 rounded-md lg:rounded-lg bg-gradient-to-r from-fuchsia-950/40 to-fuchsia-950/0 border border-fuchsia-800/30">
-                        <div className="flex flex-col gap-2.5 lg:gap-3 w-full">
-                            <H3>{t('choose-your-main-caracters')}</H3>
-                            <p className="text-fuchsia-50/70 text-xs sm:text-sm">{t('choose-your-main-caracters-description')}</p>
-                        </div>
-
-                        {/*TODO:*/}
-                        <Select>
-                            <SelectTrigger className="max-w-60">
-                                <SelectValue placeholder={t('select-caracter')}/>
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectGroup>
-                                    {data?.caracters.map((caracter) => (
-                                        <SelectItem key={caracter?.index} value={caracter}>
-                                            {t(caracter)}
-                                        </SelectItem>
-                                    ))}
-                                </SelectGroup>
-                            </SelectContent>
-                        </Select>
-                    </div>
-                )}
+            {!loading && !error && newStory && <MarkdownRenderer story={newStory}/>}
         </section>
-        </>
     );
 }

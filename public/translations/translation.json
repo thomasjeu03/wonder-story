@@ -152,6 +152,42 @@
         "it": "Gaspard il Riccio Giardiniere",
         "de": "Gaspard der Gartenigel"
       }
+    },
+    {
+      "tag": "come-back",
+      "t": {
+        "en": "Come back",
+        "fr": "Revenir",
+        "it": "Per tornare",
+        "de": "Um wiederzukommen"
+      }
+    },
+    {
+      "tag": "next",
+      "t": {
+        "en": "Next",
+        "fr": "Suivant",
+        "it": "Prossimo",
+        "de": "Nächste"
+      }
+    },
+    {
+      "tag": "create",
+      "t": {
+        "en": "Create",
+        "fr": "Créer",
+        "it": "Crea",
+        "de": "Erstellen"
+      }
+    },
+    {
+      "tag": "loading",
+      "t": {
+        "en": "Loading...",
+        "fr": "Chargement...",
+        "it": "Caricamento...",
+        "de": "Laden..."
+      }
     }
   ]
 }
