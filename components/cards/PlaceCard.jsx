@@ -40,14 +40,14 @@ export default function PlaceCard({ place, data, setData }) {
 
     return (
         <button type="button" onClick={handleClick}
-                className={`${selected && 'place-card--selected'} place-card w-full min-w-40 gap-3 flex flex-col relative items-center justify-center`}>
+                className={`${selected && 'place-card--selected'} place-card w-full min-w-40 gap-3 flex flex-col relative items-center justify-center rounded-sm`}>
             <Image
                 src={place?.img}
                 alt={place?.label}
-                className="w-full aspect-square object-cover rounded-full bg-fuchsia-950/20 overflow-hidden border-2 border-fuchsia-800/30 shadow-lg"
-                width={200}
+                className="w-40 h-40 md:w-40 md:h-40 aspect-square object-cover rounded-full bg-fuchsia-950/20 overflow-hidden border-2 border-fuchsia-800/30 shadow-lg"
+                width={100}
                 priority
-                height={200}
+                height={100}
                 quality={80}
             />
             {selected && (

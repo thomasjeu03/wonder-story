@@ -7,7 +7,7 @@ export default function Step1() {
     return (
         <>
             <h1 className="sr-only">Wonder Story</h1>
-            <H1>{t('wonderful-stories-start-here')}</H1>
+            <H1 style={{ marginTop: 'calc(30dvh)' }}>{t('wonderful-stories-start-here')}</H1>
         </>
     );
 }

@@ -9,15 +9,15 @@ export default function ContainerIsLogin({ children }) {
     const { data: session, status: sessionStatus } = useSession();
 
     if (sessionStatus === 'loading') {
-        // TODO : loader de l app
-        return <Skeleton className="w-full rounded-lg" style={{ height: 'calc(100dvh - 24px)' }} />;
+        // TODO : loader de l app, par exemple animation du logo avec la baguette
+        return <Skeleton className="w-full rounded-lg" style={{ height: 'calc(100dvh - 48px)' }} />;
     }
 
     if (session) {
         return (
             <>
                 <MenuBar/>
-                <main className="flex flex-col items-center gap-6 w-full">
+                <main className="flex flex-col items-center gap-6 w-full pt-10 sm:pt-12">
                     {children}
                 </main>
             </>

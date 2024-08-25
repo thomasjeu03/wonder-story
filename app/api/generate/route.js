@@ -12,13 +12,16 @@ export async function POST(request) {
                 messages: [
                     {
                         role: 'system',
-                        content: 'Répond moi toujours en créer une histoire pour enfant sous format markdown, je ne veux que le contenu de l histoire en incorporant les données du prompte, fait bien attention a choisir la langue du locale pour sa traduction',
+                        content: 'Tu es un assistant pour creer des histoires et contes pour enfants. Répond moi toujours en créer une histoire sous format markdown, je ne veux que le contenu de l histoire en incorporant toutes les données du prompte, fait bien attention à la traduction choisie',
                     },
                     {
                         role: 'user',
                         content: 'Crée moi uns histoire pour un enfant de ' + data.ageRange + 'ans. ' +
                             'Cette histoire aura comme personnages: ' + data.caracters.join(', ') + '. ' +
-                            'Le personnage principal sera ' + data.mainCaracter + '. ' + data.inputCustom +
+                            'Le personnage principal sera donc ' + data.mainCaracter + '. ' +
+                            'Cette histoire se déroulera à travers les lieux suivant: ' + data.places.join(', ') + ', ' +
+                            'durant cette époque temporele: ' + data.eras.join(', ') + '. ' +
+                            data.inputCustom +
                             'Traduis obligatoirement cette histoire en : "' + data.locale + '".',
                     },
                 ],

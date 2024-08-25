@@ -287,6 +287,15 @@
         "it": "Foresta Incantata",
         "de": "Verzauberter Wald"
       }
+    },
+    {
+      "tag": "my-library",
+      "t": {
+        "en": "My library",
+        "fr": "Ma Librairie",
+        "it": "Libreria mia",
+        "de": "Meine Bibliothek"
+      }
     }
   ]
 }
