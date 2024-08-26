@@ -8,6 +8,7 @@ export const UserProvider = ({ children }) => {
     const { data: session, status } = useSession();
     const [user, setUser] = useState(null);
     const [isPremium, setIsPremium] = useState(null);
+    const [currentStep, setCurrentStep] = useState(0);
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -38,7 +39,7 @@ export const UserProvider = ({ children }) => {
     }, [session, status]);
 
     return (
-        <UserContext.Provider value={{ user, status, isPremium }}>
+        <UserContext.Provider value={{ user, status, isPremium, currentStep, setCurrentStep }}>
             {children}
         </UserContext.Provider>
     );

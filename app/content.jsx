@@ -1,6 +1,6 @@
 "use client"
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Button} from "@/components/ui/button";
 import Step1 from "@/components/generatorSteps/Step1";
 import Step2 from "@/components/generatorSteps/Step2";
@@ -12,9 +12,11 @@ import {Skeleton} from "@/components/ui/skeleton";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import Step3 from "@/components/generatorSteps/Step3";
 import Step4 from "@/components/generatorSteps/Step4";
+import {useUser} from "@/app/contexts/UserContext";
 
 export default function HomeContent() {
     const { t, langue } = useLocale();
+    const {currentStep, setCurrentStep } = useUser();
 
     const [data, setData] = useState({
         locale: langue,
@@ -29,7 +31,23 @@ export default function HomeContent() {
         inputCustom: ''
     });
 
-    const [currentStep, setCurrentStep] = useState(0);
+    useEffect(() => {
+        if (currentStep === 0) {
+            setData({
+                locale: langue,
+                caracters: [],
+                mainCaracter: '',
+                places: [],
+                eras: [],
+                ageRange: '',
+                time: '',
+                genres: [],
+                moral: false,
+                inputCustom: ''
+            })
+        }
+    }, [currentStep]);
+
     const [error, setError] = useState('');
     const [newStory, setNewStory] = useState('');
     const [loading, setLoading] = useState(false);

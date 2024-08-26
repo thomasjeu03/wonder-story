@@ -4,11 +4,12 @@ import logo from "../../public/img/logo-white.png";
 import {Button} from "@/components/ui/button";
 import {SquareLibrary} from "lucide-react";
 import {useUser} from "@/app/contexts/UserContext";
-import {Skeleton} from "@/components/ui/skeleton";
 import {useLocale} from "@/app/contexts/LocaleContext";
 
 export default function MenuBar() {
     const { user, isPremium } = useUser();
+    const {setCurrentStep } = useUser();
+
     const { t } = useLocale();
 
     return (
@@ -34,7 +35,7 @@ export default function MenuBar() {
                         )}
                     </li>
                     <li className="flex items-center justify-center">
-                        <Link href="/" aria-label="Accueil">
+                        <Link href="/" aria-label="Accueil" onClick={() => setCurrentStep(0)}>
                             <Image src={logo} alt="Wonder Story logo" className="h-6 sm:h-9 w-[135px] sm:w-[202px]" height={36} width={202} priority quality={80} />
                         </Link>
                     </li>
