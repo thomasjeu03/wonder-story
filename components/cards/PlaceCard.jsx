@@ -2,6 +2,7 @@ import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
 import {useEffect, useState} from "react";
 import {CircleCheck} from "lucide-react";
+import {motion} from "framer-motion";
 
 export default function PlaceCard({ place, data, setData }) {
     const { t } = useLocale();
@@ -39,7 +40,17 @@ export default function PlaceCard({ place, data, setData }) {
     };
 
     return (
-        <button type="button" onClick={handleClick}
+        <motion.button
+            initial={{filter: 'blur(8px)', opacity: 0}}
+            animate={{filter: 'blur(0px)', opacity: 1}}
+            transition={{
+                type: 'spring',
+                ease: "easeOut",
+                duration: 2,
+                bounce: 0.2,
+                delay: place?.index * 0.15
+            }}
+            type="button" onClick={handleClick}
                 className={`${selected && 'place-card--selected'} place-card w-full min-w-40 gap-3 flex flex-col relative items-center justify-center rounded-sm`}>
             <Image
                 src={place?.img}
@@ -56,6 +67,6 @@ export default function PlaceCard({ place, data, setData }) {
                 </div>
             )}
             <h4 className="text-sm md:text-base text-center text-fuchsia-200">{t(place?.label)}</h4>
-        </button>
+        </motion.button>
     )
 }

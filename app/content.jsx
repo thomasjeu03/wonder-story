@@ -94,7 +94,7 @@ export default function HomeContent() {
                             ease: "easeOut",
                             duration: 1,
                             bounce: 0.5,
-                            delay: 0.5
+                            delay: 1.2
                         }}
                         style={{overflow: "hidden"}}
                     >
