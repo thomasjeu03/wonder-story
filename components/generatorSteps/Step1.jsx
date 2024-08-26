@@ -11,10 +11,12 @@ export default function Step1() {
             <motion.div
                 initial={{y: 40, filter: 'blur(8px)', opacity: 0}}
                 animate={{y: 0, filter: 'blur(0px)', opacity: 1}}
+                exit={{y: -40, filter: 'blur(8px)', opacity: 0}}
                 transition={{
                     type: 'spring',
                     ease: "easeOut",
-                    duration: 1.5,
+                    duration: 5,
+                    delay: 0,
                     bounce: 0.2,
                 }}>
                 <H1 style={{ marginTop: 'calc(30dvh)' }}>{t('wonderful-stories-start-here')}</H1>

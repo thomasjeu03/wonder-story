@@ -11,6 +11,7 @@ export default function Step4({ data, setData }) {
             <motion.div
                 initial={{y: 40, filter: 'blur(8px)', opacity: 0}}
                 animate={{y: 0, filter: 'blur(0px)', opacity: 1}}
+                exit={{y: -40, filter: 'blur(8px)', opacity: 0}}
                 transition={{
                     type: 'spring',
                     ease: "easeOut",

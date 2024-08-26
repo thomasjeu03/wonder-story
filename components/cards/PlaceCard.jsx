@@ -43,6 +43,7 @@ export default function PlaceCard({ place, data, setData }) {
         <motion.button
             initial={{filter: 'blur(8px)', opacity: 0}}
             animate={{filter: 'blur(0px)', opacity: 1}}
+            exit={{filter: 'blur(8px)', opacity: 0}}
             transition={{
                 type: 'spring',
                 ease: "easeOut",
