@@ -361,16 +361,16 @@
   /*MarkDown*/
   .markdown{
     h1{
-      @apply text-3xl font-bold mt-10 w-full text-center;
-    }
-    h2{
       @apply text-2xl font-bold mt-10 w-full text-center;
     }
+    h2{
+      @apply text-xl font-bold mt-10 w-full text-center;
+    }
     h3{
-      @apply text-xl font-bold mt-6 w-full text-center;
+      @apply text-lg font-bold mt-6 w-full text-center;
     }
     h4{
-      @apply text-lg font-bold mt-4 w-full text-center;
+      @apply text-base font-bold mt-4 w-full text-center;
     }
     h5{
       @apply text-base font-bold mt-4 w-full text-center;
@@ -402,5 +402,21 @@
     pre{
       @apply text-sm mt-3;
     }
+  }
+
+  .markdown.headers-v2 h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    margin-bottom: .75rem;
+    margin-top: .25rem
+  }
+
+  .markdown.headers-v2 p {
+    margin-top: .5rem
+  }
+
+  .markdown code{
+    @apply text-base font-sans font-medium mt-3 bg-fuchsia-950/30 p-3 rounded-md block;
   }
 }
