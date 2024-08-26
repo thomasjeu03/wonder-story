@@ -25,7 +25,7 @@ const TimeSelector = ({ data, setData }) => {
             <SliderPrimitive.Root
                 value={[data?.time || 3]}
                 min={1}
-                max={15}
+                max={6}
                 step={1}
                 onValueChange={handleValueChange}
                 className="relative flex w-full touch-none select-none items-center"
