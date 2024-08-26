@@ -2,7 +2,6 @@ import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
 import {useEffect, useState} from "react";
 import {CircleCheck} from "lucide-react";
-import {motion} from "framer-motion";
 
 export default function CaracterCard({ caracter, data, setData }) {
     const { t } = useLocale();
@@ -40,18 +39,7 @@ export default function CaracterCard({ caracter, data, setData }) {
     };
 
     return (
-        <motion.button
-            initial={{filter: 'blur(8px)', opacity: 0}}
-            animate={{filter: 'blur(0px)', opacity: 1}}
-            exit={{filter: 'blur(8px)', opacity: 0}}
-            transition={{
-                type: 'spring',
-                ease: "easeOut",
-                duration: 2,
-                bounce: 0.2,
-                delay: caracter?.index * 0.08
-            }}
-            type="button" onClick={handleClick} className={`${selected && 'caracter-card--selected'} caracter-card w-full min-w-40 flex flex-col bg-fuchsia-950/20 overflow-hidden relative rounded-xs sm:rounded-md border-2 border-fuchsia-800/30 shadow-lg`}>
+        <button type="button" onClick={handleClick} className={`${selected && 'caracter-card--selected'} caracter-card w-full min-w-40 flex flex-col bg-fuchsia-950/20 overflow-hidden relative rounded-xs sm:rounded-md border-2 border-fuchsia-800/30 shadow-lg`}>
             <Image
                 src={caracter?.img}
                 alt={caracter?.label}
@@ -70,6 +58,6 @@ export default function CaracterCard({ caracter, data, setData }) {
             <div className="p-1 sm:p-2 md:p-3">
                 <h4 className="text-sm md:text-base text-left text-fuchsia-200">{t(caracter?.label)}</h4>
             </div>
-        </motion.button>
+        </button>
     )
 }

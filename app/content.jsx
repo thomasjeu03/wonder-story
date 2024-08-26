@@ -105,7 +105,6 @@ export default function HomeContent() {
                     transition={{
                         type: 'spring',
                         duration: 1.2,
-                        delay: 0.8,
                         ease: "easeOut",
                         bounce: 0.2,
                     }}
@@ -115,27 +114,40 @@ export default function HomeContent() {
                 </motion.div>
 
                 {currentStep === 0 ? (
-                    <Button
-                        size="lg"
-                        onClick={handleNext}
-                        style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
+                    <motion.div
+                        initial={{ opacity: 0, y: 80, filter: 'blur(8px)' }}
+                        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        exit={{ opacity: 0, y: 80, filter: 'blur(8px)' }}
+                        transition={{
+                            type: 'spring',
+                            ease: "easeOut",
+                            duration: 1,
+                            bounce: 0.5,
+                            delay: 0.5
+                        }}
                     >
-                        <motion.p
-                            initial={{width: 0, marginRight: 0}}
-                            animate={{width: 'auto', marginRight: 12}}
-                            transition={{
-                                type: 'spring',
-                                ease: "easeOut",
-                                duration: 1,
-                                bounce: 0.5,
-                                delay: 1.8
-                            }}
-                            style={{overflow: "hidden"}}
+                        <Button
+                            size="lg"
+                            onClick={handleNext}
+                            style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
                         >
-                            {t('create-now')}
-                        </motion.p>
-                        <Sparkles/>
-                    </Button>
+                            <motion.p
+                                initial={{width: 0, marginRight: 0}}
+                                animate={{width: 'auto', marginRight: 12}}
+                                transition={{
+                                    type: 'spring',
+                                    ease: "easeOut",
+                                    duration: 1,
+                                    bounce: 0.5,
+                                    delay: 1
+                                }}
+                                style={{overflow: "hidden"}}
+                            >
+                                {t('create-now')}
+                            </motion.p>
+                            <Sparkles/>
+                        </Button>
+                    </motion.div>
                 ): (
                     <motion.div
                         initial={{ opacity: 0, y: 80, filter: 'blur(8px)' }}
@@ -158,7 +170,7 @@ export default function HomeContent() {
                                 size="lg"
                             >
                                 <ArrowLeft />
-                                {t('come-back')}
+                                {t('back')}
                             </Button>
                         )}
                         {currentStep !== steps.length - 1 ? (

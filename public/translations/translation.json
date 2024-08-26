@@ -172,12 +172,12 @@
       }
     },
     {
-      "tag": "come-back",
+      "tag": "back",
       "t": {
-        "en": "Come back",
-        "fr": "Revenir",
-        "it": "Per tornare",
-        "de": "Um wiederzukommen"
+        "en": "Back",
+        "fr": "Retour",
+        "it": "Indietro",
+        "de": "Zurück"
       }
     },
     {
