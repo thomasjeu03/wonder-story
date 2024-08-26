@@ -9,10 +9,10 @@ import {ArrowLeft, ArrowRight, Sparkles} from "lucide-react";
 import {motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import {Skeleton} from "@/components/ui/skeleton";
-import MarkdownRenderer from "@/components/MarkdownRenderer";
 import Step3 from "@/components/generatorSteps/Step3";
 import Step4 from "@/components/generatorSteps/Step4";
 import {useUser} from "@/app/contexts/UserContext";
+import Step5 from "@/components/generatorSteps/Step5";
 
 export default function HomeContent() {
     const { t, langue } = useLocale();
@@ -56,7 +56,8 @@ export default function HomeContent() {
         {id: 1, content: <Step1 />},
         {id: 2, content: <Step2 data={data} setData={setData} />},
         {id: 3, content: <Step3 data={data} setData={setData} />},
-        {id: 4, content: <Step4 data={data} setData={setData} />}
+        {id: 4, content: <Step4 data={data} setData={setData} />},
+        {id: 5, content: <Step5 loading={loading} error={error} newStory={newStory} />},
     ];
 
     const handleNext = () => {
@@ -73,11 +74,13 @@ export default function HomeContent() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setCurrentStep(currentStep + 1)
         setError('');
         setLoading(true);
         try {
             const response = await axios.post('/api/generate', { data });
             setNewStory(response.data.story);
+            //TODO: Faire la redirection vers la page /story/[id] apres avoir créer la story dans Prisma
         } catch (err) {
             setError('Error processing the data');
         } finally {
@@ -161,24 +164,21 @@ export default function HomeContent() {
                             delay: 1.5
                         }}
                         className="mx-auto fixed z-30 bottom-10 left-0 flex w-full gap-3 px-3 items-center justify-center">
-                        {currentStep !== 0 && (
+                        <Button
+                            onClick={handlePrev}
+                            className="w-full max-w-64"
+                            variant="secondary"
+                            size="lg"
+                        >
+                            <ArrowLeft />
+                            {t('back')}
+                        </Button>
+                        {(currentStep !== steps.length - 2 && currentStep !== steps.length - 1) ? (
                             <Button
-                                disabled={currentStep === 0}
-                                onClick={handlePrev}
-                                className="w-full max-w-64"
-                                variant="secondary"
                                 size="lg"
-                            >
-                                <ArrowLeft />
-                                {t('back')}
-                            </Button>
-                        )}
-                        {currentStep !== steps.length - 1 ? (
-                            <Button
-                                disabled={currentStep === steps.length - 1 || (currentStep === 1 && data?.caracters?.length === 0) || (currentStep === 2 && data?.places?.length === 0)}
                                 onClick={handleNext}
+                                disabled={currentStep === steps.length - 1 || (currentStep === 1 && data?.caracters?.length === 0) || (currentStep === 2 && data?.places?.length === 0)}
                                 className="w-full max-w-64"
-                                size="lg"
                             >
                                 {t('next')}
                                 <ArrowRight />
@@ -209,8 +209,6 @@ export default function HomeContent() {
                         )}
                     </motion.div>
                 )}
-
-                {!loading && !error && newStory && <MarkdownRenderer story={newStory}/>}
             </AnimatePresence>
         </section>
     );
