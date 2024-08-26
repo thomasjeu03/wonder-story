@@ -3,6 +3,7 @@ import AgeRangeSlider from "@/components/ui/ageRangeSlider";
 import {H2} from "@/components/typo/H2";
 import {Switch} from "@/components/ui/switch";
 import TagGenre from "@/components/cards/TagGenre";
+import TimeSelector from "@/components/ui/timeSelector";
 
 const genres = [
     {
@@ -61,33 +62,22 @@ export default function Step4({ data, setData }) {
     return (
         <>
             <H2>{t('customization-title')}</H2>
-            <div className="flex flex-col gap-3 w-full max-w-xl">
-                <AgeRangeSlider data={data} setData={setData}/>
-            </div>
-            <div className="w-full flex flex-col gap-3 max-w-xl">
-                <div className="flex flex-row w-full items-center justify-between">
-                    <p className="text-gray-500">{t('reading-duration')}</p>
-                    <p className="text-sm">
-                    <span className="text-base font-semibold whitespace-nowrap">
-                        {data?.time}
-                    </span>{' '}
-                        min
-                    </p>
-                </div>
-                <div>
-                    {/*TODO: slect time*/}
-                </div>
-            </div>
+
+            <AgeRangeSlider data={data} setData={setData}/>
+
+            <TimeSelector data={data} setData={setData}/>
+
             <div className="w-full flex flex-col gap-3 max-w-xl">
                 <div className="flex flex-row w-full items-center justify-between">
                     <p className="text-gray-500">{t('theme-selection')}</p>
                 </div>
                 <div className='flex gap-3 flex-wrap w-full'>
                     {genres.map((genre, index) => (
-                        <TagGenre key={index} genre={genre} data={data} setData={setData} />
+                        <TagGenre key={index+genre?.label} genre={genre} data={data} setData={setData} />
                     ))}
                 </div>
             </div>
+
             <div className="w-full flex flex-col gap-3 max-w-xl">
                 <div className="flex flex-row w-full gap-3 items-center justify-between">
                     <p className="text-gray-500">{t('include-moral')}</p>

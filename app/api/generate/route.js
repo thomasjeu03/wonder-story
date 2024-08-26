@@ -31,7 +31,7 @@ export async function POST(request) {
                             'Traduis obligatoirement cette histoire en : "' + data.locale + '".',
                     },
                 ],
-                max_tokens: 800,
+                max_tokens: 2000,
             },
             {
                 headers: {

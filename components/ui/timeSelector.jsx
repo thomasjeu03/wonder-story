@@ -1,31 +1,31 @@
+import {useLocale} from "@/app/contexts/LocaleContext";
 import * as SliderPrimitive from "@radix-ui/react-slider";
-import { useLocale } from "@/app/contexts/LocaleContext";
 
-const AgeRangeSlider = ({ data, setData }) => {
+const TimeSelector = ({ data, setData }) => {
     const { t } = useLocale();
 
     const handleValueChange = (value) => {
         setData((prev) => ({
             ...prev,
-            ageRange: value[0]
+            time: value[0]
         }));
     };
 
     return (
         <div className="w-full flex flex-col gap-3 max-w-xl">
-            <div className="flex flex-row w-full gap-3 items-center justify-between">
-                <p className="text-gray-500">{t('age-selection')}</p>
+            <div className="flex flex-row w-full items-center gap-3 justify-between">
+                <p className="text-gray-500">{t('reading-duration')}</p>
                 <p className="text-sm whitespace-nowrap">
                     <span className="text-base font-semibold whitespace-nowrap">
-                        {data?.ageRange}
+                        {data?.time}
                     </span>{' '}
-                    {t("years-old")}
+                    min
                 </p>
             </div>
             <SliderPrimitive.Root
-                value={[data?.ageRange || 3]}
-                min={3}
-                max={12}
+                value={[data?.time || 3]}
+                min={1}
+                max={15}
                 step={1}
                 onValueChange={handleValueChange}
                 className="relative flex w-full touch-none select-none items-center"
@@ -41,4 +41,4 @@ const AgeRangeSlider = ({ data, setData }) => {
     );
 };
 
-export default AgeRangeSlider;
+export default TimeSelector;
