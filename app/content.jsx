@@ -24,8 +24,8 @@ export default function HomeContent() {
         mainCaracter: '',
         places: [],
         eras: [],
-        ageRange: '',
-        time: '',
+        ageRange: 5,
+        time: 2,
         genres: [],
         moral: false,
         inputCustom: ''
@@ -39,8 +39,8 @@ export default function HomeContent() {
                 mainCaracter: '',
                 places: [],
                 eras: [],
-                ageRange: '',
-                time: '',
+                ageRange: 5,
+                time: 2,
                 genres: [],
                 moral: false,
                 inputCustom: ''

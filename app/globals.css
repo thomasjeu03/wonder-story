@@ -403,20 +403,4 @@
       @apply text-sm mt-3;
     }
   }
-
-  .markdown.headers-v2 h1 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.75rem;
-    margin-bottom: .75rem;
-    margin-top: .25rem
-  }
-
-  .markdown.headers-v2 p {
-    margin-top: .5rem
-  }
-
-  .markdown code{
-    @apply text-base font-sans font-medium mt-3 bg-fuchsia-950/30 p-3 rounded-md block;
-  }
 }

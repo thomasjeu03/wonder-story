@@ -296,6 +296,172 @@
         "it": "Libreria mia",
         "de": "Meine Bibliothek"
       }
+    },
+    {
+      "tag": "age-range",
+      "t": {
+        "en": "Age range",
+        "fr": "Tranche d'âge",
+        "it": "Fascia d'età",
+        "de": "Altersgruppe"
+      }
+    },
+    {
+      "tag": "years-old",
+      "t": {
+        "en": "years old",
+        "fr": "ans",
+        "it": "anni",
+        "de": "Jahre"
+      }
+    },
+    {
+      "tag": "customization-title",
+      "t": {
+        "en": "Customize Your Magical Story",
+        "fr": "Personnalisez Votre Histoire Magique",
+        "it": "Personalizza la Tua Storia Magica",
+        "de": "Passen Sie Ihre Magische Geschichte an"
+      }
+    },{
+      "tag": "age-selection",
+      "t": {
+        "en": "Select your child's age",
+        "fr": "Sélectionnez l'âge de votre enfant",
+        "it": "Seleziona l'età di tuo figlio",
+        "de": "Wählen Sie das Alter Ihres Kindes"
+      }
+    },{
+      "tag": "reading-duration",
+      "t": {
+        "en": "Set the ideal story duration",
+        "fr": "Déterminez la durée idéale de l'histoire",
+        "it": "Imposta la durata ideale della storia",
+        "de": "Legen Sie die ideale Geschichtenlänge fest"
+      }
+    },{
+      "tag": "theme-selection",
+      "t": {
+        "en": "Choose themes that will captivate your child",
+        "fr": "Choisissez les thèmes qui captiveront votre enfant",
+        "it": "Scegli i temi che cattureranno tuo figlio",
+        "de": "Wählen Sie Themen, die Ihr Kind begeistern werden"
+      }
+    },{
+      "tag": "include-moral",
+      "t": {
+        "en": "Would you like to include an educational moral?",
+        "fr": "Souhaitez-vous inclure une morale éducative ?",
+        "it": "Vuoi includere una morale educativa?",
+        "de": "Möchten Sie eine pädagogische Moral einfügen?"
+      }
+    },{
+      "tag": "adventure",
+      "t": {
+        "en": "Adventure",
+        "fr": "Aventure",
+        "it": "Avventura",
+        "de": "Abenteuer"
+      }
+    },
+    {
+      "tag": "fantasy",
+      "t": {
+        "en": "Fantasy",
+        "fr": "Fantastique",
+        "it": "Fantastico",
+        "de": "Fantasie"
+      }
+    },
+    {
+      "tag": "love",
+      "t": {
+        "en": "Love",
+        "fr": "Amour",
+        "it": "Amore",
+        "de": "Liebe"
+      }
+    },
+    {
+      "tag": "mystery",
+      "t": {
+        "en": "Mystery",
+        "fr": "Mystère",
+        "it": "Mistero",
+        "de": "Geheimnis"
+      }
+    },
+    {
+      "tag": "science-fiction",
+      "t": {
+        "en": "Science Fiction",
+        "fr": "Science-fiction",
+        "it": "Fantascienza",
+        "de": "Science-Fiction"
+      }
+    },
+    {
+      "tag": "comedy",
+      "t": {
+        "en": "Comedy",
+        "fr": "Comédie",
+        "it": "Commedia",
+        "de": "Komödie"
+      }
+    },
+    {
+      "tag": "fairy-tale",
+      "t": {
+        "en": "Fairy Tale",
+        "fr": "Conte de fées",
+        "it": "Fiaba",
+        "de": "Märchen"
+      }
+    },
+    {
+      "tag": "education",
+      "t": {
+        "en": "Education",
+        "fr": "Éducation",
+        "it": "Educazione",
+        "de": "Bildung"
+      }
+    },
+    {
+      "tag": "drama",
+      "t": {
+        "en": "Drama",
+        "fr": "Drame",
+        "it": "Dramma",
+        "de": "Drama"
+      }
+    },
+    {
+      "tag": "historical",
+      "t": {
+        "en": "Historical",
+        "fr": "Historiques",
+        "it": "Storico",
+        "de": "Historisch"
+      }
+    },
+    {
+      "tag": "animals",
+      "t": {
+        "en": "Animals",
+        "fr": "Animaux",
+        "it": "Animali",
+        "de": "Tiere"
+      }
+    },
+    {
+      "tag": "supernatural",
+      "t": {
+        "en": "Supernatural",
+        "fr": "Surnaturel",
+        "it": "Soprannaturale",
+        "de": "Übernatürlich"
+      }
     }
   ]
 }
