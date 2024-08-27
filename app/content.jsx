@@ -90,15 +90,6 @@ export default function HomeContent() {
 
     return (
         <section className="min-h-min w-full flex flex-col items-center pt-4 sm:pt-6 gap-6 sm:gap-12 pb-20">
-            <div className="gradient-blur-reverse">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
             <AnimatePresence mode="popLayout" transition={{ delay: 0 }}>
                 <motion.div
                     key={currentStep}

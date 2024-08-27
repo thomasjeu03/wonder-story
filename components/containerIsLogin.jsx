@@ -20,6 +20,14 @@ export default function ContainerIsLogin({ children }) {
                 <main className="flex flex-col items-center gap-6 w-full pt-10 sm:pt-12">
                     {children}
                 </main>
+                <div className="gradient-blur-reverse">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </>
         )
     }
