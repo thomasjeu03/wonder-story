@@ -47,7 +47,7 @@ export default function CaracterCard({ caracter, data, setData }) {
                 width={200}
                 priority
                 height={200}
-                style={{ aspectRatio: '5/4' }}
+                style={{ aspectRatio: '1' }}
                 quality={80}
             />
             {selected && (
