@@ -7,15 +7,15 @@ import {H3} from "@/components/typo/H3";
 import CaracterCard from "@/components/cards/CaracterCard";
 
 const caracters= [
-    {index: 0, label: 'Nina la Petite Fée', value: 'nina', img: '/img/caracters/0.jpg'},
+    {index: 0, label: 'the-pirate', value: 'pirate', img: '/img/caracters/0.jpg'},
     {index: 1, label: 'Milo le Chaton Magicien', value: 'milo', img: '/img/caracters/1.jpg'},
-    {index: 2, label: 'Pablo le Dinosaure Courageux', value: 'pablo', img: '/img/caracters/2.jpg'},
-    {index: 3, label: 'Oscar le Robot Rêveur', value: 'oscar', img: '/img/caracters/3.jpg'},
-    {index: 4, label: 'Luna la Sorcière Mystérieuse', value: 'luna', img: '/img/caracters/4.jpg'},
-    {index: 5, label: 'Zacharie le Zèbre', value: 'zacharie', img: '/img/caracters/5.jpg'},
-    {index: 6, label: 'Pico le Pingouin Inventeur', value: 'pico', img: '/img/caracters/6.jpg'},
-    {index: 7, label: 'Lola la Licorne Volante', value: 'lola', img: '/img/caracters/7.jpg'},
-    {index: 8, label: 'Gaspard le Hérisson Jardinier', value: 'gaspard', img: '/img/caracters/8.jpg'}
+    {index: 2, label: 'the-astronaut', value: 'astronaut', img: '/img/caracters/2.jpg'},
+    {index: 3, label: 'the-magician', value: 'magician', img: '/img/caracters/3.jpg'},
+    {index: 4, label: 'the-princess', value: 'princess', img: '/img/caracters/4.jpg'},
+    {index: 5, label: 'the-knight', value: 'knight', img: '/img/caracters/5.jpg'},
+    {index: 6, label: 'the-dinosaur', value: 'dinosaur', img: '/img/caracters/6.jpg'},
+    {index: 7, label: 'the-robot', value: 'robot', img: '/img/caracters/7.jpg'},
+    {index: 8, label: 'the-superhero', value: 'superhero', img: '/img/caracters/8.jpg'}
 ]
 
 export default function Step2({ data, setData }) {

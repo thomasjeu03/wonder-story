@@ -462,6 +462,78 @@
         "it": "Soprannaturale",
         "de": "Übernatürlich"
       }
+    },
+    {
+      "tag": "the-pirate",
+      "t": {
+        "en": "The Pirate",
+        "fr": "Le Pirate",
+        "it": "Il Pirata",
+        "de": "Der Pirat"
+      }
+    },
+    {
+      "tag": "the-astronaut",
+      "t": {
+        "en": "The Astronaut",
+        "fr": "L'Astronaute",
+        "it": "L'Astronauta",
+        "de": "Der Astronaut"
+      }
+    },
+    {
+      "tag": "the-magician",
+      "t": {
+        "en": "The Magician",
+        "fr": "Le Magicien",
+        "it": "Il Mago",
+        "de": "Der Magier"
+      }
+    },
+    {
+      "tag": "the-princess",
+      "t": {
+        "en": "The Princess",
+        "fr": "La Princesse",
+        "it": "La Principessa",
+        "de": "Die Prinzessin"
+      }
+    },
+    {
+      "tag": "the-knight",
+      "t": {
+        "en": "The Knight",
+        "fr": "Le Chevalier",
+        "it": "Il Cavaliere",
+        "de": "Der Ritter"
+      }
+    },
+    {
+      "tag": "the-superhero",
+      "t": {
+        "en": "The Superhero",
+        "fr": "Le Super-héros",
+        "it": "Il Supereroe",
+        "de": "Der Superheld"
+      }
+    },
+    {
+      "tag": "the-dinosaur",
+      "t": {
+        "en": "The Dinosaur",
+        "fr": "Le Dinosaure",
+        "it": "Il Dinosauro",
+        "de": "Der Dinosaurier"
+      }
+    },
+    {
+      "tag": "the-robot",
+      "t": {
+        "en": "The Robot",
+        "fr": "Le Robot",
+        "it": "Il Robot",
+        "de": "Der Roboter"
+      }
     }
   ]
 }
