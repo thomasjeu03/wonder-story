@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import axios from 'axios';
 // TODO : optimiser les promptes
 export async function POST(request) {
-    const { data } = await request.json();
+    const { data, userId } = await request.json();
 
     try {
         const response = await axios.post(
@@ -43,7 +43,22 @@ export async function POST(request) {
 
         const storyContent = response.data.choices[0].message.content;
 
-        return NextResponse.json({ story: storyContent });
+        const newStory = await prisma.story.create({
+            data: {
+                userId: userId,
+                content: storyContent,
+                ageRange: data.ageRange,
+                caracters: data.caracters,
+                mainCaracter: data.mainCaracter,
+                places: data.places,
+                time: data.time,
+                moral: data.moral,
+                genres: data.genres,
+                locale: data.locale,
+            },
+        });
+
+        return NextResponse.json({ id: newStory.id });
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });

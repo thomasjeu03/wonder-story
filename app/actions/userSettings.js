@@ -20,9 +20,11 @@ export async function billingPortal({ userId }) {
         throw new Error("Stripe customer ID is missing");
     }
 
+    const URL = process.env.NODE_ENV === "development" ? process.env.NEXT_URL_DEVELOPMENT : process.env.NEXT_URL_PRODUCTION
+
     const session = await stripe.billingPortal.sessions.create({
         customer: user?.stripeCustomerId ?? "",
-        return_url: `https://wonder-story.app/account`
+        return_url: `${URL}/account`
     });
 
     if (!session.url) {

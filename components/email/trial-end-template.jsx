@@ -1,8 +1,10 @@
+const URL = process.env.NODE_ENV === "development" ? process.env.NEXT_URL_DEVELOPMENT : process.env.NEXT_URL_PRODUCTION
+
 export const TrialEndTemplate = ({ name }) => (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333', lineHeight: '1.6', backgroundColor: '#f4f4f4', padding: '20px' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto', backgroundColor: '#ffffff', padding: '20px', borderRadius: '10px', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-                <img src="https://wonder-story.app/img/logo.png" alt="Your Logo" style={{ width: '150px' }} />
+                <img src={`${URL}/img/logo.png`} alt="Your Logo" style={{ width: '150px' }} />
             </div>
 
             <h1 style={{ fontSize: '24px', color: '#222', marginBottom: '20px' }}>Bonjour, {name}!</h1>
@@ -15,7 +17,7 @@ export const TrialEndTemplate = ({ name }) => (
             </p>
 
             <div style={{ textAlign: 'center', margin: '30px 0' }}>
-                <a href="https://wonder-story.app/account" style={{
+                <a href={`${URL}/account`} style={{
                     display: 'inline-block',
                     backgroundColor: '#007bff',
                     color: '#ffffff',

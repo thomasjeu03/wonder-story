@@ -13,10 +13,12 @@ import Step3 from "@/components/generatorSteps/Step3";
 import Step4 from "@/components/generatorSteps/Step4";
 import {useUser} from "@/app/contexts/UserContext";
 import Step5 from "@/components/generatorSteps/Step5";
+import { useRouter } from "next/navigation";
 
 export default function HomeContent() {
     const { t, langue } = useLocale();
-    const {currentStep, setCurrentStep } = useUser();
+    const {currentStep, setCurrentStep, user } = useUser();
+    const router = useRouter();
 
     const [data, setData] = useState({
         locale: langue,
@@ -49,7 +51,6 @@ export default function HomeContent() {
     }, [currentStep]);
 
     const [error, setError] = useState('');
-    const [newStory, setNewStory] = useState('');
     const [loading, setLoading] = useState(false);
 
     const steps = [
@@ -57,7 +58,7 @@ export default function HomeContent() {
         {id: 2, content: <Step2 data={data} setData={setData} />},
         {id: 3, content: <Step3 data={data} setData={setData} />},
         {id: 4, content: <Step4 data={data} setData={setData} />},
-        {id: 5, content: <Step5 loading={loading} error={error} newStory={newStory} />},
+        {id: 5, content: <Step5 loading={loading} />},
     ];
 
     const handleNext = () => {
@@ -78,9 +79,8 @@ export default function HomeContent() {
         setError('');
         setLoading(true);
         try {
-            const response = await axios.post('/api/generate', { data });
-            setNewStory(response.data.story);
-            //TODO: Faire la redirection vers la page /story/[id] apres avoir créer la story dans Prisma
+            const response = await axios.post('/api/generate', { data, userId: user?.id });
+            router.push(`/story/${response.data.id}`);
         } catch (err) {
             setError('Error processing the data');
         } finally {

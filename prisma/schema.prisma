@@ -16,6 +16,7 @@ model User {
   emailVerified    DateTime?
   accounts         Account[]
   sessions         Session[]
+  storys           Story[]
 
   stripeCustomerId String?
   plan             UserPlan @default(FREE)
@@ -50,4 +51,26 @@ model Session {
   userId       Int
   user         User     @relation(fields: [userId], references: [id])
   @@unique([userId, expires])
+}
+
+model Story {
+  id              Int        @id @default(autoincrement())
+  userId          Int
+  content         String
+  ageRange        Int
+  caracters      String[]
+  mainCaracter   String
+  places          String[]
+  time            Int
+  moral           Boolean    @default(true)
+  genres          String[]
+  locale          String
+  createdAt       DateTime   @default(now())
+  title           String?
+  backgroundColor String?
+  coverImage      String?
+  isPublic        Boolean    @default(false)
+  audioUrl        String?
+  user            User       @relation(fields: [userId], references: [id])
+  @@index([userId])
 }

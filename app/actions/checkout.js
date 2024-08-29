@@ -24,6 +24,8 @@ export async function createCheckoutSession({ userId }) {
         throw new Error("Stripe customer ID is missing");
     }
 
+    const URL = process.env.NODE_ENV === "development" ? process.env.NEXT_URL_DEVELOPMENT : process.env.NEXT_URL_PRODUCTION
+
     const session = await stripe.checkout.sessions.create({
         customer: stripeCustomerId,
         mode: 'subscription',
@@ -35,8 +37,8 @@ export async function createCheckoutSession({ userId }) {
                 quantity: 1
             }
         ],
-        success_url: `https://wonder-story.app/success`,
-        cancel_url: `https://wonder-story.app/cancel`,
+        success_url: `${URL}/success`,
+        cancel_url: `${URL}/cancel`,
     });
 
     if (!session.url) {
