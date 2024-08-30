@@ -154,7 +154,7 @@ export default function HomeContent() {
                             bounce: 0.5,
                             delay: 1.5
                         }}
-                        className="mx-auto fixed z-30 bottom-10 left-0 flex w-full gap-3 px-3 items-center justify-center">
+                        className="mx-auto fixed z-30 bottom-10 left-0 flex w-full gap-3 px-6 items-center justify-center">
                         <Button
                             onClick={handlePrev}
                             className="w-full max-w-64"

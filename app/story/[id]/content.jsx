@@ -6,6 +6,8 @@ export default function StoryContent({data}) {
     return (
         <>
             <MarkdownRenderer story={data?.content} />
+            <br/>
+            <br/>
         </>
     );
 }
