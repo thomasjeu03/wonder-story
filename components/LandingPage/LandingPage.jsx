@@ -7,7 +7,7 @@ export default function LandingPage() {
         <>
             <header>
                 header langing
-                <Button variant='secondary' onClick={() => signIn("google")}>Sign in with Google</Button>
+                <Button onClick={() => signIn("google")}>Se connecter</Button>
             </header>
             <main>
                 main landing
