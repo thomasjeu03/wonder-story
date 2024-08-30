@@ -534,6 +534,78 @@
         "it": "Il Robot",
         "de": "Der Roboter"
       }
+    },
+    {
+      "tag": "features",
+      "t": {
+        "en": "Features",
+        "fr": "Caractéristiques",
+        "it": "Caratteristiche",
+        "de": "Funktionen"
+      }
+    },
+    {
+      "tag": "how-it-work",
+      "t": {
+        "en": "How it works?",
+        "fr": "Comment ça marche ?",
+        "it": "Come funziona?",
+        "de": "Wie es funktioniert?"
+      }
+    },
+    {
+      "tag": "price",
+      "t": {
+        "en": "Price",
+        "fr": "Prix",
+        "it": "Prezzo",
+        "de": "Preis"
+      }
+    },
+    {
+      "tag": "faqs",
+      "t": {
+        "en": "FAQ",
+        "fr": "FAQ",
+        "it": "Domande frequenti",
+        "de": "FAQs"
+      }
+    },
+    {
+      "tag": "create-story",
+      "t": {
+        "en": "Create story",
+        "fr": "Créez une histoire",
+        "it": "Crea una storia",
+        "de": "Erstelle eine Geschichte"
+      }
+    },
+    {
+      "tag": "login",
+      "t": {
+        "en": "Login",
+        "fr": "Connexion",
+        "it": "Accedi",
+        "de": "Anmelden"
+      }
+    },
+    {
+      "tag": "landing-hero-subtitle",
+      "t": {
+        "en": "Offer your children unique and personalized adventures that will spark their imagination",
+        "fr": "Offrez à vos enfants des aventures uniques et personnalisées qui éveilleront leur imagination",
+        "it": "Offri ai tuoi bambini avventure uniche e personalizzate che stimoleranno la loro immaginazione",
+        "de": "Bieten Sie Ihren Kindern einzigartige und personalisierte Abenteuer, die ihre Fantasie anregen"
+      }
+    },
+    {
+      "tag": "landing-hero-title",
+      "t": {
+        "en": "Create magical stories for your children with AI",
+        "fr": "Créez des histoires magiques pour vos enfants avec l'IA",
+        "it": "Crea storie magiche per i tuoi bambini con l'intelligenza artificiale",
+        "de": "Erstellen Sie mit KI magische Geschichten für Ihre Kinder"
+      }
     }
   ]
 }
