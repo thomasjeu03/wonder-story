@@ -55,7 +55,7 @@ export default function LandingPage() {
             <main className="w-full flex flex-col justify-start items-center gap-52 mt-52 mb-52">
                 <section className="w-full gap-8 flex max-w-5xl">
                     <div className="w-full flex flex-col gap-4">
-                        <h2>Notre générateur d'histoires</h2>
+                        <h2>Notre générateur d histoires</h2>
                         <h3>Des histoires personnalisées, conçues pour inspirer et éduquer.</h3>
                     </div>
                     <div>
