@@ -1,8 +1,12 @@
 import prisma from '@/lib/prisma';
 
 export async function GET(req) {
-    const { where = '{}', offset = '0', limit = '15', orderBy = '{}' } = req.url || {};
-    // TODO: faire fonctionner les params
+    const url = new URL(req.url);
+    const where = url.searchParams.get('where') || '{}';
+    const orderBy = url.searchParams.get('orderBy') || '{}';
+    const offset = url.searchParams.get('offset') || '0';
+    const limit = url.searchParams.get('limit') || '15';
+
     try {
         let parsedWhere;
         let parsedOrderBy;

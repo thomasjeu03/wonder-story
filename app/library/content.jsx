@@ -40,7 +40,7 @@ export default function LibraryContent() {
     const { t } = useLocale();
     const [stories, setStories] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [limit, setLimit] = useState(15)
+    const [limit, setLimit] = useState(20)
     const [offset, setOffset] = useState(0)
 
     useEffect(() => {
