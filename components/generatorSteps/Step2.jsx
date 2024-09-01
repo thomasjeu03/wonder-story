@@ -7,15 +7,24 @@ import {H3} from "@/components/typo/H3";
 import CaracterCard from "@/components/cards/CaracterCard";
 
 const caracters= [
-    {index: 0, label: 'the-pirate', value: 'pirate', img: '/img/caracters/0.jpg'},
-    {index: 1, label: 'Milo le Chaton Magicien', value: 'milo', img: '/img/caracters/1.jpg'},
+    {index: 0, label: 'the-policewoman', value: 'policewoman', img: '/img/caracters/0.jpg'},
+    {index: 1, label: 'the-worker', value: 'worker', img: '/img/caracters/1.jpg'},
     {index: 2, label: 'the-astronaut', value: 'astronaut', img: '/img/caracters/2.jpg'},
-    {index: 3, label: 'the-magician', value: 'magician', img: '/img/caracters/3.jpg'},
-    {index: 4, label: 'the-princess', value: 'princess', img: '/img/caracters/4.jpg'},
-    {index: 5, label: 'the-knight', value: 'knight', img: '/img/caracters/5.jpg'},
-    {index: 6, label: 'the-dinosaur', value: 'dinosaur', img: '/img/caracters/6.jpg'},
-    {index: 7, label: 'the-robot', value: 'robot', img: '/img/caracters/7.jpg'},
-    {index: 8, label: 'the-superhero', value: 'superhero', img: '/img/caracters/8.jpg'}
+    {index: 3, label: 'the-ballerina-dancer', value: 'dancer', img: '/img/caracters/3.jpg'},
+    {index: 4, label: 'the-doctoress', value: 'doctoress', img: '/img/caracters/4.jpg'},
+    {index: 5, label: 'the-fireman', value: 'fireman', img: '/img/caracters/5.jpg'},
+    {index: 6, label: 'the-gardener', value: 'gardener', img: '/img/caracters/6.jpg'},
+    {index: 7, label: 'the-farmer', value: 'farmer', img: '/img/caracters/7.jpg'},
+    {index: 8, label: 'the-cook', value: 'cook', img: '/img/caracters/8.jpg'},
+    {index: 9, label: 'the-kitten', value: 'kitten', img: '/img/caracters/9.jpg'},
+    {index: 10, label: 'the-dog', value: 'dog', img: '/img/caracters/10.jpg'},
+    {index: 11, label: 'the-fox', value: 'fox', img: '/img/caracters/11.jpg'},
+    {index: 12, label: 'the-owl', value: 'owl', img: '/img/caracters/12.jpg'},
+    {index: 13, label: 'the-koala', value: 'koala', img: '/img/caracters/13.jpg'},
+    {index: 14, label: 'the-otter', value: 'otter', img: '/img/caracters/14.jpg'},
+    {index: 15, label: 'the-red-panda', value: 'red panda', img: '/img/caracters/15.jpg'},
+    {index: 16, label: 'the-mouse', value: 'mouse', img: '/img/caracters/16.jpg'},
+    {index: 17, label: 'the-lioness', value: 'lioness', img: '/img/caracters/17.jpg'}
 ]
 
 export default function Step2({ data, setData }) {
