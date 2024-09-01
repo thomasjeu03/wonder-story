@@ -536,12 +536,12 @@
       }
     },
     {
-      "tag": "features",
+      "tag": "benefits",
       "t": {
-        "en": "Features",
-        "fr": "Caractéristiques",
-        "it": "Caratteristiche",
-        "de": "Funktionen"
+        "en": "Benefits",
+        "fr": "Bénéfices",
+        "it": "Vantaggi",
+        "de": "Vorteile"
       }
     },
     {
@@ -608,7 +608,7 @@
       }
     },
     {
-      "tag": "section-features-title",
+      "tag": "section-benefits-title",
       "t": {
         "en": "Our story generator",
         "fr": "Notre générateur d histoires",
@@ -617,7 +617,7 @@
       }
     },
     {
-      "tag": "section-features-subtitle",
+      "tag": "section-benefits-subtitle",
       "t": {
         "en": "Personalized stories, designed to inspire and educate",
         "fr": "Des histoires personnalisées, conçues pour inspirer et éduquer",

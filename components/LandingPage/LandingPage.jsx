@@ -24,7 +24,7 @@ export default function LandingPage() {
                         </a>
                         <ul className="flex flex-row gap-8 items-center justify-end">
                             <li>
-                                <a href="/#features" className="text-gray-400 hover:text-gray-200">{t('features')}</a>
+                                <a href="/#benefits" className="text-gray-400 hover:text-gray-200">{t('benefits')}</a>
                             </li>
                             <li>
                                 <a href="/#how-it-works"
@@ -43,9 +43,11 @@ export default function LandingPage() {
                     </div>
                 </nav>
                 <h1 className="sr-only">Wonder Story - Générateur d histoires pour enfants</h1>
-                <div className="flex flex-col items-center gap-9 w-full max-w-2xl">
-                    <h2 className="text-center font-semibold text-5xl text-balance">{t('landing-hero-title')}</h2>
-                    <h3 className="text-center text-gray-400 text-balance">{t('landing-hero-subtitle')}</h3>
+                <div className="flex flex-col items-center gap-12 w-full max-w-2xl">
+                    <div className="flex flex-col items-center gap-6 w-full">
+                        <h2 className="text-center font-semibold text-5xl text-balance">{t('landing-hero-title')}</h2>
+                        <h3 className="text-center text-gray-400 text-balance max-w-xl">{t('landing-hero-subtitle')}</h3>
+                    </div>
                     <Button size="lg" onClick={() => signIn("google")}>
                         {t('create-story')}
                         <Sparkles/>
@@ -53,10 +55,10 @@ export default function LandingPage() {
                 </div>
             </header>
             <main className="w-full flex flex-col justify-start items-center gap-96 mt-96 mb-96">
-                <section id='features' className="w-full flex-col gap-12 flex max-w-5xl">
+                <section id='benefits' className="w-full flex-col gap-12 flex max-w-5xl">
                     <div className="w-full flex flex-col gap-4">
-                        <h2 className="font-handwriting text-5xl">{t('section-features-title')}</h2>
-                        <h3 className="text-2xl text-gray-400">{t('section-features-subtitle')}</h3>
+                        <h2 className="font-handwriting text-5xl">{t('section-benefits-title')}</h2>
+                        <h3 className="text-2xl text-gray-400">{t('section-benefits-subtitle')}</h3>
                     </div>
                     <div>
 d

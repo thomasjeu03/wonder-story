@@ -85,6 +85,7 @@ export default function LibraryContent() {
                                     <p className="text-xs text-gray-400">{formatDate(story?.createdAt, true, false)}</p>
                                 </div>
                                 <h2 className="text-base font-semibold line-clamp-1">{getTitle(story)}</h2>
+                                {/*TODO: menu -> delete button (with alert)*/}
                             </Link>
                         ))
                     ) : (
