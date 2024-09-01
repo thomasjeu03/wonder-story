@@ -3,6 +3,7 @@ import {signIn} from "next-auth/react";
 
 import logoWhite from   "../../public/img/logo-white.png";
 import bgLandingPage from   "../../public/img/bg-landing-page.png";
+import mockup from   "../../public/img/mockup.png";
 import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
 import {Sparkles} from "lucide-react";
@@ -13,7 +14,7 @@ export default function LandingPage() {
     return (
         <>
             <header className="flex flex-col items-center justify-start w-full pt-52">
-                <Image src={bgLandingPage} priority quality={100} className="pointer-events-none absolute top-0 left-0 w-full h-auto -z-10"
+                <Image src={bgLandingPage} priority quality={100} width={2000} className="pointer-events-none absolute top-0 left-0 w-full h-auto -z-10"
                        alt='background image Wonder Story landing page'/>
                 <nav
                     className="w-full flex items-center justify-center fixed top-0 z-50 left-0 border-b border-gray-700 bg-background/70 backdrop-blur-lg">
@@ -53,8 +54,12 @@ export default function LandingPage() {
                         <Sparkles/>
                     </Button>
                 </div>
+                {/*mockup fait sur shots.so*/}
+                {/*TODO: refaire le mockup when app is ready*/}
+                <Image src={mockup} priority quality={100} width={1000} className="mt-16"
+                       alt='Wonder Story mockup'/>
             </header>
-            <main className="w-full flex flex-col justify-start items-center gap-96 mt-96 mb-96">
+            <main className="w-full flex flex-col justify-start items-center gap-48 mt-48 mb-48">
                 <section id='benefits' className="w-full flex-col gap-12 flex max-w-5xl">
                     <div className="w-full flex flex-col gap-4">
                         <h2 className="font-handwriting text-5xl">{t('section-benefits-title')}</h2>
