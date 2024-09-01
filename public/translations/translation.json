@@ -563,6 +563,177 @@
       }
     },
     {
+      "tag": "sunday",
+      "t": {
+        "en": "Sunday",
+        "fr": "Dimanche",
+        "it": "Domenica",
+        "de": "Sonntag"
+      }
+    },
+    {
+      "tag": "monday",
+      "t": {
+        "en": "Monday",
+        "fr": "Lundi",
+        "it": "Lunedì",
+        "de": "Montag"
+      }
+    },
+    {
+      "tag": "tuesday",
+      "t": {
+        "en": "Tuesday",
+        "fr": "Mardi",
+        "it": "Martedi",
+        "de": "Dienstag"
+      }
+    },
+    {
+      "tag": "wednesday",
+      "t": {
+        "en": "Wednesday",
+        "fr": "Mercredi",
+        "it": "Mercoledì",
+        "de": "Mittwoch"
+      }
+    },
+    {
+      "tag": "thursday",
+      "t": {
+        "en": "Thursday",
+        "fr": "Jeudi",
+        "it": "Giovedì",
+        "de": "Donnerstag"
+      }
+    },
+    {
+      "tag": "friday",
+      "t": {
+        "en": "Friday",
+        "fr": "Vendredi",
+        "it": "Venerdi",
+        "de": "Freitag"
+      }
+    },
+    {
+      "tag": "saturday",
+      "t": {
+        "en": "Saturday",
+        "fr": "Samedi",
+        "it": "Sabato",
+        "de": "Samstag"
+      }
+    },
+    {
+      "tag": "january",
+      "t": {
+        "en": "January",
+        "fr": "Janvier",
+        "it": "Gennaio",
+        "de": "Januar"
+      }
+    },
+    {
+      "tag": "february",
+      "t": {
+        "en": "February",
+        "fr": "Février",
+        "it": "Febbraio",
+        "de": "Februar"
+      }
+    },
+    {
+      "tag": "march",
+      "t": {
+        "en": "March",
+        "fr": "Mars",
+        "it": "Marzo",
+        "de": "März"
+      }
+    },
+    {
+      "tag": "april",
+      "t": {
+        "en": "April",
+        "fr": "Avril",
+        "it": "Aprile",
+        "de": "April"
+      }
+    },
+    {
+      "tag": "may",
+      "t": {
+        "en": "May",
+        "fr": "Mai",
+        "it": "Maggio",
+        "de": "Mai"
+      }
+    },
+    {
+      "tag": "june",
+      "t": {
+        "en": "June",
+        "fr": "Juin",
+        "it": "Giugno",
+        "de": "Juni"
+      }
+    },
+    {
+      "tag": "july",
+      "t": {
+        "en": "July",
+        "fr": "Juillet",
+        "it": "Luglio",
+        "de": "Juli"
+      }
+    },
+    {
+      "tag": "august",
+      "t": {
+        "en": "August",
+        "fr": "Août",
+        "it": "Agosto",
+        "de": "August"
+      }
+    },
+    {
+      "tag": "september",
+      "t": {
+        "en": "September",
+        "fr": "Septembre",
+        "it": "Settembre",
+        "de": "September"
+      }
+    },
+    {
+      "tag": "october",
+      "t": {
+        "en": "October",
+        "fr": "Octobre",
+        "it": "Ottobre",
+        "de": "Oktober"
+      }
+    },
+    {
+      "tag": "november",
+      "t": {
+        "en": "November",
+        "fr": "Novembre",
+        "it": "Novembre",
+        "de": "November"
+      }
+    },
+    {
+      "tag": "december",
+      "t": {
+        "en": "December",
+        "fr": "Décembre",
+        "it": "Dicembre",
+        "de": "Dezember"
+      }
+    },
+    {
       "tag": "faqs",
       "t": {
         "en": "FAQ",
@@ -694,6 +865,24 @@
         "fr": "Aucune histoire créée",
         "it": "Nessuna storia creata",
         "de": "Keine Geschichte erstellt"
+      }
+    },
+    {
+      "tag": "start-premium",
+      "t": {
+        "en": "Start Premium",
+        "fr": "S'abonner à Premium",
+        "it": "Inizia Premium",
+        "de": "Starte Premium"
+      }
+    },
+    {
+      "tag": "start-free-trial",
+      "t": {
+        "en": "Start free trial",
+        "fr": "Commencer l'essai gratuit",
+        "it": "Inizia la prova gratuita",
+        "de": "Starte kostenlose Testversion"
       }
     }
   ]

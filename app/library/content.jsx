@@ -12,21 +12,28 @@ import {Sparkles} from "lucide-react";
 const formatDate = (dateString, showHours = true, showDate = true) => {
     const date = new Date(dateString);
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const {t} = useLocale();
+
     const hours = date.getHours().toString().padStart(2, '0');
     const minutes = date.getMinutes().toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const year = date.getFullYear();
+
+    const daysOfWeek = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    const months = ['january', 'february', 'march', 'april', 'mai', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+    const dayOfWeek = daysOfWeek[date.getDay()];
+    const day = date.getDate();
+    const month = months[date.getMonth()];
 
     if (showHours && !showDate) {
         return `${hours}:${minutes}`;
     }
 
     if (showDate && !showHours) {
-        return `${day}/${month}/${year}`;
+        return `${t(dayOfWeek)} ${day} ${t(month)}`;
     }
 
-    return `${hours}:${minutes} ${day}/${month}/${year}`;
+    return `${hours}:${minutes} ${t(dayOfWeek)} ${day} ${t(month)}`;
 };
 
 export const getTitle = (story) => {
@@ -70,16 +77,16 @@ export default function LibraryContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
                 {loading ? (
                     <>
-                        <Skeleton className="w-full rounded-lg" style={{height: '60px'}}/>
-                        <Skeleton className="w-full rounded-lg" style={{height: '60px', opacity: '0.7'}}/>
-                        <Skeleton className="w-full rounded-lg" style={{height: '60px', opacity: '0.3'}}/>
-                        <Skeleton className="w-full rounded-lg" style={{height: '60px', opacity: '0.1'}}/>
+                        <Skeleton className="w-full rounded-sm" style={{height: '58px'}}/>
+                        <Skeleton className="w-full rounded-sm" style={{height: '58px', opacity: '0.7'}}/>
+                        <Skeleton className="w-full rounded-sm" style={{height: '58px', opacity: '0.3'}}/>
+                        <Skeleton className="w-full rounded-sm" style={{height: '58px', opacity: '0.1'}}/>
                     </>
                 ) : (
                     stories && stories?.length > 0 ? (
                         stories.map((story, index) => (
                             <Link href={`/story/${story?.id}`} key={index}
-                                  className="w-full flex flex-col rounded-sm pt-3 pl-3 pr-3 pb-2 bg-secondary backdrop-blur-sm shadow-lg hover:bg-secondary/80 outline-dashed outline-1 outline-gray-600 -outline-offset-4 hover:outline-gray-600">
+                                  className="w-full flex flex-col rounded-sm pt-2.5 pl-3 pr-3 pb-2 bg-secondary backdrop-blur-sm shadow-lg hover:bg-secondary/80 outline-dashed outline-1 outline-gray-600 -outline-offset-4 hover:outline-gray-600">
                                 <div className="w-full flex flex-row items-center justify-between">
                                     <p className="text-xs text-gray-400">{formatDate(story?.createdAt, false, true)}</p>
                                     <p className="text-xs text-gray-400">{formatDate(story?.createdAt, true, false)}</p>

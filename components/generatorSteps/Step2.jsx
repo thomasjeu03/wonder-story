@@ -6,8 +6,13 @@ import { useLocale } from "@/app/contexts/LocaleContext";
 import {H3} from "@/components/typo/H3";
 import CaracterCard from "@/components/cards/CaracterCard";
 
+const caracterTags = [
+    {label: 'historical', color: '#9f13be', icone: 'Hourglass'},
+    {label: 'animals', color: '#27a40d', icone: 'PawPrint'},
+]
+
 const caracters= [
-    {index: 0, label: 'the-policewoman', value: 'policewoman', img: '/img/caracters/0.jpg'},
+    {index: 0, label: 'the-policewoman', value: 'policewoman', img: '/img/caracters/0.jpg', tag: 'historical'},
     {index: 1, label: 'the-worker', value: 'worker', img: '/img/caracters/1.jpg'},
     {index: 2, label: 'the-astronaut', value: 'astronaut', img: '/img/caracters/2.jpg'},
     {index: 3, label: 'the-ballerina-dancer', value: 'dancer', img: '/img/caracters/3.jpg'},
@@ -63,6 +68,17 @@ export default function Step2({ data, setData }) {
                 <H2>{t('choose-your-caracters')}</H2>
                 <H3 className="text-gray-400">{t('choose-your-caracters-description')}</H3>
             </div>
+
+            {/*TODO: faire un systeme de tags*/}
+            {/*<div className="flex flex-row gap-3 w-full max-w-4xl">*/}
+            {/*    {caracterTags.map((caracterTag, index) => (*/}
+            {/*        <button type="button" key={index}*/}
+            {/*                className="rounded-2xl px-3 text-white"*/}
+            {/*                style={{ border: `1px solid ${caracterTag?.color}` }}>*/}
+            {/*            {t(caracterTag?.label)}*/}
+            {/*        </button>*/}
+            {/*    ))}*/}
+            {/*</div>*/}
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full gap-2 sm:gap-3 md:gap-4 max-w-5xl">
                 {caracters.map((caracter) => (

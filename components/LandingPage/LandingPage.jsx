@@ -4,9 +4,10 @@ import {signIn} from "next-auth/react";
 import logoWhite from   "../../public/img/logo-white.png";
 import bgLandingPage from   "../../public/img/bg-landing-page.png";
 import mockup from   "../../public/img/mockup.png";
+import premiumCard from   "../../public/img/premiumCard.png";
 import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
-import {Sparkles} from "lucide-react";
+import {Sparkles, XIcon, CheckIcon} from "lucide-react";
 
 export default function LandingPage() {
     const {t} = useLocale();
@@ -95,17 +96,71 @@ d
                         <h2 className="text-center font-handwriting text-5xl text-balance">{t('section-price-title')}</h2>
                         <h3 className="text-center text-2xl text-gray-400 text-balance">{t('section-price-subtitle')}</h3>
                     </div>
-                    <div className="w-full flex flex-row gap-8">
+                    <div className="w-full grid grid-cols-3 gap-6">
                         <div className="price-card">
-                            <h4 className='text-gray-300 text-2xl'>To test</h4>
-                        </div>
-                        <div className="price-card">
-                            <h4 className='text-gray-300 text-2xl'>Premium</h4>
+                            <h4 className='text-gray-300 text-2xl'>Essai Gratuit</h4>
+                            <p className="text-gray-400 text-sm">Essayez gratuitement et découvrez la magie de nos histoires personnalisées</p>
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li className="flex flex-row gap-2"><CheckIcon color={'lightgreen'}/> Jusqu à 3
+                                    histoires générées
+                                </li>
+                                <li className="flex flex-row gap-2"><CheckIcon color={'lightgreen'}/> Personnalisation
+                                    de base des histoires
+                                </li>
+                                <li className="flex flex-row gap-2"><XIcon color={'red'}/> Accès à la bibliothèque
+                                    personnelle
+                                </li>
+                                <li className="flex flex-row gap-2"><XIcon color={'red'}/> Histoires illimitées</li>
+                                <li className="flex flex-row gap-2"><XIcon color={'red'}/> Téléchargement des histoires
+                                    en PDF
+                                </li>
+                                <li className="flex flex-row gap-2"><XIcon color={'red'}/> Personnalisation avancée des
+                                    histoires
+                                </li>
                             </ul>
+                            <Button size="lg" variant="secondary" className="w-full" onClick={() => signIn("google")}>
+                                {t('start-free-trial')}
+                            </Button>
+                        </div>
+                        <div className="price-card price-card--premium col-span-2 p-0 flex flex-row">
+                            <div className="flex flex-col gap-6 w-full p-6">
+                                <h4 className='text-gray-300 text-2xl'>Premium</h4>
+                                <div className="flex flex-col items-center justify-center gap-3 w-full">
+                                    <p className=" text-gray-400">
+                                        <span className="font-handwriting text-5xl text-foreground">4,99€</span> /mois
+                                    </p>
+                                    <p className="text-gray-400 text-sm text-center">
+                                        Accédez à des histoires illimitées et plongez dans un monde d aventures personnalisées
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li className="flex flex-row gap-2">
+                                        <CheckIcon color={'lightgreen'}/>
+                                        Histoires générées illimitées
+                                    </li>
+                                    <li className="flex flex-row gap-2">
+                                        <CheckIcon color={'lightgreen'}/>
+                                        Personnalisation avancée des histoires
+                                    </li>
+                                    <li className="flex flex-row gap-2">
+                                        <CheckIcon color={'lightgreen'} />
+                                        Accès complet à la bibliothèque personnelle
+                                    </li>
+                                    <li className="flex flex-row gap-2">
+                                        <CheckIcon color={'lightgreen'}/>
+                                        Téléchargement des histoires en PDF
+                                    </li>
+                                </ul>
+                                <Button size="lg" className="w-full" onClick={() => signIn("google")}>
+                                    {t('start-premium')}
+                                </Button>
+                                <p className="text-xs text-gray-500 text-center text-balance">Renouvellement
+                                    automatique, annulation à tout moment</p>
+                            </div>
+                            <div className="w-full h-full">
+                                <Image src={premiumCard} priority quality={100} className="w-full h-full object-cover"
+                                       alt='Wonder Story premium price'/>
+                            </div>
                         </div>
                     </div>
                 </section>

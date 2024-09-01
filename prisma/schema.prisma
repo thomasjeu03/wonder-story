@@ -74,3 +74,20 @@ model Story {
   user            User       @relation(fields: [userId], references: [id])
   @@index([userId])
 }
+
+model Caracter {
+  id            Int          @id @default(autoincrement())
+  name          Json
+  image         String?
+  caracterTagId Int?
+  caracterTag   CaracterTag? @relation(fields: [caracterTagId], references: [id])
+  @@index([caracterTagId])
+}
+
+model CaracterTag {
+  id       Int          @id @default(autoincrement())
+  name     Json
+  color    String?
+  icon     String?
+  caracter Caracter[]
+}
