@@ -606,6 +606,95 @@
         "it": "Crea storie magiche per i tuoi bambini con l'intelligenza artificiale",
         "de": "Erstellen Sie mit KI magische Geschichten für Ihre Kinder"
       }
+    },
+    {
+      "tag": "section-features-title",
+      "t": {
+        "en": "Our story generator",
+        "fr": "Notre générateur d histoires",
+        "it": "Il nostro generatore di storie",
+        "de": "Unser Story-Generator"
+      }
+    },
+    {
+      "tag": "section-features-subtitle",
+      "t": {
+        "en": "Personalized stories, designed to inspire and educate",
+        "fr": "Des histoires personnalisées, conçues pour inspirer et éduquer",
+        "it": "Storie personalizzate, progettate per ispirare ed educare",
+        "de": "Personalisierte Geschichten, die inspirieren und aufklären sollen"
+      }
+    },
+    {
+      "tag": "section-steps-title",
+      "t": {
+        "en": "How does it work?",
+        "fr": "Comment ca marche ?",
+        "it": "Come funziona?",
+        "de": "Wie funktioniert es?"
+      }
+    },
+    {
+      "tag": "section-steps-subtitle",
+      "t": {
+        "en": "Create stories in a few simple steps.",
+        "fr": "Créez des histoires en quelques étapes simples",
+        "it": "Crea storie in pochi semplici passaggi",
+        "de": "Erstellen Sie Geschichten in wenigen einfachen Schritten"
+      }
+    },
+    {
+      "tag": "section-testimonials-title",
+      "t": {
+        "en": "Delighted parents and children",
+        "fr": "Des parents et des enfants enchantés",
+        "it": "Genitori e figli contentissimi",
+        "de": "Begeisterte Eltern und Kinder"
+      }
+    },
+    {
+      "tag": "section-testimonials-subtitle",
+      "t": {
+        "en": "Find out what families are saying about us",
+        "fr": "Découvrez ce que les familles disent de nous",
+        "it": "Scopri cosa dicono di noi le famiglie",
+        "de": "Erfahren Sie, was Familien über uns sagen"
+      }
+    },{
+      "tag": "section-price-title",
+      "t": {
+        "en": "Stories without limits, at your fingertips",
+        "fr": "Des histoires sans limites, à portée de main",
+        "it": "Storie senza limiti, a portata di mano",
+        "de": "Geschichten ohne Grenzen, direkt zur Hand"
+      }
+    },
+    {
+      "tag": "section-price-subtitle",
+      "t": {
+        "en": "Enjoy 3 free story generations, then unlock unlimited tales for only €4.99/month with our premium offer.",
+        "fr": "Profitez de 3 générations gratuites pour tester, puis débloquez des récits illimités pour seulement 4,99 €/mois avec notre offre premium.",
+        "it": "Approfitta di 3 generazioni gratuite per provare, poi sblocca racconti illimitati per soli 4,99 €/mese con la nostra offerta premium.",
+        "de": "Genießen Sie 3 kostenlose Geschichtengenerationen und schalten Sie unbegrenzte Geschichten für nur 4,99 €/Monat mit unserem Premium-Angebot frei."
+      }
+    },
+    {
+      "tag": "create-your-first-story",
+      "t": {
+        "en": "Create your first story",
+        "fr": "Créez votre première histoire",
+        "it": "Crea la tua prima storia",
+        "de": "Erstelle deine erste Geschichte"
+      }
+    },
+    {
+      "tag": "no-story-created",
+      "t": {
+        "en": "No story created",
+        "fr": "Aucune histoire créée",
+        "it": "Nessuna storia creata",
+        "de": "Keine Geschichte erstellt"
+      }
     }
   ]
 }

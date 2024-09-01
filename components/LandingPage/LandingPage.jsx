@@ -44,31 +44,62 @@ export default function LandingPage() {
                 </nav>
                 <h1 className="sr-only">Wonder Story - Générateur d histoires pour enfants</h1>
                 <div className="flex flex-col items-center gap-9 w-full max-w-2xl">
-                    <h2 className="text-center font-semibold text-5xl">{t('landing-hero-title')}</h2>
-                    <h3 className="text-center text-gray-400">{t('landing-hero-subtitle')}</h3>
+                    <h2 className="text-center font-semibold text-5xl text-balance">{t('landing-hero-title')}</h2>
+                    <h3 className="text-center text-gray-400 text-balance">{t('landing-hero-subtitle')}</h3>
                     <Button size="lg" onClick={() => signIn("google")}>
                         {t('create-story')}
                         <Sparkles/>
                     </Button>
                 </div>
             </header>
-            <main className="w-full flex flex-col justify-start items-center gap-52 mt-52 mb-52">
-                <section className="w-full gap-8 flex max-w-5xl">
+            <main className="w-full flex flex-col justify-start items-center gap-96 mt-96 mb-96">
+                <section id='features' className="w-full flex-col gap-12 flex max-w-5xl">
                     <div className="w-full flex flex-col gap-4">
-                        <h2>Notre générateur d histoires</h2>
-                        <h3>Des histoires personnalisées, conçues pour inspirer et éduquer.</h3>
+                        <h2 className="font-handwriting text-5xl">{t('section-features-title')}</h2>
+                        <h3 className="text-2xl text-gray-400">{t('section-features-subtitle')}</h3>
                     </div>
                     <div>
-
+d
                     </div>
                 </section>
-                <section className="w-full gap-8 flex justify-start items-start max-w-5xl">
+
+                <section id="how-it-works" className="w-full gap-12 flex flex-col items-center max-w-5xl">
                     <div className="w-full flex flex-col gap-4">
-                        <h2 className="text-center">Comment ca marche ?</h2>
-                        <h3 className="text-center">Créez des histoires en quelques étapes simples.</h3>
+                        <h2 className="text-center font-handwriting text-5xl">{t('section-steps-title')}</h2>
+                        <h3 className="text-center text-2xl text-gray-400">{t('section-steps-subtitle')}</h3>
                     </div>
                     <div>
+d
+                    </div>
+                </section>
 
+                <section id='testimonials' className="w-full gap-12 flex flex-col max-w-5xl">
+                    <div className="w-full flex flex-col gap-4">
+                        <h2 className="font-handwriting text-5xl">{t('section-testimonials-title')}</h2>
+                        <h3 className="text-2xl text-gray-400">{t('section-testimonials-subtitle')}</h3>
+                    </div>
+                    <div>
+d
+                    </div>
+                </section>
+
+                <section id='price' className="w-full gap-12 flex flex-col justify-start items-start max-w-5xl">
+                    <div className="w-full flex flex-col gap-4">
+                        <h2 className="text-center font-handwriting text-5xl text-balance">{t('section-price-title')}</h2>
+                        <h3 className="text-center text-2xl text-gray-400 text-balance">{t('section-price-subtitle')}</h3>
+                    </div>
+                    <div className="w-full flex flex-row gap-8">
+                        <div className="price-card">
+                            <h4 className='text-gray-300 text-2xl'>To test</h4>
+                        </div>
+                        <div className="price-card">
+                            <h4 className='text-gray-300 text-2xl'>Premium</h4>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </main>

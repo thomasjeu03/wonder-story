@@ -23,6 +23,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['SF-Pro', 'sans-serif'],
+                handwriting: ['California-Vibes', 'cursive'],
             },
             colors: {
                 border: "hsl(var(--border))",
