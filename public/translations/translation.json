@@ -994,6 +994,15 @@
       }
     },
     {
+      "tag": "made_by",
+      "t": {
+        "en": "Made with love by",
+        "fr": "Fait avec soin par",
+        "it": "Fatto con amore da",
+        "de": "Hervorragend von"
+      }
+    },
+    {
       "tag": "try_for_free_discover_magic",
       "t": {
         "en": "Try for free and discover the magic of our personalized stories",
