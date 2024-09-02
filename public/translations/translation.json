@@ -884,6 +884,123 @@
         "it": "Inizia la prova gratuita",
         "de": "Starte kostenlose Testversion"
       }
+    },
+    {
+      "tag": "month",
+      "t": {
+        "en": "month",
+        "fr": "mois",
+        "it": "mese",
+        "de": "Monat"
+      }
+    },
+    {
+      "tag": "subtitle-card-premium",
+      "t": {
+        "en": "Access unlimited stories and immerse yourself in a world of personalized adventures",
+        "fr": "Accédez à des histoires illimitées et plongez dans un monde d'aventures personnalisées",
+        "it": "Accedi a storie illimitate e immergiti in un mondo di avventure personalizzate",
+        "de": "Greifen Sie auf unbegrenzte Geschichten zu und tauchen Sie ein in eine Welt personalisierter Abenteuer"
+      }
+    },
+    {
+      "tag": "unlimited_story_generation",
+      "t": {
+        "en": "Unlimited story generation",
+        "fr": "Génération d'histoires illimitées",
+        "it": "Generazione illimitata di storie",
+        "de": "Unbegrenzte Geschichtengenerierung"
+      }
+    },
+    {
+      "tag": "advanced_story_customization",
+      "t": {
+        "en": "Advanced story customization",
+        "fr": "Personnalisation avancée des histoires",
+        "it": "Personalizzazione avanzata delle storie",
+        "de": "Erweiterte Geschichtenanpassung"
+      }
+    },
+    {
+      "tag": "full_access_personal_library",
+      "t": {
+        "en": "Full access to personal library",
+        "fr": "Accès complet à la bibliothèque personnelle",
+        "it": "Accesso completo alla biblioteca personale",
+        "de": "Voller Zugriff auf die persönliche Bibliothek"
+      }
+    },
+    {
+      "tag": "story_download_pdf",
+      "t": {
+        "en": "Download stories in PDF",
+        "fr": "Téléchargement des histoires en PDF",
+        "it": "Scarica le storie in PDF",
+        "de": "Geschichten im PDF-Format herunterladen"
+      }
+    },
+    {
+      "tag": "automatic_renewal_no_commitment",
+      "t": {
+        "en": "Automatic renewal & no commitment",
+        "fr": "Renouvellement automatique & sans engagement",
+        "it": "Rinnovo automatico e senza impegno",
+        "de": "Automatische Verlängerung & keine Verpflichtung"
+      }
+    },
+    {
+      "tag": "unlimited_stories",
+      "t": {
+        "en": "Unlimited stories",
+        "fr": "Histoires illimitées",
+        "it": "Storie illimitate",
+        "de": "Unbegrenzte Geschichten"
+      }
+    },
+    {
+      "tag": "personal_library_access",
+      "t": {
+        "en": "Access to personal library",
+        "fr": "Accès à la bibliothèque personnelle",
+        "it": "Accesso alla biblioteca personale",
+        "de": "Zugang zur persönlichen Bibliothek"
+      }
+    },
+    {
+      "tag": "basic_story_customization",
+      "t": {
+        "en": "Basic story customization",
+        "fr": "Personnalisation de base des histoires",
+        "it": "Personalizzazione di base delle storie",
+        "de": "Grundlegende Geschichtenanpassung"
+      }
+    },
+    {
+      "tag": "up_to_three_stories_generated",
+      "t": {
+        "en": "Up to 3 stories generated",
+        "fr": "Jusqu'à 3 histoires générées",
+        "it": "Fino a 3 storie generate",
+        "de": "Bis zu 3 Geschichten generiert"
+      }
+    },
+    {
+      "tag": "free_trial",
+      "t": {
+        "en": "Free trial",
+        "fr": "Essai Gratuit",
+        "it": "Prova gratuita",
+        "de": "Kostenlose Testversion"
+      }
+    },
+    {
+      "tag": "try_for_free_discover_magic",
+      "t": {
+        "en": "Try for free and discover the magic of our personalized stories",
+        "fr": "Essayez gratuitement et découvrez la magie de nos histoires personnalisées",
+        "it": "Provalo gratuitamente e scopri la magia delle nostre storie personalizzate",
+        "de": "Probieren Sie es kostenlos aus und entdecken Sie die Magie unserer personalisierten Geschichten"
+      }
     }
   ]
 }
