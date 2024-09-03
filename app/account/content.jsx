@@ -7,9 +7,44 @@ import Image from 'next/image';
 import {BuyButton} from "@/components/buy/BuyButton";
 import {AccountSettingsButton} from "@/components/buy/UserSettings";
 import {useUser} from "@/app/contexts/UserContext";
+import {useState} from "react";
+import {Send} from "lucide-react";
 
 export default function AccountContent() {
     const { user, isPremium } = useUser();
+
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError(null);
+        setSuccess(false);
+
+        try {
+            const response = await fetch('/api/sendEmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: user?.name, email: user?.email }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSuccess(true);
+            } else {
+                throw new Error(data.error || 'Something went wrong');
+            }
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <>
@@ -27,7 +62,7 @@ export default function AccountContent() {
             <H2 className='text-center'>{user?.name}</H2>
             <p className='text-center'>{user?.email}</p>
             <p className={`rounded-md px-4 py-1 text-white 
-                    ${isPremium ? 'bg-yellow-600' : 'bg-green-600'}`}
+                        ${isPremium ? 'bg-yellow-600' : 'bg-green-600'}`}
             >
                 {user?.plan}
             </p>
@@ -41,6 +76,17 @@ export default function AccountContent() {
                     Sign out
                 </Button>
             </div>
+            <hr/>
+            {isPremium && (
+                <>
+                    <Button onClick={handleSubmit} type="button" disabled={loading}>
+                        {loading ? 'Sending...' : 'Send email test'}
+                        <Send size={18} />
+                    </Button>
+                    {error && <p style={{color: 'red'}}>Error: {error}</p>}
+                    {success && <p style={{color: 'green'}}>Email sent successfully!</p>}
+                </>
+            )}
         </>
     );
 }
