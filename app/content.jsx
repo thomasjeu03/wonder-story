@@ -14,6 +14,7 @@ import Step4 from "@/components/generatorSteps/Step4";
 import {useUser} from "@/app/contexts/UserContext";
 import Step5 from "@/components/generatorSteps/Step5";
 import { useRouter } from "next/navigation";
+import {getCaracters, getCaracterTags} from "@/lib/api";
 
 export default function HomeContent() {
     const { t, langue } = useLocale();
@@ -25,7 +26,6 @@ export default function HomeContent() {
         caracters: [],
         mainCaracter: '',
         places: [],
-        eras: [],
         ageRange: 5,
         time: 3,
         genres: [],
@@ -40,7 +40,6 @@ export default function HomeContent() {
                 caracters: [],
                 mainCaracter: '',
                 places: [],
-                eras: [],
                 ageRange: 5,
                 time: 3,
                 genres: [],
@@ -50,12 +49,51 @@ export default function HomeContent() {
         }
     }, [currentStep]);
 
+    const [caracterTags, setCaracterTags] = useState([]);
+    const [loadingCaracterTags, setLoadingCaracterTags] = useState(true);
+    const [limitCaracterTags, setLimitCaracterTags] = useState(20)
+    const [offsetCaracterTags, setOffsetCaracterTags] = useState(0)
+
+    const [caracters, setCaracters] = useState([]);
+    const [loadingCaracters, setLoadingCaracters] = useState(true);
+    const [limitCaracters, setLimitCaracters] = useState(100)
+    const [offsetCaracters, setOffsetCaracters] = useState(0)
+
+    useEffect(() => {
+        async function fetchCaracters() {
+            setLoadingCaracters(true);
+            try {
+                const response = await getCaracters({}, offsetCaracters, limitCaracters);
+                setCaracters(response);
+            } catch (error) {
+                setLoadingCaracters(false)
+            } finally {
+                setLoadingCaracters(false);
+            }
+        }
+
+        async function fetchCategories() {
+            setLoadingCaracterTags(true);
+            try {
+                const response = await getCaracterTags({}, offsetCaracterTags, limitCaracterTags);
+                setCaracterTags(response);
+            } catch (error) {
+                setLoadingCaracterTags(false)
+            } finally {
+                setLoadingCaracterTags(false);
+            }
+        }
+
+        fetchCategories();
+        fetchCaracters();
+    }, [limitCaracterTags, limitCaracters, offsetCaracterTags, offsetCaracters]);
+
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
     const steps = [
         {id: 1, content: <Step1 />},
-        {id: 2, content: <Step2 data={data} setData={setData} />},
+        {id: 2, content: <Step2 data={data} setData={setData} loadingCaracters={loadingCaracters} loadingCaracterTags={loadingCaracterTags} caracterTags={caracterTags} caracters={caracters} />},
         {id: 3, content: <Step3 data={data} setData={setData} />},
         {id: 4, content: <Step4 data={data} setData={setData} />},
         {id: 5, content: <Step5 loading={loading} />},

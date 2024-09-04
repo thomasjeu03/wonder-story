@@ -27,13 +27,12 @@ export async function POST(request) {
                             'Le personnage principal sera donc ' + data.mainCaracter + '. ' +
                             'Cette histoire se déroulera à travers les lieux suivant: ' + data.places.join(', ') + '. ' +
                             'Cette histoire aura un temps de lecture de: ' + data.time + 'min. ' +
-                            'Durant cette époque temporelle: ' + data.eras.join(', ') + '. ' +
                             'Cette histoire devra comporter une morale si le mot suivant est egal à true: ' + data.moral + '. ' +
                             'Cette histoire se basera sur les thèmes suivants: ' + data.genres.join(', ') + '. ' +
                             'Traduis obligatoirement cette histoire en : "' + data.locale + '".',
                     },
                 ],
-                max_tokens: data.time * 1000,
+                max_tokens: data.time * 1500,
             },
             {
                 headers: {

@@ -6,7 +6,7 @@ export async function generateMetadata({ params: { id } }) {
     const story = await getStoryById(id);
 
     return customMetadata({
-        title: story?.title || 'Nouvelle histoire - Wonder Story',
+        title: story?.title || 'Histoire - Wonder Story',
         postURL: `/story/${id}`,
     });
 }

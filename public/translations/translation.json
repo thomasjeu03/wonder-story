@@ -446,6 +446,438 @@
       }
     },
     {
+      "tag": "imaginary",
+      "t": {
+        "en": "Imaginary",
+        "fr": "Imaginaire",
+        "it": "Immaginario",
+        "de": "Imaginares"
+      }
+    },
+    {
+      "tag": "sea-world",
+      "t": {
+        "en": "Sea World",
+        "fr": "Monde de la mer",
+        "it": "Mondo marino",
+        "de": "Meereswelt"
+      }
+    },
+    {
+      "tag": "professions",
+      "t": {
+        "en": "Professions",
+        "fr": "Professions",
+        "it": "Professioni",
+        "de": "Beruf"
+      }
+    },
+    {
+      "tag": "the-policewoman",
+      "t": {
+        "en": "The policewoman",
+        "fr": "La policière",
+        "it": "La poliziotta",
+        "de": "Die Polizistin"
+      }
+    },
+    {
+      "tag": "the-worker",
+      "t": {
+        "en": "The worker",
+        "fr": "Le travailleur",
+        "it": "Il lavoratore",
+        "de": "Der Arbeiter"
+      }
+    },
+    {
+      "tag": "the-astronaut",
+      "t": {
+        "en": "The astronaut",
+        "fr": "L'astronaute",
+        "it": "L'astronauta",
+        "de": "Der Astronaut"
+      }
+    },
+    {
+      "tag": "the-ballerina-dancer",
+      "t": {
+        "en": "The ballerina dancer",
+        "fr": "La danseuse étoile",
+        "it": "La ballerina",
+        "de": "Die Ballerina"
+      }
+    },
+    {
+      "tag": "the-doctress",
+      "t": {
+        "en": "The doctress",
+        "fr": "La docteure",
+        "it": "La dottoressa",
+        "de": "Die Ärztin"
+      }
+    },
+    {
+      "tag": "the-fireman",
+      "t": {
+        "en": "The fireman",
+        "fr": "Le pompier",
+        "it": "Il pompiere",
+        "de": "Der Feuerwehrmann"
+      }
+    },
+    {
+      "tag": "the-gardener",
+      "t": {
+        "en": "The gardener",
+        "fr": "Le jardinier",
+        "it": "Il giardiniere",
+        "de": "Der Gärtner"
+      }
+    },
+    {
+      "tag": "the-farmer",
+      "t": {
+        "en": "The farmer",
+        "fr": "Le fermier",
+        "it": "Il contadino",
+        "de": "Der Bauer"
+      }
+    },
+    {
+      "tag": "the-cook",
+      "t": {
+        "en": "The cook",
+        "fr": "Le cuisinier",
+        "it": "Il cuoco",
+        "de": "Der Koch"
+      }
+    },
+    {
+      "tag": "the-kitten",
+      "t": {
+        "en": "The kitten",
+        "fr": "Le chaton",
+        "it": "Il gattino",
+        "de": "Das Kätzchen"
+      }
+    },
+    {
+      "tag": "the-dog",
+      "t": {
+        "en": "The dog",
+        "fr": "Le chien",
+        "it": "Il cane",
+        "de": "Der Hund"
+      }
+    },
+    {
+      "tag": "the-fox",
+      "t": {
+        "en": "The fox",
+        "fr": "Le renard",
+        "it": "La volpe",
+        "de": "Der Fuchs"
+      }
+    },
+    {
+      "tag": "the-owl",
+      "t": {
+        "en": "The owl",
+        "fr": "Le hibou",
+        "it": "Il gufo",
+        "de": "Die Eule"
+      }
+    },
+    {
+      "tag": "the-koala",
+      "t": {
+        "en": "The koala",
+        "fr": "Le koala",
+        "it": "Il koala",
+        "de": "Der Koala"
+      }
+    },
+    {
+      "tag": "the-otter",
+      "t": {
+        "en": "The otter",
+        "fr": "La loutre",
+        "it": "La lontra",
+        "de": "Der Otter"
+      }
+    },
+    {
+      "tag": "the-red-panda",
+      "t": {
+        "en": "The red panda",
+        "fr": "Le panda roux",
+        "it": "Il panda rosso",
+        "de": "Der Rote Panda"
+      }
+    },
+    {
+      "tag": "the-mouse",
+      "t": {
+        "en": "The mouse",
+        "fr": "La souris",
+        "it": "Il topo",
+        "de": "Die Maus"
+      }
+    },
+    {
+      "tag": "the-lioness",
+      "t": {
+        "en": "The lioness",
+        "fr": "La lionne",
+        "it": "La leonessa",
+        "de": "Die Löwin"
+      }
+    },
+    {
+      "tag": "the-pirat",
+      "t": {
+        "en": "The pirate",
+        "fr": "Le pirate",
+        "it": "Il pirata",
+        "de": "Der Pirat"
+      }
+    },
+    {
+      "tag": "the-jellyfish",
+      "t": {
+        "en": "The jellyfish",
+        "fr": "La méduse",
+        "it": "La medusa",
+        "de": "Die Qualle"
+      }
+    },
+    {
+      "tag": "the-crab",
+      "t": {
+        "en": "The crab",
+        "fr": "Le crabe",
+        "it": "Il granchio",
+        "de": "Der Krebs"
+      }
+    },
+    {
+      "tag": "the-whale",
+      "t": {
+        "en": "The whale",
+        "fr": "La baleine",
+        "it": "La balena",
+        "de": "Der Wal"
+      }
+    },
+    {
+      "tag": "the-seal",
+      "t": {
+        "en": "The seal",
+        "fr": "Le phoque",
+        "it": "La foca",
+        "de": "Der Seehund"
+      }
+    },
+    {
+      "tag": "the-seahorse",
+      "t": {
+        "en": "The seahorse",
+        "fr": "L'hippocampe",
+        "it": "Il cavalluccio marino",
+        "de": "Das Seepferdchen"
+      }
+    },
+    {
+      "tag": "the-mermaid",
+      "t": {
+        "en": "The mermaid",
+        "fr": "La sirène",
+        "it": "La sirena",
+        "de": "Die Meerjungfrau"
+      }
+    },
+    {
+      "tag": "the-sea-turtle",
+      "t": {
+        "en": "The sea turtle",
+        "fr": "La tortue de mer",
+        "it": "La tartaruga marina",
+        "de": "Die Meeresschildkröte"
+      }
+    },
+    {
+      "tag": "the-octopus",
+      "t": {
+        "en": "The octopus",
+        "fr": "La pieuvre",
+        "it": "Il polpo",
+        "de": "Der Oktopus"
+      }
+    },
+    {
+      "tag": "the-unicorn",
+      "t": {
+        "en": "The unicorn",
+        "fr": "La licorne",
+        "it": "L'unicorno",
+        "de": "Das Einhorn"
+      }
+    },
+    {
+      "tag": "the-ghost",
+      "t": {
+        "en": "The ghost",
+        "fr": "Le fantôme",
+        "it": "Il fantasma",
+        "de": "Der Geist"
+      }
+    },
+    {
+      "tag": "the-elf",
+      "t": {
+        "en": "The elf",
+        "fr": "L'elfe",
+        "it": "L'elfo",
+        "de": "Der Elf"
+      }
+    },
+    {
+      "tag": "the-robot",
+      "t": {
+        "en": "The robot",
+        "fr": "Le robot",
+        "it": "Il robot",
+        "de": "Der Roboter"
+      }
+    },
+    {
+      "tag": "the-dragon",
+      "t": {
+        "en": "The dragon",
+        "fr": "Le dragon",
+        "it": "Il drago",
+        "de": "Der Drache"
+      }
+    },
+    {
+      "tag": "the-troll",
+      "t": {
+        "en": "The troll",
+        "fr": "Le troll",
+        "it": "Il troll",
+        "de": "Der Troll"
+      }
+    },
+    {
+      "tag": "the-fairy",
+      "t": {
+        "en": "The fairy",
+        "fr": "La fée",
+        "it": "La fata",
+        "de": "Die Fee"
+      }
+    },
+    {
+      "tag": "the-alien",
+      "t": {
+        "en": "The alien",
+        "fr": "L'alien",
+        "it": "L'alieno",
+        "de": "Der Alien"
+      }
+    },
+    {
+      "tag": "the-witch",
+      "t": {
+        "en": "The witch",
+        "fr": "La sorcière",
+        "it": "La strega",
+        "de": "Die Hexe"
+      }
+    },
+    {
+      "tag": "the-knight",
+      "t": {
+        "en": "The knight",
+        "fr": "Le chevalier",
+        "it": "Il cavaliere",
+        "de": "Der Ritter"
+      }
+    },
+    {
+      "tag": "the-princess",
+      "t": {
+        "en": "The princess",
+        "fr": "La princesse",
+        "it": "La principessa",
+        "de": "Die Prinzessin"
+      }
+    },
+    {
+      "tag": "the-roman",
+      "t": {
+        "en": "The roman",
+        "fr": "Le romain",
+        "it": "Il romano",
+        "de": "Der Römer"
+      }
+    },
+    {
+      "tag": "the-prehistoric-woman",
+      "t": {
+        "en": "The prehistoric woman",
+        "fr": "La femme préhistorique",
+        "it": "La donna preistorica",
+        "de": "Die prähistorische Frau"
+      }
+    },
+    {
+      "tag": "the-samurai",
+      "t": {
+        "en": "The samurai",
+        "fr": "Le samouraï",
+        "it": "Il samurai",
+        "de": "Der Samurai"
+      }
+    },
+    {
+      "tag": "the-egyptian",
+      "t": {
+        "en": "The egyptian",
+        "fr": "L'égyptien",
+        "it": "L'egiziano",
+        "de": "Der Ägypter"
+      }
+    },
+    {
+      "tag": "the-greek",
+      "t": {
+        "en": "The greek",
+        "fr": "Le grec",
+        "it": "Il greco",
+        "de": "Der Grieche"
+      }
+    },
+    {
+      "tag": "the-viking",
+      "t": {
+        "en": "The viking",
+        "fr": "Le viking",
+        "it": "Il vichingo",
+        "de": "Der Wikinger"
+      }
+    },
+    {
+      "tag": "the-amazon",
+      "t": {
+        "en": "The amazon",
+        "fr": "L'amazone",
+        "it": "L'amazzone",
+        "de": "Die Amazone"
+      }
+    },
+    {
       "tag": "animals",
       "t": {
         "en": "Animals",

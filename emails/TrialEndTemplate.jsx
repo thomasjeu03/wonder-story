@@ -2,6 +2,7 @@ import { Html, Button, Img } from "@react-email/components";
 
 const URL = process.env.NODE_ENV === "development" ? process.env.NEXT_URL_DEVELOPMENT : process.env.NEXT_URL_PRODUCTION
 
+// TODO: faire un super template
 export default function TrialEndTemplate({ name }) {
     return (
         <Html lang="fr" dir="ltr">

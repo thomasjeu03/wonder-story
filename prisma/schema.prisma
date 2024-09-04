@@ -77,17 +77,19 @@ model Story {
 
 model Caracter {
   id            Int          @id @default(autoincrement())
-  name          Json
+  name          String
   image         String?
+  createdAt     DateTime     @default(now())
   caracterTagId Int?
   caracterTag   CaracterTag? @relation(fields: [caracterTagId], references: [id])
   @@index([caracterTagId])
 }
 
 model CaracterTag {
-  id       Int          @id @default(autoincrement())
-  name     Json
-  color    String?
-  icon     String?
-  caracter Caracter[]
+  id        Int        @id @default(autoincrement())
+  name      String
+  color     String?
+  icon      String?
+  createdAt DateTime   @default(now())
+  caracter  Caracter[]
 }
