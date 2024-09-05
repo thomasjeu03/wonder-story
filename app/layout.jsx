@@ -7,6 +7,8 @@ import {SessionProvider} from "next-auth/react";
 import {UserProvider} from "@/app/contexts/UserContext";
 import ContainerIsLogin from "@/components/containerIsLogin";
 import {LocaleProvider} from "@/app/contexts/LocaleContext";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({ children, session }) {
     return (
@@ -27,6 +29,8 @@ export default function RootLayout({ children, session }) {
                         </LocaleProvider>
                     </ThemeProvider>
                 </SessionProvider>
+                <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );
