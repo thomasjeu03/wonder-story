@@ -27,13 +27,13 @@ export default function WelcomeAboard({ name }) {
                         </Button>
                     </Section>
 
-                    <Text style={{ fontSize: '24px', color: '#fff', textAlign: 'center', marginBottom: '20px' }}>Bienvenue dans l&rsquo;univers magique de Wonder Story, {name}!</Text>
+                    <Text style={{ fontSize: '24px', lineHeight: '32px', color: '#fff', textAlign: 'center', marginBottom: '20px' }}>Bienvenue dans l&rsquo;univers magique de Wonder Story, {name}!</Text>
 
-                    <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px' }}>
+                    <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px', color: '#b9b9b9' }}>
                         Nous sommes ravis de vous accueillir dans notre application dédiée à la création d&rsquo;histoires fantastiques pour les enfants. Wonder Story vous permet d&rsquo;explorer un monde plein de récits captivants, où chaque histoire est aussi unique que l&rsquo;imagination de votre enfant.
                     </Text>
 
-                    <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px' }}>
+                    <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px', color: '#b9b9b9' }}>
                         Pour profiter pleinement de toutes les fonctionnalités de Wonder Story, et permettre à vos enfants de créer des histoires sans limite, découvrez notre offre <strong style={{ color: '#fff' }}>Premium</strong> !
                     </Text>
 
@@ -60,7 +60,7 @@ export default function WelcomeAboard({ name }) {
                         </Button>
                     </Section>
 
-                    <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px' }}>
+                    <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px', color: '#b9b9b9' }}>
                         Avec Premium, accédez à des histoires personnalisées en illimité, de nouveaux mondes et personnages à explorer, et bien plus encore pour éveiller la créativité de vos enfants !
                     </Text>
 
