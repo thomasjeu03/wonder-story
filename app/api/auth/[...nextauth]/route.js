@@ -4,6 +4,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 import {stripe} from "@/lib/stripe";
 import {resend} from "@/lib/resend";
+import WelcomeAboard from "@/emails/WelcomeAboard";
 
 export const authOptions = {
     adapter: PrismaAdapter(prisma),
@@ -47,6 +48,7 @@ export const authOptions = {
 
             if (!userId || !email) return;
 
+            const emailHtml = WelcomeAboard({ name });
 
             const stripeCustomer = await stripe.customers.create({
                 email,
@@ -68,6 +70,14 @@ export const authOptions = {
                 lastName: lastName,
                 unsubscribed: false,
                 audienceId: '83ef9007-29ba-4883-ba46-e488913ea13b',
+            });
+
+            //TODO: utiliser l'adresse mail: welcome@notifications.wonder-story.app
+            await resend.emails.send({
+                from: 'Wonder Story <welcome@resend.dev>',
+                to: [email],
+                subject: 'Bienvenue sur Wonder Story',
+                react: emailHtml,
             });
         }
     },
