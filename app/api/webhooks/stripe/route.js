@@ -103,6 +103,5 @@ const findUserFromCustomer = async (stripeCustomerId) => {
 };
 
 // TODO: Envoi email notification when:
-//  -checkout.session.completed
-//  -customer.subscription.deleted
-//  -customer.subscription.trial_will_end
+//  -checkout.session.completed => pour le remercier d'avoir souscrit
+//  -customer.subscription.deleted => pour lui demander de revenir
