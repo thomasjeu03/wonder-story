@@ -1,16 +1,16 @@
 import { resend }from '@/lib/resend';
-import TrialEndTemplate from "@/emails/TrialEndTemplate";
+import WelcomeAboard from "@/emails/WelcomeAboard";
 
 export async function POST(request) {
     try {
         const { name, email } = await request.json();
 
-        const emailHtml = TrialEndTemplate({ name });
+        const emailHtml = WelcomeAboard({ name });
 
         const response = await resend.emails.send({
-            from: 'no-reply@email.wonder-story.app',
+            from: 'welcome@email.wonder-story.app',
             to: email,
-            subject: 'Bientôt la fin de votre période d essai',
+            subject: 'Bienvenue sur Wonder Story',
             html: emailHtml,
         });
 
