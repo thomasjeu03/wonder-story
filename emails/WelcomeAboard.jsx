@@ -18,9 +18,13 @@ export default function WelcomeAboard({ name }) {
                     padding: '17px',
                     borderRadius: '16px',
                     outline: '1px dashed #6b7280',
+                    fontFamily: 'SF-Pro, Arial, sans-serif',
+                    color: '#b9b9b9'
                 }}>
                     <Section style={{ textAlign: 'center', marginBottom: '30px' }}>
-                        <Img src={`${URL}/img/logo-white.png`} alt="Logo Wonder Story" style={{ width: '150px' }} />
+                        <Button href={URL}>
+                            <Img src={`${URL}/img/logo-white.png`} alt="Logo Wonder Story" style={{ width: '150px' }} />
+                        </Button>
                     </Section>
 
                     <Text style={{ fontSize: '24px', color: '#fff', textAlign: 'center', marginBottom: '20px' }}>Bienvenue dans l&rsquo;univers magique de Wonder Story, {name}!</Text>
@@ -51,7 +55,7 @@ export default function WelcomeAboard({ name }) {
                                 lineHeight: '1.75rem',
                                 fontWeight: '600',
                             }}>
-                                Accéder à Premium
+                                Accéder à l&rsquo;offre Premium
                             </div>
                         </Button>
                     </Section>
