@@ -9,7 +9,7 @@ export async function POST(request) {
 
         // TODO: mettre une vrai adresse mail d envoi
         const response = await resend.emails.send({
-            from: 'Wonder Story <notifications@resend.dev>',
+            from: 'Wonder Story <welcome@notifications.wonder-story.app>',
             to: [email],
             subject: 'Bienvenue sur Wonder Story',
             html: emailHtml,
