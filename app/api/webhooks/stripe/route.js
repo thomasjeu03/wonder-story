@@ -103,6 +103,6 @@ const findUserFromCustomer = async (stripeCustomerId) => {
 };
 
 // TODO: Envoi email notification when:
-//  -customer.subscription.created
 //  -checkout.session.completed
+//  -customer.subscription.deleted
 //  -customer.subscription.trial_will_end

@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 import {stripe} from "@/lib/stripe";
+import {resend} from "@/lib/resend";
 
 export const authOptions = {
     adapter: PrismaAdapter(prisma),
@@ -42,6 +43,7 @@ export const authOptions = {
             const userId = message.user.id;
             const email = message.user.email;
             const name = message.user.name;
+            const [firstName, lastName] = name.split(' ');
 
             if (!userId || !email) return;
 
@@ -59,6 +61,14 @@ export const authOptions = {
                     stripeCustomerId: stripeCustomer.id
                 }
             })
+
+            await resend.contacts.create({
+                email: email,
+                firstName: firstName,
+                lastName: lastName,
+                unsubscribed: false,
+                audienceId: '83ef9007-29ba-4883-ba46-e488913ea13b',
+            });
         }
     },
     pages: {
