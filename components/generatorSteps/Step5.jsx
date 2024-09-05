@@ -1,13 +1,11 @@
 import {Skeleton} from "@/components/ui/skeleton";
 
-export default function Step5({loading }) {
+export default function Step5() {
 
     return (
         <>
-            {/*TODO: animation chargement histoire puis redirection vers /story/[id]*/}
-            {loading && (
-                <Skeleton className="w-full rounded-lg" style={{ height: 'calc(100dvh - 184px)' }} />
-            )}
+            {/*TODO: animation chargement histoire*/}
+            <Skeleton className="w-full rounded-lg" style={{ height: 'calc(100dvh - 200px)' }} />
         </>
     );
 }
