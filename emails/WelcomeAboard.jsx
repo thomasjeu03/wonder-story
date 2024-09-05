@@ -3,6 +3,7 @@ import { Html, Button, Img, Section, Text, Hr } from "@react-email/components";
 const URL = process.env.NODE_ENV === "development" ? process.env.NEXT_URL_DEVELOPMENT : process.env.NEXT_URL_PRODUCTION
 
 export default function WelcomeAboard({ name }) {
+    const thisYear = new Date().getFullYear();
     return (
         <Html lang="fr" dir="ltr">
             <Section style={{
@@ -57,7 +58,7 @@ export default function WelcomeAboard({ name }) {
                 <Hr style={{ border: 'none', borderTop: '1px solid #A1A1A1', margin: '20px 0' }} />
 
                 <Text style={{ fontSize: '12px', color: '#8c8c8c', textAlign: 'center' }}>
-                    © 2024 Wonder Story. Tous droits réservés.
+                    © {thisYear} Wonder Story. Tous droits réservés.
                 </Text>
             </Section>
         </Html>

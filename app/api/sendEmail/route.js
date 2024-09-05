@@ -6,16 +6,19 @@ export async function POST(request) {
         const { name, email } = await request.json();
 
         const emailHtml = WelcomeAboard({ name });
-
-        // TODO: mettre une vrai adresse mail d envoi
-        const response = await resend.emails.send({
-            from: 'Wonder Story <welcome@notifications.wonder-story.app>',
+        //TODO: utiliser l'adresse mail: welcome@notifications.wonder-story.app
+        const { data, error } = await resend.emails.send({
+            from: 'Wonder Story <welcome@resend.dev>',
             to: [email],
             subject: 'Bienvenue sur Wonder Story',
-            html: emailHtml,
+            react: emailHtml,
         });
 
-        return new Response(JSON.stringify({ success: true, messageId: response.id }), { status: 200 });
+        if (error) {
+            return Response.json({ error }, { status: error.statusCode });
+        }
+
+        return Response.json(data);
     } catch (error) {
         console.error('Error sending email:', error);
         return new Response(JSON.stringify({ success: false, error: error.message }), { status: 500 });

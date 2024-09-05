@@ -9,6 +9,7 @@ import {AccountSettingsButton} from "@/components/buy/UserSettings";
 import {useUser} from "@/app/contexts/UserContext";
 import {useState} from "react";
 import {Send} from "lucide-react";
+import axios from "axios";
 
 export default function AccountContent() {
     const { user, isPremium } = useUser();
@@ -24,20 +25,9 @@ export default function AccountContent() {
         setSuccess(false);
 
         try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name: user?.name, email: user?.email }),
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
+            const response = await axios.post('/api/sendEmail', {name: user?.name, email: user?.email });
+            if (response.status === 200){
                 setSuccess(true);
-            } else {
-                throw new Error(data.error || 'Something went wrong');
             }
         } catch (err) {
             setError(err.message);
