@@ -323,8 +323,7 @@
   .price-card{
     background: linear-gradient(rgba(62, 62, 65, 0.3), rgba(28, 28, 31, 0.3));
     border-radius: 32px;
-    border: 1px solid rgba(95, 95, 100, 0.3);
-    outline-offset: -1px;
+    border: 1.5px solid rgba(95, 95, 100, 0.3);
     padding: 24px;
     width: 100%;
     backdrop-filter: blur(24px);
@@ -340,8 +339,8 @@
   .price-card--premium{
     gap: 0 !important;
     box-shadow: 0 6px 25px rgba(255, 204, 0, 0.19) !important;
-    outline: 1px solid rgba(255, 204, 0, 0.66) !important;
-    outline-offset: -1px;
+    background: linear-gradient(rgba(62, 62, 65, 0.3), rgba(28, 28, 31, 0.3)) padding-box, linear-gradient(159deg, rgba(255, 204, 0, 1) 10%, rgba(95, 95, 100, 0.3) 50%) border-box !important;
+    border: 1.5px solid transparent !important;
   }
 
   /*Caracter CARD*/
