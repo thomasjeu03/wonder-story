@@ -6,12 +6,18 @@ export async function POST(request) {
         const { name, email } = await request.json();
 
         const emailHtml = WelcomeAboard({ name });
-        //TODO: utiliser l'adresse mail: welcome@notifications.wonder-story.app
+        //TODO: utiliser l'adresse mail: welcome@wonder-story.app
         const { data, error } = await resend.emails.send({
             from: 'Wonder Story <welcome@resend.dev>',
             to: [email],
             subject: 'Bienvenue sur Wonder Story',
             react: emailHtml,
+            tags: [
+                {
+                    name: 'category',
+                    value: 'welcome',
+                },
+            ],
         });
 
         if (error) {
