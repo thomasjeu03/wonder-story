@@ -6,6 +6,7 @@ import {Button} from "@/components/ui/button";
 import {SquareLibrary} from "lucide-react";
 import {useUser} from "@/app/contexts/UserContext";
 import {useLocale} from "@/app/contexts/LocaleContext";
+import {signIn} from "next-auth/react";
 
 export default function MenuBar() {
     const { user, isPremium } = useUser();
@@ -41,7 +42,7 @@ export default function MenuBar() {
                         </Link>
                     </li>
                     <li className="flex items-center justify-end">
-                        {user && (
+                        {user ? (
                             <Link href="/account" aria-label="Mon compte">
                                 <Image
                                     src={user?.image}
@@ -54,6 +55,8 @@ export default function MenuBar() {
                                     className={`${isPremium ? 'border-2 border-yellow-500' : ''} rounded-full h-8 w-8 mx-[2px] my-[2px]`}
                                 />
                             </Link>
+                        ):(
+                            <Button variant="secondary" onClick={() => signIn("google")}>{t('login')}</Button>
                         )}
                     </li>
                 </ul>
