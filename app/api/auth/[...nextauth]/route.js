@@ -72,9 +72,8 @@ export const authOptions = {
                 audienceId: '83ef9007-29ba-4883-ba46-e488913ea13b',
             });
 
-            //TODO: utiliser l'adresse mail: welcome@wonder-story.app
             await resend.emails.send({
-                from: 'Wonder Story <welcome@resend.dev>',
+                from: 'Wonder Story <welcome@wonder-story.app>',
                 to: [email],
                 subject: 'Bienvenue sur Wonder Story',
                 react: emailHtml,
