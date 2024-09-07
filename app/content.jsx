@@ -14,7 +14,7 @@ import Step4 from "@/components/generatorSteps/Step4";
 import {useUser} from "@/app/contexts/UserContext";
 import Step5 from "@/components/generatorSteps/Step5";
 import { useRouter } from "next/navigation";
-import {getCaracters, getCaracterTags} from "@/lib/api";
+import {getCaracters, getCaracterTags, getPlaces, getPlaceTags} from "@/lib/api";
 import {BuyButton} from "@/components/buy/BuyButton";
 
 export default function HomeContent() {
@@ -60,6 +60,16 @@ export default function HomeContent() {
     const [limitCaracters, setLimitCaracters] = useState(100)
     const [offsetCaracters, setOffsetCaracters] = useState(0)
 
+    const [placeTags, setPlaceTags] = useState([]);
+    const [loadingPlaceTags, setLoadingPlaceTags] = useState(true);
+    const [limitPlaceTags, setLimitPlaceTags] = useState(20)
+    const [offsetPlaceTags, setOffsetPlaceTags] = useState(0)
+
+    const [places, setPlaces] = useState([]);
+    const [loadingPlaces, setLoadingPlaces] = useState(true);
+    const [limitPlaces, setLimitPlaces] = useState(100)
+    const [offsetPlaces, setOffsetPlaces] = useState(0)
+
     useEffect(() => {
         async function fetchCaracters() {
             setLoadingCaracters(true);
@@ -85,9 +95,35 @@ export default function HomeContent() {
             }
         }
 
+        async function fetchPlaces() {
+            setLoadingPlaces(true);
+            try {
+                const response = await getPlaces({}, offsetPlaces, limitPlaces);
+                setPlaces(response);
+            } catch (error) {
+                setLoadingPlaces(false)
+            } finally {
+                setLoadingPlaces(false);
+            }
+        }
+
+        async function fetchPlaceTags() {
+            setLoadingPlaceTags(true);
+            try {
+                const response = await getPlaceTags({}, offsetPlaceTags, limitPlaceTags);
+                setPlaceTags(response);
+            } catch (error) {
+                setLoadingPlaceTags(false)
+            } finally {
+                setLoadingPlaceTags(false);
+            }
+        }
+
         fetchCategories();
         fetchCaracters();
-    }, [limitCaracterTags, limitCaracters, offsetCaracterTags, offsetCaracters]);
+        fetchPlaces();
+        fetchPlaceTags();
+    }, [limitCaracterTags, limitCaracters, offsetCaracterTags, offsetCaracters, offsetPlaces, limitPlaces, offsetPlaceTags, limitPlaceTags]);
 
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -95,7 +131,7 @@ export default function HomeContent() {
     const steps = [
         {id: 1, content: <Step1 />},
         {id: 2, content: <Step2 data={data} setData={setData} loadingCaracters={loadingCaracters} loadingCaracterTags={loadingCaracterTags} caracterTags={caracterTags} caracters={caracters} />},
-        {id: 3, content: <Step3 data={data} setData={setData} />},
+        {id: 3, content: <Step3 data={data} setData={setData} loadingPlaces={loadingPlaces} loadingPlaceTags={loadingPlaceTags} placeTags={placeTags} places={places} />},
         {id: 4, content: <Step4 data={data} setData={setData} />},
         {id: 5, content: <Step5 data={data} caractersDataBase={caracters} caracterTagsDataBase={caracterTags} />},
     ];

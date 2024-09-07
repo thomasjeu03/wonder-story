@@ -94,3 +94,22 @@ model CaracterTag {
   createdAt DateTime   @default(now())
   caracter  Caracter[]
 }
+
+model Place {
+  id            Int          @id @default(autoincrement())
+  name          String
+  image         String?
+  createdAt     DateTime     @default(now())
+  placeTagId    Int?
+  placeTag      PlaceTag?    @relation(fields: [placeTagId], references: [id])
+  @@index([placeTagId])
+}
+
+model PlaceTag {
+  id        Int        @id @default(autoincrement())
+  name      String
+  color     String?
+  icon      String?
+  createdAt DateTime   @default(now())
+  place     Place[]
+}

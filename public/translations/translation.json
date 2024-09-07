@@ -1478,6 +1478,348 @@
         "it": "Provalo gratuitamente e scopri la magia delle nostre storie personalizzate",
         "de": "Probieren Sie es kostenlos aus und entdecken Sie die Magie unserer personalisierten Geschichten"
       }
+    },
+    {
+      "tag": "country-side",
+      "t": {
+        "en": "Countryside",
+        "fr": "Campagne",
+        "it": "Campagna",
+        "de": "Landschaft"
+      }
+    },
+    {
+      "tag": "urban-world",
+      "t": {
+        "en": "Urban world",
+        "fr": "Monde urbain",
+        "it": "Mondo urbano",
+        "de": "Urbane Welt"
+      }
+    },
+    {
+      "tag": "the-ice-rink",
+      "t": {
+        "en": "The Ice Rink",
+        "fr": "La Patinoire",
+        "it": "La Pista di Ghiaccio",
+        "de": "Die Eislaufbahn"
+      }
+    },
+    {
+      "tag": "the-suspension-bridge",
+      "t": {
+        "en": "The Suspension Bridge",
+        "fr": "Le Pont Suspendu",
+        "it": "Il Ponte Sospeso",
+        "de": "Die Hängebrücke"
+      }
+    },
+    {
+      "tag": "the-urban-park",
+      "t": {
+        "en": "The Urban Park",
+        "fr": "Le Parc Urbain",
+        "it": "Il Parco Urbano",
+        "de": "Der Stadtpark"
+      }
+    },
+    {
+      "tag": "the-airport",
+      "t": {
+        "en": "The Airport",
+        "fr": "L'Aéroport",
+        "it": "L'Aeroporto",
+        "de": "Der Flughafen"
+      }
+    },
+    {
+      "tag": "the-zoo",
+      "t": {
+        "en": "The Zoo",
+        "fr": "Le Zoo",
+        "it": "Lo Zoo",
+        "de": "Der Zoo"
+      }
+    },
+    {
+      "tag": "the-classroom",
+      "t": {
+        "en": "The Classroom",
+        "fr": "La Salle de Classe",
+        "it": "L'Aula",
+        "de": "Das Klassenzimmer"
+      }
+    },
+    {
+      "tag": "the-amusement-park",
+      "t": {
+        "en": "The Amusement Park",
+        "fr": "Le Parc d'Attractions",
+        "it": "Il Parco Divertimenti",
+        "de": "Der Vergnügungspark"
+      }
+    },
+    {
+      "tag": "the-museum",
+      "t": {
+        "en": "The Museum",
+        "fr": "Le Musée",
+        "it": "Il Museo",
+        "de": "Das Museum"
+      }
+    },
+    {
+      "tag": "the-big-city",
+      "t": {
+        "en": "The Big City",
+        "fr": "La Grande Ville",
+        "it": "La Grande Città",
+        "de": "Die Große Stadt"
+      }
+    },
+    {
+      "tag": "the-flower-field",
+      "t": {
+        "en": "The Flower Field",
+        "fr": "Le Champ de Fleurs",
+        "it": "Il Campo di Fiori",
+        "de": "Das Blumenfeld"
+      }
+    },
+    {
+      "tag": "the-desert",
+      "t": {
+        "en": "The Desert",
+        "fr": "Le Désert",
+        "it": "Il Deserto",
+        "de": "Die Wüste"
+      }
+    },
+    {
+      "tag": "the-farm",
+      "t": {
+        "en": "The Farm",
+        "fr": "La Ferme",
+        "it": "La Fattoria",
+        "de": "Der Bauernhof"
+      }
+    },
+    {
+      "tag": "the-jungle",
+      "t": {
+        "en": "The Jungle",
+        "fr": "La Jungle",
+        "it": "La Giungla",
+        "de": "Der Dschungel"
+      }
+    },
+    {
+      "tag": "the-lake",
+      "t": {
+        "en": "The Lake",
+        "fr": "Le Lac",
+        "it": "Il Lago",
+        "de": "Der See"
+      }
+    },
+    {
+      "tag": "the-savanna",
+      "t": {
+        "en": "The Savanna",
+        "fr": "La Savane",
+        "it": "La Savana",
+        "de": "Die Savanne"
+      }
+    },
+    {
+      "tag": "the-snowy-mountain",
+      "t": {
+        "en": "The Snowy Mountain",
+        "fr": "La Montagne Enneigée",
+        "it": "La Montagna Innevata",
+        "de": "Der Schneebedeckte Berg"
+      }
+    },
+    {
+      "tag": "the-beach",
+      "t": {
+        "en": "The Beach",
+        "fr": "La Plage",
+        "it": "La Spiaggia",
+        "de": "Der Strand"
+      }
+    },
+    {
+      "tag": "the-forest",
+      "t": {
+        "en": "The Forest",
+        "fr": "La Forêt",
+        "it": "La Foresta",
+        "de": "Der Wald"
+      }
+    },
+    {
+      "tag": "the-enchanted-forge-cave",
+      "t": {
+        "en": "The Enchanted Forge Cave",
+        "fr": "La Grotte Forge Enchantée",
+        "it": "La Grotta della Forgia Incantata",
+        "de": "Die Verzauberte Schmiedehöhle"
+      }
+    },
+    {
+      "tag": "the-sky-island",
+      "t": {
+        "en": "The Sky Island",
+        "fr": "L'Île du Ciel",
+        "it": "L'Isola del Cielo",
+        "de": "Die Himmelsinsel"
+      }
+    },
+    {
+      "tag": "the-tiny-fairies-village",
+      "t": {
+        "en": "The Tiny Fairies' Village",
+        "fr": "Le Village des Petites Fées",
+        "it": "Il Villaggio delle Piccole Fate",
+        "de": "Das Dorf der Winzigen Feen"
+      }
+    },
+    {
+      "tag": "the-land-of-fire",
+      "t": {
+        "en": "The Land of Fire",
+        "fr": "Le Pays du Feu",
+        "it": "La Terra del Fuoco",
+        "de": "Das Land des Feuers"
+      }
+    },
+    {
+      "tag": "the-infinite-labyrinth",
+      "t": {
+        "en": "The Infinite Labyrinth",
+        "fr": "Le Labyrinthe Infini",
+        "it": "Il Labirinto Infinito",
+        "de": "Das Unendliche Labyrinth"
+      }
+    },
+    {
+      "tag": "the-dragon-valley",
+      "t": {
+        "en": "The Dragon Valley",
+        "fr": "La Vallée des Dragons",
+        "it": "La Valle dei Draghi",
+        "de": "Das Drachental"
+      }
+    },
+    {
+      "tag": "the-mushroom-woods",
+      "t": {
+        "en": "The Mushroom Woods",
+        "fr": "Le Bois des Champignons",
+        "it": "Il Bosco dei Funghi",
+        "de": "Der Pilzwald"
+      }
+    },
+    {
+      "tag": "the-rainbow-kingdom",
+      "t": {
+        "en": "The Rainbow Kingdom",
+        "fr": "Le Royaume de l'Arc-en-ciel",
+        "it": "Il Regno dell'Arcobaleno",
+        "de": "Das Regenbogenreich"
+      }
+    },
+    {
+      "tag": "aquapolis",
+      "t": {
+        "en": "Aquapolis",
+        "fr": "Aquapolis",
+        "it": "Aquapolis",
+        "de": "Aquapolis"
+      }
+    },
+    {
+      "tag": "the-taj-mahal",
+      "t": {
+        "en": "The Taj Mahal",
+        "fr": "Le Taj Mahal",
+        "it": "Il Taj Mahal",
+        "de": "Der Taj Mahal"
+      }
+    },
+    {
+      "tag": "the-jurassic",
+      "t": {
+        "en": "The Jurassic",
+        "fr": "Le Jurassique",
+        "it": "Il Giurassico",
+        "de": "Das Jura"
+      }
+    },
+    {
+      "tag": "the-great-wall-of-china",
+      "t": {
+        "en": "The Great Wall of China",
+        "fr": "La Grande Muraille de Chine",
+        "it": "La Grande Muraglia Cinese",
+        "de": "Die Chinesische Mauer"
+      }
+    },
+    {
+      "tag": "the-viking-drakkar",
+      "t": {
+        "en": "The Viking Drakkar",
+        "fr": "Le Drakkar Viking",
+        "it": "Il Drakkar dei Vichinghi",
+        "de": "Das Wikingerschiff"
+      }
+    },
+    {
+      "tag": "the-prehistoric-cave",
+      "t": {
+        "en": "The Prehistoric Cave",
+        "fr": "La Grotte Préhistorique",
+        "it": "La Grotta Preistorica",
+        "de": "Die Prähistorische Höhle"
+      }
+    },
+    {
+      "tag": "the-acropolis-of-athens",
+      "t": {
+        "en": "The Acropolis of Athens",
+        "fr": "L'Acropole d'Athènes",
+        "it": "L'Acropoli di Atene",
+        "de": "Die Akropolis von Athen"
+      }
+    },
+    {
+      "tag": "the-medieval-castle",
+      "t": {
+        "en": "The Medieval Castle",
+        "fr": "Le Château Médiéval",
+        "it": "Il Castello Medievale",
+        "de": "Die Mittelalterliche Burg"
+      }
+    },
+    {
+      "tag": "the-great-pyramid-of-giza",
+      "t": {
+        "en": "The Great Pyramid of Giza",
+        "fr": "La Grande Pyramide de Gizeh",
+        "it": "La Grande Piramide di Giza",
+        "de": "Die Große Pyramide von Gizeh"
+      }
+    },
+    {
+      "tag": "the-easter-island",
+      "t": {
+        "en": "The Easter Island",
+        "fr": "L'Île de Pâques",
+        "it": "L'Isola di Pasqua",
+        "de": "Die Osterinsel"
+      }
     }
   ]
 }
