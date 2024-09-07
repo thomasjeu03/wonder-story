@@ -15,10 +15,11 @@ import {useUser} from "@/app/contexts/UserContext";
 import Step5 from "@/components/generatorSteps/Step5";
 import { useRouter } from "next/navigation";
 import {getCaracters, getCaracterTags} from "@/lib/api";
+import {BuyButton} from "@/components/buy/BuyButton";
 
 export default function HomeContent() {
     const { t, langue } = useLocale();
-    const {currentStep, setCurrentStep, user } = useUser();
+    const {currentStep, setCurrentStep, user, canGenerate } = useUser();
     const router = useRouter();
 
     const [data, setData] = useState({
@@ -100,8 +101,10 @@ export default function HomeContent() {
     ];
 
     const handleNext = () => {
-        if (currentStep < steps.length - 1) {
-            setCurrentStep(currentStep + 1);
+        if (canGenerate) {
+            if (currentStep < steps.length - 1) {
+                setCurrentStep(currentStep + 1);
+            }
         }
     };
 
@@ -113,16 +116,18 @@ export default function HomeContent() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setCurrentStep(currentStep + 1)
-        setError('');
-        setLoading(true);
-        try {
-            const response = await axios.post('/api/generate', { data, userId: user?.id });
-            router.push(`/story/${response.data.id}`);
-        } catch (err) {
-            setError('Error processing the data');
-        } finally {
-            setLoading(false)
+        if (canGenerate) {
+            setCurrentStep(currentStep + 1)
+            setError('');
+            setLoading(true);
+            try {
+                const response = await axios.post('/api/generate', { data, userId: user?.id });
+                router.push(`/story/${response.data.id}`);
+            } catch (err) {
+                setError('Error processing the data');
+            } finally {
+                setLoading(false)
+            }
         }
     };
 
@@ -162,27 +167,34 @@ export default function HomeContent() {
                                     delay: 0.5
                                 }}
                             >
-                                <Button
-                                    size="lg"
-                                    onClick={handleNext}
-                                    style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
-                                >
-                                    <motion.p
-                                        initial={{width: 0, marginRight: 0}}
-                                        animate={{width: 'auto', marginRight: 12}}
-                                        transition={{
-                                            type: 'spring',
-                                            ease: "easeOut",
-                                            duration: 1,
-                                            bounce: 0.5,
-                                            delay: 1
-                                        }}
-                                        style={{overflow: "hidden"}}
+                                {canGenerate ? (
+                                    <Button
+                                        size="lg"
+                                        onClick={handleNext}
+                                        style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
                                     >
-                                        {t('create-now')}
-                                    </motion.p>
-                                    <Sparkles/>
-                                </Button>
+                                        <motion.p
+                                            initial={{width: 0, marginRight: 0}}
+                                            animate={{width: 'auto', marginRight: 12}}
+                                            transition={{
+                                                type: 'spring',
+                                                ease: "easeOut",
+                                                duration: 1,
+                                                bounce: 0.5,
+                                                delay: 1
+                                            }}
+                                            style={{overflow: "hidden"}}
+                                        >
+                                            {t('create-now')}
+                                        </motion.p>
+                                        <Sparkles/>
+                                    </Button>
+                                ):(
+                                    <div className="flex flex-col items-center gap-3">
+                                        <p className="text-amber-500">{t('your-reached-the-3-free-trials')}</p>
+                                        <BuyButton />
+                                    </div>
+                                )}
                             </motion.div>
                         ): (
                             <motion.div
@@ -235,7 +247,13 @@ export default function HomeContent() {
                                             }}
                                             style={{overflow: "hidden"}}
                                         >
-                                            {loading ? t('loading') : t('create')}
+                                            {canGenerate ? (
+                                                <>
+                                                    {loading ? t('loading') : t('create')}
+                                                </>
+                                            ):(
+                                                t('your-reached-the-3-free-trials')
+                                            )}
                                         </motion.p>
                                         {loading ? <Skeleton className="h-6 w-6 bg-gray-800 rounded-full" /> : <Sparkles/>}
                                     </Button>

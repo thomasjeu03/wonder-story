@@ -13,13 +13,14 @@ model User {
   email            String   @unique
   name             String?
   image            String?
+  storiesGenerated Int?     @default(0)
+  plan             UserPlan @default(FREE)
   emailVerified    DateTime?
   accounts         Account[]
   sessions         Session[]
   storys           Story[]
 
   stripeCustomerId String?
-  plan             UserPlan @default(FREE)
 }
 
 enum UserPlan {

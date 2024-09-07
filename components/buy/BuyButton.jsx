@@ -1,8 +1,9 @@
 import {Button} from "@/components/ui/button";
 import {useSession} from "next-auth/react";
 import {createCheckoutSession} from "@/app/actions/checkout";
+import {Crown} from "lucide-react";
 
-export const BuyButton = () => {
+export const BuyButton = ({size = 'lg', varient = 'default'}) => {
     const { data: session } = useSession();
 
     const handleSubmit = async (event) => {
@@ -16,8 +17,9 @@ export const BuyButton = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <Button type="submit" variant='secondary'>
+            <Button type="submit" size={size} variant={varient}>
                 Upgrade to Premium
+                <Crown />
             </Button>
         </form>
     );

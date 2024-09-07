@@ -1444,6 +1444,15 @@
       }
     },
     {
+      "tag": "your-reached-the-3-free-trials",
+      "t": {
+        "en": "You have reached the 3 free trials",
+        "fr": "Vous avez atteint les 3 essais gratuits",
+        "it": "Hai raggiunto le 3 prove gratuite",
+        "de": "Sie haben die 3 kostenlosen Testversionen erreicht"
+      }
+    },
+    {
       "tag": "try_for_free_discover_magic",
       "t": {
         "en": "Try for free and discover the magic of our personalized stories",

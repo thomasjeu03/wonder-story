@@ -59,6 +59,15 @@ export async function POST(request) {
             },
         });
 
+        await prisma.user.update({
+            where: { id: userId },
+            data: {
+                storiesGenerated: {
+                    increment: 1,
+                },
+            },
+        });
+
         return NextResponse.json({ id: newStory.id });
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);

@@ -7,7 +7,8 @@ const UserContext = createContext();
 export const UserProvider = ({ children }) => {
     const { data: session, status } = useSession();
     const [user, setUser] = useState(null);
-    const [isPremium, setIsPremium] = useState(null);
+    const [isPremium, setIsPremium] = useState(false);
+    const [canGenerate, setCanGenerate] = useState(false);
     const [currentStep, setCurrentStep] = useState(0);
 
     useEffect(() => {
@@ -20,6 +21,7 @@ export const UserProvider = ({ children }) => {
                         const userData = response.data.user;
                         setUser(userData);
                         setIsPremium(userData?.plan === 'PREMIUM');
+                        setCanGenerate(userData?.plan === 'PREMIUM' || userData?.storiesGenerated < 3 );
                         localStorage.setItem('user', JSON.stringify(userData));
                     } else {
                         console.error('Failed to fetch user');
@@ -39,7 +41,7 @@ export const UserProvider = ({ children }) => {
     }, [session, status]);
 
     return (
-        <UserContext.Provider value={{ user, status, isPremium, currentStep, setCurrentStep }}>
+        <UserContext.Provider value={{ user, status, isPremium, currentStep, setCurrentStep, canGenerate }}>
             {children}
         </UserContext.Provider>
     );
