@@ -96,7 +96,7 @@ export default function HomeContent() {
         {id: 2, content: <Step2 data={data} setData={setData} loadingCaracters={loadingCaracters} loadingCaracterTags={loadingCaracterTags} caracterTags={caracterTags} caracters={caracters} />},
         {id: 3, content: <Step3 data={data} setData={setData} />},
         {id: 4, content: <Step4 data={data} setData={setData} />},
-        {id: 5, content: <Step5 />},
+        {id: 5, content: <Step5 data={data} caractersDataBase={caracters} caracterTagsDataBase={caracterTags} />},
     ];
 
     const handleNext = () => {

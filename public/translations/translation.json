@@ -1435,6 +1435,15 @@
       }
     },
     {
+      "tag": "your-story-is-creating",
+      "t": {
+        "en": "Your story is creating...",
+        "fr": "Votre histoire est en cours de création...",
+        "it": "La tua storia sta creando...",
+        "de": "Deine Geschichte wird erstellt..."
+      }
+    },
+    {
       "tag": "try_for_free_discover_magic",
       "t": {
         "en": "Try for free and discover the magic of our personalized stories",
