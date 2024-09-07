@@ -19,7 +19,7 @@ import {BuyButton} from "@/components/buy/BuyButton";
 
 export default function HomeContent() {
     const { t, langue } = useLocale();
-    const {currentStep, setCurrentStep, user, canGenerate } = useUser();
+    const {currentStep, setCurrentStep, user, canGenerate, isPremium } = useUser();
     const router = useRouter();
 
     const [data, setData] = useState({
@@ -168,37 +168,42 @@ export default function HomeContent() {
                                 }}
                             >
                                 {canGenerate ? (
-                                    <Button
-                                        size="lg"
-                                        onClick={handleNext}
-                                        style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
-                                    >
-                                        <motion.p
-                                            initial={{width: 0, marginRight: 0}}
-                                            animate={{width: 'auto', marginRight: 12}}
-                                            transition={{
-                                                type: 'spring',
-                                                ease: "easeOut",
-                                                duration: 1,
-                                                bounce: 0.5,
-                                                delay: 1
-                                            }}
-                                            style={{overflow: "hidden"}}
+                                    <div className="flex flex-col items-center gap-4">
+                                        <Button
+                                            size="lg"
+                                            onClick={handleNext}
+                                            style={{boxShadow: '0 6px 24px rgba(249, 244, 249, 0.3)', gap: 0}}
                                         >
-                                            {t('create-now')}
-                                        </motion.p>
-                                        <Sparkles/>
-                                    </Button>
-                                ):(
+                                            <motion.p
+                                                initial={{width: 0, marginRight: 0}}
+                                                animate={{width: 'auto', marginRight: 12}}
+                                                transition={{
+                                                    type: 'spring',
+                                                    ease: "easeOut",
+                                                    duration: 1,
+                                                    bounce: 0.5,
+                                                    delay: 1
+                                                }}
+                                                style={{overflow: "hidden"}}
+                                            >
+                                                {t('create-now')}
+                                            </motion.p>
+                                            <Sparkles/>
+                                        </Button>
+                                        {!isPremium && (
+                                            <p className="text-sm text-gray-500 text-center">{t('you-have-already-generated')} {user?.storiesGenerated}/3 {t('stories')}</p>
+                                        )}
+                                    </div>
+                                ): (
                                     <div className="flex flex-col items-center gap-3">
-                                        <p className="text-amber-500">{t('your-reached-the-3-free-trials')}</p>
-                                        <BuyButton />
+                                        <p className="text-amber-500 text-center">{t('your-reached-the-3-free-trials')}</p>
+                                        <BuyButton/>
                                     </div>
                                 )}
                             </motion.div>
-                        ): (
+                        ) : (
                             <motion.div
-                                initial={{ opacity: 0, y: 80, filter: 'blur(8px)' }}
+                                initial={{opacity: 0, y: 80, filter: 'blur(8px)' }}
                                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                                 exit={{ opacity: 0, y: 80, filter: 'blur(8px)' }}
                                 transition={{

@@ -1327,6 +1327,24 @@
       }
     },
     {
+      "tag": "stories",
+      "t": {
+        "en": "stories",
+        "fr": "histoires",
+        "it": "storie",
+        "de": "Geschichten"
+      }
+    },
+    {
+      "tag": "you-have-already-generated",
+      "t": {
+        "en": "You have already generated",
+        "fr": "Vous avez déjà généré",
+        "it": "Hai già generato",
+        "de": "Sie haben bereits generiert"
+      }
+    },
+    {
       "tag": "subtitle-card-premium",
       "t": {
         "en": "Access unlimited stories and immerse yourself in a world of personalized adventures",

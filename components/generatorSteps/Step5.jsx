@@ -1,8 +1,8 @@
 import {useLocale} from "@/app/contexts/LocaleContext";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {H2} from "@/components/typo/H2";
 import {Skeleton} from "@/components/ui/skeleton";
+import {H3} from "@/components/typo/H3";
 
 export default function Step5({data, caractersDataBase, caracterTagsDataBase, radius = 80}) {
     const {t} = useLocale();
@@ -31,7 +31,7 @@ export default function Step5({data, caractersDataBase, caracterTagsDataBase, ra
         <div className="w-full flex flex-col items-center justify-end relative gap-3 overflow-hidden"
              style={{height: 'calc(100dvh - 200px)'}}>
             <div className="flex flex-row flex-wrap gap-3 items-center justify-center">
-                <H2 className="text-center text-gray-300">{t('your-story-is-creating')}</H2>
+                <H3 className="text-center text-gray-300">{t('your-story-is-creating')}</H3>
                 <Skeleton className="h-6 w-6 bg-gray-200 rounded-full" />
             </div>
 
