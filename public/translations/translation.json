@@ -1820,6 +1820,33 @@
         "it": "L'Isola di Pasqua",
         "de": "Die Osterinsel"
       }
+    },
+    {
+      "tag": "manage-subscription",
+      "t": {
+        "en": "Manage my subscription",
+        "fr": "Gérer mon abonnement",
+        "it": "Gestisci il mio abbonamento",
+        "de": "Mein Abonnement verwalten"
+      }
+    },
+    {
+      "tag": "sign-out",
+      "t": {
+        "en": "Sign out",
+        "fr": "Deconnexion",
+        "it": "Esci",
+        "de": "Abmelden"
+      }
+    },
+    {
+      "tag": "upgrade-to-premium",
+      "t": {
+        "en": "Upgrade to Premium",
+        "fr": "S'abonner à Premium",
+        "it": "Abbonati al Premium",
+        "de": "Upgrade zu Premium"
+      }
     }
   ]
 }

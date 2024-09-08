@@ -1,5 +1,7 @@
 import prisma from "../../../../lib/prisma";
 import {NextResponse} from "next/server";
+import {resend} from "@/lib/resend";
+import WelcomePremium from "@/emails/WelcomePremium";
 
 exports.POST = async (req) => {
     const body = await req.json();
@@ -62,6 +64,31 @@ exports.POST = async (req) => {
             });
             break;
         }
+        case "customer.subscription.created": {
+            const session = body.data.object;
+            const stripeCustomerId = session.customer;
+            const user = await findUserFromCustomer(stripeCustomerId);
+
+            if (!user?.id) {
+                break;
+            }
+
+            const emailHtml = WelcomePremium({ name: user?.name})
+
+            await resend.emails.send({
+                from: 'Wonder Story <premium@wonder-story.app>',
+                to: [user?.email],
+                subject: 'Merci pour ton abonnement Premium ! 🎉',
+                react: emailHtml,
+                tags: [
+                    {
+                        name: 'category',
+                        value: 'premium',
+                    },
+                ],
+            });
+            break;
+        }
         case "customer.subscription.deleted": {
             const subscription = body.data.object;
             const stripeCustomerId = subscription.customer;
@@ -103,5 +130,4 @@ const findUserFromCustomer = async (stripeCustomerId) => {
 };
 
 // TODO: Envoi email notification when:
-//  -checkout.session.completed => pour le remercier d'avoir souscrit
 //  -customer.subscription.deleted => pour lui demander de revenir

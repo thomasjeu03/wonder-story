@@ -7,40 +7,39 @@ import Image from 'next/image';
 import {BuyButton} from "@/components/buy/BuyButton";
 import {AccountSettingsButton} from "@/components/buy/UserSettings";
 import {useUser} from "@/app/contexts/UserContext";
+import {useLocale} from "@/app/contexts/LocaleContext";
+import {LogOut} from "lucide-react";
 
 export default function AccountContent() {
     const { user, isPremium } = useUser();
+    const { t } = useLocale();
 
     return (
-        <>
-            {user?.image && (
-                <Image
-                    src={user?.image}
-                    alt={user?.name || 'User Image'}
-                    width={60}
-                    height={60}
-                    unoptimized
-                    className="rounded-full"
-                    quality={80}
-                />
-            )}
-            <H2 className='text-center'>{user?.name}</H2>
-            <p className='text-center'>{user?.email}</p>
-            <p className={`rounded-md px-4 py-1 text-white 
-                        ${isPremium ? 'bg-yellow-600' : 'bg-green-600'}`}
-            >
-                {user?.plan}
-            </p>
-            <div className='flex gap-2'>
-                {isPremium ? (
-                    <AccountSettingsButton/>
-                ) : (
-                    <BuyButton/>
+        <section className="min-h-min w-full flex flex-col items-center pt-4 sm:pt-6 gap-6 sm:gap-12 pb-20">
+            <div className="flex flex-col gap-3 items-center w-full">
+                {user?.image && (
+                    <Image
+                        src={user?.image}
+                        alt={user?.name || 'User Image'}
+                        width={80}
+                        height={80}
+                        unoptimized
+                        className={`${isPremium ? 'border-2 border-yellow-500' : ''} rounded-full`}
+                        quality={90}
+                    />
                 )}
-                <Button variant='link' className='text-destructive' onClick={() => signOut()}>
-                    Sign out
-                </Button>
+                <H2 className='text-center'>{user?.name}</H2>
+                <p className='text-center'>{user?.email}</p>
             </div>
-        </>
+            {isPremium ? (
+                <AccountSettingsButton/>
+            ) : (
+                <BuyButton/>
+            )}
+            <Button variant='destructive' size="lg" className="w-full max-w-sm" onClick={() => signOut()}>
+                {t('sign-out')}
+                <LogOut />
+            </Button>
+        </section>
     );
 }

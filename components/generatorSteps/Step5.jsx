@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {Skeleton} from "@/components/ui/skeleton";
 import {H3} from "@/components/typo/H3";
 
-export default function Step5({data, caractersDataBase, caracterTagsDataBase, radius = 80}) {
+export default function Step5({data, caractersDataBase, caracterTagsDataBase, radius = 80, placesDataBase, placeTagsDataBase}) {
     const {t} = useLocale();
 
     const caractersFind = caractersDataBase.filter(caracter =>
@@ -18,6 +18,20 @@ export default function Step5({data, caractersDataBase, caracterTagsDataBase, ra
             color: tag?.color || '#ffffff'
         };
     });
+
+    const placesFind = placesDataBase.filter(place =>
+        data?.places?.includes(t(place.name))
+    );
+
+    // TODO: animations des places lors de la génération de l'histoire
+    const placesWithColors = placesFind.map(place => {
+        const tag = placeTagsDataBase.find(tag => tag.id === place.placeTagId);
+        return {
+            ...place,
+            color: tag?.color || '#ffffff'
+        };
+    });
+
 
     const calculatePosition = (index, total) => {
         const angleInDegrees = (index / total) * 360;
