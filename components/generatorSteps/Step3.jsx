@@ -17,7 +17,7 @@ export default function Step3({ data, setData, loadingPlaces, loadingPlaceTags, 
             </div>
 
             <Tabs defaultValue={placeTags[0]?.name} className="w-full flex flex-col items-center">
-                <TabsList className="w-full max-w-4xl gap-3">
+                <TabsList className="w-full max-w-4xl gap-2">
                     {loadingPlaceTags ? (
                         <Skeleton height="20px" width="40px" />
                     ):(

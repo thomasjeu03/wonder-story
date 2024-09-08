@@ -20,7 +20,7 @@ export default function Step2({ data, setData, loadingCaracters, loadingCaracter
             </div>
 
             <Tabs defaultValue={caracterTags[0]?.name} className="w-full flex flex-col items-center">
-                <TabsList className="w-full max-w-4xl gap-3">
+                <TabsList className="w-full max-w-4xl gap-2">
                     {loadingCaracterTags ? (
                         <Skeleton height="20px" width="40px" />
                     ):(
