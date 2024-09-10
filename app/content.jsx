@@ -227,7 +227,10 @@ export default function HomeContent() {
                                             <Sparkles/>
                                         </Button>
                                         {!isPremium && (
-                                            <p className="text-sm text-gray-500 text-center">{t('you-have-already-generated')} {user?.storiesGenerated}/3 {t('stories')}</p>
+                                            <>
+                                                <p className="text-sm text-gray-500 text-center">{t('you-have-already-generated')} {user?.storiesGenerated}/3 {t('stories')}</p>
+                                                <BuyButton varient="secondary" size="default"/>
+                                            </>
                                         )}
                                     </div>
                                 ): (
