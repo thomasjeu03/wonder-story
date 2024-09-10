@@ -321,9 +321,9 @@
 
   /*Price CARD*/
   .price-card{
-    background: linear-gradient(rgba(62, 62, 65, 0.3), rgba(28, 28, 31, 0.3));
+    background: linear-gradient(#1e1d20, #111114) padding-box, linear-gradient(170deg, rgb(65, 65, 65) 10%, #171717 50%) border-box !important;
+    border: 1px solid transparent !important;
     border-radius: 32px;
-    border: 1.5px solid rgba(95, 95, 100, 0.3);
     padding: 24px;
     width: 100%;
     backdrop-filter: blur(24px);

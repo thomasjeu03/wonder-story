@@ -1847,6 +1847,51 @@
         "it": "Abbonati al Premium",
         "de": "Upgrade zu Premium"
       }
+    },
+    {
+      "tag": "dont-waste-time",
+      "t": {
+        "en": "Don't waste time",
+        "fr": "Ne perdez pas de temps",
+        "it": "Non perdere il tempo",
+        "de": "Nicht die Zeit verbringen"
+      }
+    },
+    {
+      "tag": "benefit-2-title",
+      "t": {
+        "en": "Anywhere, anytime",
+        "fr": "N'importe où, n'importe quand",
+        "it": "Ovunque, in qualsiasi momento",
+        "de": "Überall und jederzeit"
+      }
+    },
+    {
+      "tag": "benefit-2",
+      "t": {
+        "en": "Access stories anywhere and at any time, whether during a long commute or just before putting the kids to bed, making the reading experience flexible and convenient.",
+        "fr": "Accéder aux histoires n'importe où et à tout moment, que ce soit pendant un long trajet ou juste avant de coucher les enfants, rendant ainsi l’expérience de lecture flexible et pratique",
+        "it": "Accedi alle storie ovunque e in qualsiasi momento, durante un lungo tragitto o appena prima di mettere a letto i bambini, rendendo l'esperienza di lettura flessibile e conveniente.",
+        "de": "Greifen Sie überall und jederzeit auf Geschichten zu, sei es während einer langen Fahrt zur Arbeit oder kurz bevor Sie die Kinder ins Bett bringen, und machen Sie das Leseerlebnis flexibel und bequem."
+      }
+    },
+    {
+      "tag": "benefit-3",
+      "t": {
+        "en": "With unique AI-generated stories, kids are constantly discovering new adventures, sparking their creativity and imagination",
+        "fr": "Grâce aux histoires uniques générées par l’IA, les enfants découvrent constamment de nouvelles aventures, ce qui stimule leur créativité et imagination",
+        "it": "Con storie uniche generate dall'intelligenza artificiale, i bambini scoprono costantemente nuove avventure, stimolando la loro creatività e immaginazione",
+        "de": "Mit einzigartigen, von der KI generierten Geschichten entdecken Kinder ständig neue Abenteuer und regen ihre Kreativität und Fantasie an"
+      }
+    },
+    {
+      "tag": "your-story-in-less-than-a-minute",
+      "t": {
+        "en": "Your story in less than a minute, to help you find the perfect story quickly every night",
+        "fr": "Votre histoire en moins d'une minute, pour vous aider à trouver l'histoire parfaite rapidement chaque soir",
+        "it": "La tua storia in meno di un minuto, per aiutarti a trovare velocemente la storia perfetta ogni sera",
+        "de": "Ihre Geschichte in weniger als einer Minute, damit Sie jeden Abend schnell die perfekte Geschichte finden"
+      }
     }
   ]
 }
