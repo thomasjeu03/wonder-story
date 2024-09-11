@@ -10,6 +10,9 @@ import bgPremiumCard from   "../../public/img/bg-premium-card.png";
 import bgFooter from   "../../public/img/footer.png";
 import benefit1 from   "../../public/img/landingPage/benefit1.png";
 import benefit2 from   "../../public/img/landingPage/benefit2.png";
+import step1 from   "../../public/img/landingPage/step1.png";
+import step2 from   "../../public/img/landingPage/step2.png";
+import step3 from   "../../public/img/landingPage/step3.png";
 import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
 import {Sparkles, XIcon, CheckIcon, Timer, Globe} from "lucide-react";
@@ -101,14 +104,6 @@ export default function LandingPage() {
                                    alt='Wonder Story benefit 1'/>
                         </div>
                         <div className="price-card col-auto md:col-span-1 p-0 gap-0 relative min-h-96">
-                            <div className="gradient-blur z-0 h-48 md:h-32">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
                             <div className="flex flex-col gap-3 w-full p-6 z-10">
                                 <h4 className='font-handwriting text-gray-300 text-4xl w-full flex flex-row gap-3'>
                                     <Globe size={32}/>
@@ -124,23 +119,72 @@ export default function LandingPage() {
                     <p className="text-gray-300 text-center w-full">{t('benefit-3')}</p>
                 </section>
 
-                {/*<section id="how-it-works" className="w-full gap-12 flex flex-col items-center max-w-5xl">*/}
-                {/*    <div className="w-full flex flex-col gap-4">*/}
-                {/*        <h2 className="text-center font-handwriting text-5xl lg:text-7xl">{t('section-steps-title')}</h2>*/}
-                {/*        <h3 className="text-center text-md md:text-2xl text-gray-400">{t('section-steps-subtitle')}</h3>*/}
-                {/*    </div>*/}
-                {/*    <div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
+                <section id="how-it-works" className="w-full gap-12 flex flex-col items-center max-w-5xl">
+                    <div className="w-full flex flex-col gap-4">
+                        <h2 className="text-center font-handwriting text-5xl lg:text-7xl">{t('section-steps-title')}</h2>
+                        <h3 className="text-center text-md md:text-2xl text-gray-400">{t('section-steps-subtitle')}</h3>
+                    </div>
+                    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                        <div className="price-card col-auto md:col-span-1 p-0 gap-0 relative max-w-sm m-auto">
+                            <div className="flex flex-col gap-3 w-full p-6 z-10">
+                                <h4 className='font-handwriting text-gray-300 text-4xl w-full flex flex-row gap-3'>
+                                    <span className="text-3xl">1.</span>{t('step-1-title')}
+                                </h4>
+                                <p className="text-gray-300">{t('step-1-subtitle')}</p>
+                            </div>
+                            <Image src={step1} priority quality={80}
+                                   className="w-full h-auto"
+                                   alt='Wonder Story step 1'/>
+                        </div>
+                        <div className="price-card col-auto md:col-span-1 p-0 gap-0 relative max-w-sm m-auto">
+                            <div className="flex flex-col gap-3 w-full p-6 z-10">
+                                <h4 className='font-handwriting text-gray-300 text-4xl w-full flex flex-row gap-3'>
+                                    <span className="text-3xl">2.</span>{t('step-2-title')}
+                                </h4>
+                                <p className="text-gray-300">{t('step-2-subtitle')}</p>
+                            </div>
+                            <Image src={step2} priority quality={80}
+                                   className="w-full h-auto"
+                                   alt='Wonder Story step 2'/>
+                        </div>
+                        <div className="price-card col-auto md:col-span-1 p-0 gap-0 relative max-w-sm m-auto">
+                            <div className="flex flex-col gap-3 w-full p-6 z-10">
+                                <h4 className='font-handwriting text-gray-300 text-4xl w-full flex flex-row gap-3'>
+                                    <span className="text-3xl">3.</span>{t('step-3-title')}
+                                </h4>
+                                <p className="text-gray-300">{t('step-3-subtitle')}</p>
+                            </div>
+                            <Image src={step3} priority quality={80}
+                                   className="w-full h-auto"
+                                   alt='Wonder Story step 3'/>
+                        </div>
+                    </div>
+                    <Button size="lg" className="mt-6" onClick={() => signIn("google")}>
+                        {t('create-story')}
+                        <Sparkles/>
+                    </Button>
+                </section>
 
-                {/*<section id='testimonials' className="w-full gap-12 flex flex-col max-w-5xl">*/}
-                {/*    <div className="w-full flex flex-col gap-4">*/}
-                {/*        <h2 className="font-handwriting text-5xl lg:text-7xl">{t('section-testimonials-title')}</h2>*/}
-                {/*        <h3 className="text-md md:text-2xl text-gray-400">{t('section-testimonials-subtitle')}</h3>*/}
-                {/*    </div>*/}
-                {/*    <div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
+                <section id='testimonials' className="w-full gap-12 flex flex-col max-w-5xl">
+                    <div className="w-full flex flex-col gap-4">
+                        <h2 className="font-handwriting text-5xl lg:text-7xl">{t('section-testimonials-title')}</h2>
+                        <h3 className="text-md md:text-2xl text-gray-400">{t('section-testimonials-subtitle')}</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="price-card testimonial-card flex flex-col items-center p-6 gap-2 max-w-96 m-auto">
+                            <p className="text-xl text-center">{t('testimonial1')}</p>
+                            <span className="text-center text-gray-400">{t('testimonial1-author')}</span>
+                        </div>
+                        <div className="price-card testimonial-card flex flex-col items-center p-6 gap-2 max-w-96 m-auto">
+                            <p className="text-xl text-center">{t('testimonial2')}</p>
+                            <span className="text-center text-gray-400">{t('testimonial2-author')}</span>
+                        </div>
+                        <div className="price-card testimonial-card flex flex-col items-center p-6 gap-2 max-w-96 m-auto">
+                            <p className="text-xl text-center">{t('testimonial3')}</p>
+                            <span className="text-center text-gray-400">{t('testimonial3-author')}</span>
+                        </div>
+                    </div>
+                </section>
 
                 <section id='price' className="w-full gap-12 flex flex-col justify-start items-start max-w-5xl">
                     <div className="w-full flex flex-col gap-4">
@@ -196,7 +240,7 @@ export default function LandingPage() {
                                         {t('advanced_story_customization')}
                                     </li>
                                     <li className="flex flex-row gap-2">
-                                        <CheckIcon color={'lightgreen'} />
+                                        <CheckIcon color={'lightgreen'}/>
                                         {t('full_access_personal_library')}
                                     </li>
                                     <li className="flex flex-row gap-2">
@@ -212,7 +256,8 @@ export default function LandingPage() {
                                 </div>
                             </div>
                             <div className="w-full h-full flex items-center justify-center p-4">
-                                <Image src={premiumCard} priority quality={100} className="w-full h-full object-cover rounded-md border-2 border-amber-200"
+                                <Image src={premiumCard} priority quality={100}
+                                       className="w-full h-full object-cover rounded-md border-2 border-amber-200"
                                        alt='Wonder Story premium price'/>
                             </div>
                         </div>
@@ -221,7 +266,8 @@ export default function LandingPage() {
             </main>
             <footer className='flex flex-col w-full'>
                 {/*TODO: all extras pages*/}
-                <Link href="https://thomasjeu.fr" target='_blank' rel='noopener' className="w-full text-center text-gray-400 text-sm">{t('made_by')} Thomas JEU</Link>
+                <Link href="https://thomasjeu.fr" target='_blank' rel='noopener'
+                      className="w-full text-center text-gray-400 text-sm">{t('made_by')} Thomas JEU</Link>
                 <Image src={bgFooter} priority quality={100}
                        className="w-full h-auto relative"
                        alt='Wonder Story footer image'/>

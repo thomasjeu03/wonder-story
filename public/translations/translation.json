@@ -1892,6 +1892,60 @@
         "it": "La tua storia in meno di un minuto, per aiutarti a trovare velocemente la storia perfetta ogni sera",
         "de": "Ihre Geschichte in weniger als einer Minute, damit Sie jeden Abend schnell die perfekte Geschichte finden"
       }
+    },
+    {
+      "tag": "step-1-title",
+      "t": {
+        "en": "Choose",
+        "fr": "Choisir",
+        "it": "Scegliere",
+        "de": "Wählen"
+      }
+    },
+    {
+      "tag": "step-2-title",
+      "t": {
+        "en": "Personalize",
+        "fr": "Personnaliser",
+        "it": "Personalizza",
+        "de": "Personalisieren"
+      }
+    },
+    {
+      "tag": "step-3-title",
+      "t": {
+        "en": "Enjoy",
+        "fr": "Profiter",
+        "it": "Godere",
+        "de": "Genießen"
+      }
+    },
+    {
+      "tag": "step-1-subtitle",
+      "t": {
+        "en": "Choose the characters and worlds for your story.",
+        "fr": "Choisissez les personnages et les lieux de votre histoire.",
+        "it": "Scegli i personaggi e le ambientazioni della tua storia.",
+        "de": "Wählen Sie die Charaktere und Schauplätze für Ihre Geschichte."
+      }
+    },
+    {
+      "tag": "step-2-subtitle",
+      "t": {
+        "en": "Personalize the story with themes, length, and age group.",
+        "fr": "Personnalisez l'histoire avec des thèmes, la durée et le groupe d'âge.",
+        "it": "Personalizza la storia con temi, durata e fascia d'età.",
+        "de": "Personalisieren Sie die Geschichte mit Themen, Länge und Altersgruppe."
+      }
+    },
+    {
+      "tag": "step-3-subtitle",
+      "t": {
+        "en": "Get your story generated in less than 5 seconds.",
+        "fr": "Générez votre histoire en moins de 5 secondes.",
+        "it": "Ottieni la tua storia generata in meno di 5 secondi.",
+        "de": "Lassen Sie Ihre Geschichte in weniger als 5 Sekunden generieren."
+      }
     }
   ]
 }
