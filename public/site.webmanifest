@@ -1,5 +1,5 @@
 {
-    "background_color": "#0E0B0E ",
+    "background_color": "rgb(14, 11, 14)",
     "categories": [
         "Wonder Story",
         "Générateur d’histoires",
@@ -32,7 +32,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#0E0B0E",
+    "theme_color": "rgb(14, 11, 14)",
     "orientation": "any",
     "display_override": [
         "fullscreen",
