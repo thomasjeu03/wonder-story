@@ -18,9 +18,14 @@ import apple from   "../../public/img/apple.png";
 import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
 import {Sparkles, XIcon, CheckIcon, Timer, Globe} from "lucide-react";
+import {useState} from "react";
+import {Skeleton} from "@/components/ui/skeleton";
 
 export default function LandingPage() {
     const {t} = useLocale();
+
+    const [appleLoading, setAppleLoading] = useState(false)
+    const [googleLoading, setGoogleLoading] = useState(false)
     // TODO: landing page
     return (
         <>
@@ -82,12 +87,34 @@ export default function LandingPage() {
                         <Sparkles/>
                     </Button>
                     <div className="flex gap-4 flex-wrap items-center justify-center">
-                        <Button variant="secondary" onClick={() => signIn("google")}>
-                            <Image src={google} alt='google logo' quality={50} width={25}/>
-                            {t('login-with')} Google</Button>
-                        <Button variant="secondary" onClick={() => signIn("apple")}>
-                            <Image src={apple} alt='apple logo' quality={50} width={20}/>
-                            {t('login-with')} Apple</Button>
+                        <Button variant="secondary"
+                            onClick={() => {
+                                setGoogleLoading(true)
+                                signIn("google")
+                            }}>
+                            {googleLoading ? (
+                                <Skeleton className="w-36 h-6"/>
+                            ):(
+                                <>
+                                    <Image src={google} alt='google logo' quality={50} width={25}/>
+                                    {t('login-with')} Google
+                                </>
+                            )}
+                        </Button>
+                        <Button variant="secondary"
+                            onClick={() => {
+                                setAppleLoading(true)
+                                signIn("apple")
+                            }}>
+                            {appleLoading ? (
+                                <Skeleton className="w-36 h-6"/>
+                            ):(
+                                <>
+                                    <Image src={apple} alt='apple logo' quality={50} width={20}/>
+                                    {t('login-with')} Apple
+                                </>
+                            )}
+                        </Button>
                     </div>
                 </div>
                 <Image src={mockup} priority quality={100} width={1300} alt='Wonder Story mockup'/>
