@@ -15,8 +15,13 @@ export const authOptions = {
             clientSecret: {
                 appleId: process.env.APPLE_CLIENT_ID,
                 teamId: process.env.APPLE_TEAM_ID,
-                privateKey: process.env.APPLE_PRIVATE_KEY,
+                privateKey: process.env.APPLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
                 keyId: process.env.APPLE_KEY_ID,
+            },
+            authorization: {
+                params: {
+                    scope: 'name email',
+                },
             },
         }),
         GoogleProvider({
