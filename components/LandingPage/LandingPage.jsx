@@ -13,6 +13,8 @@ import benefit2 from   "../../public/img/landingPage/benefit2.png";
 import step1 from   "../../public/img/landingPage/step1.png";
 import step2 from   "../../public/img/landingPage/step2.png";
 import step3 from   "../../public/img/landingPage/step3.png";
+import google from   "../../public/img/google.png";
+import apple from   "../../public/img/apple.png";
 import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
 import {Sparkles, XIcon, CheckIcon, Timer, Globe} from "lucide-react";
@@ -64,7 +66,7 @@ export default function LandingPage() {
                             {/*    <a href="/#faq" className="text-gray-200 hover:text-gray-50">{t('faqs')}</a>*/}
                             {/*</li>*/}
                             <li>
-                                <Button onClick={() => signIn("google")}>{t('login')}</Button>
+                                <Button onClick={() => signIn("google")}>{t('create-story')}</Button>
                             </li>
                         </ul>
                     </div>
@@ -79,6 +81,14 @@ export default function LandingPage() {
                         {t('create-story')}
                         <Sparkles/>
                     </Button>
+                    <div className="flex gap-4 flex-wrap items-center justify-center">
+                        <Button variant="secondary" onClick={() => signIn("google")}>
+                            <Image src={google} alt='google logo' quality={50} width={25}/>
+                            {t('login-with')} Google</Button>
+                        <Button variant="secondary" onClick={() => signIn("apple")}>
+                            <Image src={apple} alt='apple logo' quality={50} width={20}/>
+                            {t('login-with')} Apple</Button>
+                    </div>
                 </div>
                 <Image src={mockup} priority quality={100} width={1300} alt='Wonder Story mockup'/>
             </header>

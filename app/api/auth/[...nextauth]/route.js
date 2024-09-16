@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import AppleProvider from "next-auth/providers/apple";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 import {stripe} from "@/lib/stripe";
@@ -9,6 +10,15 @@ import WelcomeAboard from "@/emails/WelcomeAboard";
 export const authOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
+        AppleProvider({
+            clientId: process.env.APPLE_CLIENT_ID,
+            clientSecret: {
+                appleId: process.env.APPLE_CLIENT_ID,
+                teamId: process.env.APPLE_TEAM_ID,
+                privateKey: process.env.APPLE_PRIVATE_KEY,
+                keyId: process.env.APPLE_KEY_ID,
+            },
+        }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
