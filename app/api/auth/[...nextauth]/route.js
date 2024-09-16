@@ -21,6 +21,8 @@ export const authOptions = {
             authorization: {
                 params: {
                     scope: 'name email',
+                    response_type: "code",
+                    code_challenge_method: "S256",
                 },
             },
         }),
