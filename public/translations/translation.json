@@ -1193,6 +1193,15 @@
       }
     },
     {
+      "tag": "login-with",
+      "t": {
+        "en": "Login with",
+        "fr": "Se connecter avec",
+        "it": "Accedi con",
+        "de": "Anmelden mit"
+      }
+    },
+    {
       "tag": "landing-hero-subtitle",
       "t": {
         "en": "Offer your children unique and personalized adventures that will spark their imagination",
