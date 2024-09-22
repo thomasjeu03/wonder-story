@@ -103,20 +103,20 @@ export default function LandingPage() {
                         </Button>
 
                         {/*TODO: apple auth*/}
-                        <Button variant="secondary"
-                            onClick={() => {
-                                setAppleLoading(true)
-                                signIn("apple")
-                            }}>
-                            {appleLoading ? (
-                                <Skeleton className="w-36 h-6"/>
-                            ):(
-                                <>
-                                    <Image src={apple} alt='apple logo' quality={50} width={20}/>
-                                    {t('login-with')} Apple
-                                </>
-                            )}
-                        </Button>
+                        {/*<Button variant="secondary"*/}
+                        {/*    onClick={() => {*/}
+                        {/*        setAppleLoading(true)*/}
+                        {/*        signIn("apple")*/}
+                        {/*    }}>*/}
+                        {/*    {appleLoading ? (*/}
+                        {/*        <Skeleton className="w-36 h-6"/>*/}
+                        {/*    ):(*/}
+                        {/*        <>*/}
+                        {/*            <Image src={apple} alt='apple logo' quality={50} width={20}/>*/}
+                        {/*            {t('login-with')} Apple*/}
+                        {/*        </>*/}
+                        {/*    )}*/}
+                        {/*</Button>*/}
                     </div>
                 </div>
                 <Image src={mockup} priority quality={100} width={1300} alt='Wonder Story mockup'/>
