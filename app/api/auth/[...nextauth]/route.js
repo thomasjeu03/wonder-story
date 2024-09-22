@@ -66,6 +66,7 @@ export const authOptions = {
     session: {
         strategy: "jwt",
     },
+    debug: true,
     events: {
         createUser: async (message) => {
             const userId = message.user.id;
