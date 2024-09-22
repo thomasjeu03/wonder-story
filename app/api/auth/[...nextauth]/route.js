@@ -25,6 +25,7 @@ export const authOptions = {
                     code_challenge_method: "S256",
                 },
             },
+            checks: ["pkce", "state"],
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
@@ -53,6 +54,15 @@ export const authOptions = {
         },
     },
     secret: process.env.NEXTAUTH_SECRET,
+    cookies: {
+        pkceCodeVerifier: {
+            name: "next-auth.pkce.code_verifier",
+            options: {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === "production",
+            },
+        },
+    },
     session: {
         strategy: "jwt",
     },
