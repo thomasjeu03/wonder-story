@@ -265,7 +265,7 @@ export default function LandingPage() {
                                     <h4 className='font-handwriting text-gray-300 text-3xl w-full'>Premium</h4>
                                     <p className="text-gray-200">
                                         <span
-                                            className="font-handwriting text-5xl text-foreground">4,99€</span> /{t('month')}
+                                            className="font-handwriting text-5xl text-foreground">1,99€</span> /{t('month')}
                                     </p>
                                     <p className="text-gray-300 text-sm text-center">{t('subtitle-card-premium')}</p>
                                 </div>
