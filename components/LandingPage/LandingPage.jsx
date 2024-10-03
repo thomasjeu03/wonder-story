@@ -235,7 +235,7 @@ export default function LandingPage() {
                             <div className="flex flex-col items-center justify-center gap-3 w-full">
                                 <h4 className='font-handwriting text-gray-300 text-3xl w-full'>{t('free_trial')}</h4>
                                 <p className="text-gray-200">
-                                    <span className="font-handwriting text-5xl text-foreground">0,00€</span>
+                                    <span className="font-handwriting text-5xl text-foreground">0,00 €</span>
                                 </p>
                                 <p className="text-gray-300 text-sm text-center">{t('try_for_free_discover_magic')}</p>
                             </div>
@@ -265,7 +265,7 @@ export default function LandingPage() {
                                     <h4 className='font-handwriting text-gray-300 text-3xl w-full'>Premium</h4>
                                     <p className="text-gray-200">
                                         <span
-                                            className="font-handwriting text-5xl text-foreground">4,99€</span> /{t('month')}
+                                            className="font-handwriting text-5xl text-foreground">1,99 €</span> /{t('month')}
                                     </p>
                                     <p className="text-gray-300 text-sm text-center">{t('subtitle-card-premium')}</p>
                                 </div>
