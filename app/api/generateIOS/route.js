@@ -29,6 +29,7 @@ export async function POST(request) {
                             'Le temps de lecture est : ' + data.time + ' minutes. ' +
                             'La morale de l\'histoire est nécessaire si le champ "moral" est égal à true : ' + data.moral + '. ' +
                             'Sépare le titre de l\'histoire avec cette balise : "[TITLE_END]".' +
+                            'Ne rajoute surtout pas de balise "[TITLE]" au début du titre.' +
                             'L\'histoire doit être traduite en : "' + data.locale + '". '
                     },
                 ],
