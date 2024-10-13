@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
+export const maxDuration = 20;
+export const dynamic = 'force-dynamic';
+
 // TODO : optimiser le prompte pour IOS
 export async function POST(request) {
     const { data } = await request.json();
