@@ -43,8 +43,9 @@ export async function POST(request) {
         );
 
         const storyContent = response.data.choices[0].message.content;
+        const storyTitle = "Mon titre personnalisé"
 
-        return NextResponse.json({storyContent}, { status: 200 })
+        return NextResponse.json({ storyTitle, storyContent }, { status: 200 });
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
