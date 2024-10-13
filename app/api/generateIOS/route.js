@@ -14,22 +14,23 @@ export async function POST(request) {
                 messages: [
                     {
                         role: 'system',
-                        content: 'Tu es un assistant pour creer des histoires et contes pour enfants. ' +
-                            'Répond moi toujours en créant une histoire sous format texte. ' +
-                            'Tu es un expert dans la mise en forme string pour ces histoires. Tu as l habitude de raconter des histoires à de nombreux enfant, qui sont adaptée à leur age au niveau du vocabulaire. ' +
-                            'Je ne veux que le contenu de l histoire en incorporant toutes les données du prompte. ' +
+                        content: 'Tu es un assistant spécialisé en création d\'histoires pour enfants. ' +
+                            'Ton rôle est de générer un titre accrocheur et une histoire adaptée à un enfant, qui est adaptée à leur age et au niveau du vocabulaire.' +
+                            'Je veux que le contenu de l histoire incorpore les données du prompte. ' +
+                            'Le retour doit inclure le titre et l\'histoire, chacun séparé par une balise spéciale, que je te fournirai.' +
                             'ATTENTION: Tu sais faire attention à choisir la bonne traduction en fonction du local situé en fin de prompt, il est obligatoire de prendre cela en compte',
                     },
                     {
                         role: 'user',
-                        content: 'Crée moi uns histoire pour un enfant de ' + data.ageRange + 'ans. ' +
-                            'Les personnages de cette histoire sont: ' + data.caracters.join(', ') + '. ' +
-                            'Le personnage principal sera donc ' + data.mainCaracter + '. ' +
-                            'Cette histoire se déroulera à travers les lieux suivant: ' + data.places.join(', ') + '. ' +
-                            'Cette histoire aura un temps de lecture de: ' + data.time + 'min. ' +
-                            'Cette histoire devra comporter une morale si le mot suivant est egal à true: ' + data.moral + '. ' +
-                            'Cette histoire se basera sur les thèmes suivants: ' + data.genres.join(', ') + '. ' +
-                            'Traduis obligatoirement cette histoire en : "' + data.locale + '".',
+                        content: 'Crée une histoire pour un enfant de ' + data.ageRange + ' ans. ' +
+                            'Les personnages sont : ' + data.caracters.join(', ') + '. ' +
+                            'Le personnage principal est ' + data.mainCaracter + '. ' +
+                            'Les lieux de l\'histoire sont : ' + data.places.join(', ') + '. ' +
+                            'Les thèmes de l\'histoire sont : ' + data.genres.join(', ') + '. ' +
+                            'Le temps de lecture est : ' + data.time + ' minutes. ' +
+                            'La morale de l\'histoire est nécessaire si le champ "moral" est égal à true : ' + data.moral + '. ' +
+                            'Sépare le titre de l\'histoire avec cette balise : "[TITLE_END]".' +
+                            'L\'histoire doit être traduite en : "' + data.locale + '". '
                     },
                 ],
                 max_tokens: data.time * 1500,
@@ -42,8 +43,8 @@ export async function POST(request) {
             }
         );
 
-        const storyContent = response.data.choices[0].message.content;
-        const storyTitle = "Mon titre personnalisé"
+        const fullContent = response.data.choices[0].message.content;
+        const [storyTitle, storyContent] = fullContent.split('[TITLE_END]').map(part => part.trim());
 
         return NextResponse.json({ storyTitle, storyContent }, { status: 200 });
     } catch (error) {
