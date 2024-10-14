@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-export const maxDuration = 30;
+export const maxDuration = 40;
 export const dynamic = 'force-dynamic';
 
 // TODO : optimiser le prompte pour IOS

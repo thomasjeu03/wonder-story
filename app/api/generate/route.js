@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import axios from 'axios';
 import prisma from '@/lib/prisma';
 
-export const maxDuration = 30;
+export const maxDuration = 40;
 export const dynamic = 'force-dynamic';
 
 // TODO : optimiser les promptes
