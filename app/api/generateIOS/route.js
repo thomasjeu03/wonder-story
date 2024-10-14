@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-export const maxDuration = 20;
+export const maxDuration = 30;
 export const dynamic = 'force-dynamic';
 
 // TODO : optimiser le prompte pour IOS
@@ -26,11 +26,8 @@ export async function POST(request) {
                         role: 'user',
                         content: 'Crée une histoire pour un enfant de ' + data.ageRange + ' ans. ' +
                             'Les personnages sont : ' + data.caracters.join(', ') + '. ' +
-                            'Le personnage principal est ' + data.mainCaracter + '. ' +
-                            'Les lieux de l\'histoire sont : ' + data.places.join(', ') + '. ' +
-                            'Les thèmes de l\'histoire sont : ' + data.genres.join(', ') + '. ' +
                             'Le temps de lecture est : ' + data.time + ' minutes. ' +
-                            'La morale de l\'histoire est nécessaire si le champ "moral" est égal à true : ' + data.moral + '. ' +
+                            'La morale de l\'histoire est nécessaire si le champ "moral" est égal à true : "moral" = ' + (data.moral ? 'true' : 'false') + ' . ' +
                             'Sépare le titre de l\'histoire avec cette balise : "[TITLE_END]".' +
                             'Ne rajoute surtout pas de balise "[TITLE]" au début du titre.' +
                             'L\'histoire doit être traduite en : "' + data.locale + '". '

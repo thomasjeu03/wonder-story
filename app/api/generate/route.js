@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import axios from 'axios';
 import prisma from '@/lib/prisma';
 
-export const maxDuration = 20;
+export const maxDuration = 30;
 export const dynamic = 'force-dynamic';
 
 // TODO : optimiser les promptes
@@ -30,7 +30,7 @@ export async function POST(request) {
                             'Le personnage principal sera donc ' + data.mainCaracter + '. ' +
                             'Cette histoire se déroulera à travers les lieux suivant: ' + data.places.join(', ') + '. ' +
                             'Cette histoire aura un temps de lecture de: ' + data.time + 'min. ' +
-                            'Cette histoire devra comporter une morale si le mot suivant est egal à true: ' + data.moral + '. ' +
+                            'La morale de l\'histoire est nécessaire si le champ "moral" est égal à true : "moral" = ' + (data.moral ? 'true' : 'false') + ' . ' +
                             'Cette histoire se basera sur les thèmes suivants: ' + data.genres.join(', ') + '. ' +
                             'Traduis obligatoirement cette histoire en : "' + data.locale + '".',
                     },
