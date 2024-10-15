@@ -37,7 +37,7 @@ export async function createCheckoutSession({ userId }) {
                 quantity: 1
             }
         ],
-        success_url: `${URL}/success`,
+        success_url: `${URL}`,
         cancel_url: `${URL}/cancel`,
     });
 
