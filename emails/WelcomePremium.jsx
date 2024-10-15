@@ -32,19 +32,15 @@ export default function WelcomePremium({ name }) {
                     </Section>
 
                     <Text style={{ fontSize: '24px', lineHeight: '32px', color: '#fff', textAlign: 'center', marginBottom: '20px', textWrap: 'balance' }}>
-                        Merci pour ton abonnement Premium, {name} !
+                        Merci pour ton achat Premium, {name} !
                     </Text>
 
                     <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px', color: '#b9b9b9' }}>
-                        Nous sommes ravis de te compter parmi nos membres Premium ! Grâce à ton abonnement, tu accèdes à des histoires personnalisées et illimitées, de nouveaux personnages, des mondes fantastiques à découvrir, et bien plus encore.
+                        Nous sommes ravis de te compter parmi nos membres Premium ! Grâce à ton achat, tu accèdes à des histoires personnalisées et illimitées, de nouveaux personnages, des mondes fantastiques à découvrir, et bien plus encore.
                     </Text>
 
                     <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px', color: '#b9b9b9' }}>
                         Tu peux dès à présent profiter de toutes ces fonctionnalités exclusives pour éveiller l’imagination de tes enfants.
-                    </Text>
-
-                    <Text style={{ fontSize: '16px', lineHeight: '1.5', marginBottom: '20px', color: '#b9b9b9' }}>
-                        Pour rappel, ton abonnement se renouvelle automatiquement et peut être résilié à tout moment, sans engagement. Tu peux gérer ton abonnement dans ta page profil sur le bouton <i>Gérer mon abonnement</i>.
                     </Text>
 
                     <Section style={{ textAlign: 'center', margin: '30px 0' }}>
