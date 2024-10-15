@@ -1284,10 +1284,10 @@
     {
       "tag": "section-price-subtitle",
       "t": {
-        "en": "Enjoy 3 free story generations, then unlock unlimited tales for only €1.99/month with our premium offer.",
-        "fr": "Profitez de 3 générations gratuites pour tester, puis débloquez des récits illimités pour seulement 1,99 €/mois avec notre offre premium.",
-        "it": "Approfitta di 3 generazioni gratuite per provare, poi sblocca racconti illimitati per soli 1,99 €/mese con la nostra offerta premium.",
-        "de": "Genießen Sie 3 kostenlose Geschichtengenerationen und schalten Sie unbegrenzte Geschichten für nur 1,99 €/Monat mit unserem Premium-Angebot frei."
+        "en": "Enjoy 3 free story generations, then unlock unlimited tales for only €9.99 with our premium offer.",
+        "fr": "Profitez de 3 générations gratuites pour tester, puis débloquez des récits illimités pour seulement 9,99 € avec notre offre premium.",
+        "it": "Approfitta di 3 generazioni gratuite per provare, poi sblocca racconti illimitati per soli 9,99 € con la nostra offerta premium.",
+        "de": "Genießen Sie 3 kostenlose Geschichtengenerationen und schalten Sie unbegrenzte Geschichten für nur 9,99 € mit unserem Premium-Angebot frei."
       }
     },
     {
@@ -1312,7 +1312,7 @@
       "tag": "start-premium",
       "t": {
         "en": "Start Premium",
-        "fr": "S'abonner à Premium",
+        "fr": "Commencer Premium",
         "it": "Inizia Premium",
         "de": "Starte Premium"
       }
@@ -1399,12 +1399,12 @@
       }
     },
     {
-      "tag": "automatic_renewal_no_commitment",
+      "tag": "one-time-purchase-for-life",
       "t": {
-        "en": "Automatic renewal & no commitment",
-        "fr": "Renouvellement automatique & sans engagement",
-        "it": "Rinnovo automatico e senza impegno",
-        "de": "Automatische Verlängerung & keine Verpflichtung"
+        "en": "One-time purchase for life",
+        "fr": "Achat unique à vie",
+        "it": "Acquisto una tantum per tutta la vita",
+        "de": "Einmaliger Kauf auf Lebenszeit"
       }
     },
     {
@@ -1851,10 +1851,10 @@
     {
       "tag": "upgrade-to-premium",
       "t": {
-        "en": "Upgrade to Premium",
-        "fr": "S'abonner à Premium",
-        "it": "Abbonati al Premium",
-        "de": "Upgrade zu Premium"
+        "en": "Buy Premium",
+        "fr": "Acheter Premium",
+        "it": "Acquista Premium",
+        "de": "Premium kaufen"
       }
     },
     {

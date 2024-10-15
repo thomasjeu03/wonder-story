@@ -123,7 +123,7 @@ export default function LandingPage() {
             </header>
             <main className="w-full flex flex-col justify-start items-center gap-48 mt-48 mb-48">
                 <section id='benefits' className="w-full flex-col gap-12 flex max-w-5xl">
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="w-full flex flex-col gap-12">
                         <h2 className="font-handwriting text-5xl lg:text-7xl">{t('section-benefits-title')}</h2>
                         <h3 className="text-md md:text-2xl text-gray-400">{t('section-benefits-subtitle')}</h3>
                     </div>
@@ -159,7 +159,7 @@ export default function LandingPage() {
                 </section>
 
                 <section id="how-it-works" className="w-full gap-12 flex flex-col items-center max-w-5xl">
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="w-full flex flex-col gap-12">
                         <h2 className="text-center font-handwriting text-5xl lg:text-7xl">{t('section-steps-title')}</h2>
                         <h3 className="text-center text-md md:text-2xl text-gray-400">{t('section-steps-subtitle')}</h3>
                     </div>
@@ -205,7 +205,7 @@ export default function LandingPage() {
                 </section>
 
                 <section id='testimonials' className="w-full gap-12 flex flex-col max-w-5xl">
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="w-full flex flex-col gap-12">
                         <h2 className="font-handwriting text-5xl lg:text-7xl">{t('section-testimonials-title')}</h2>
                         <h3 className="text-md md:text-2xl text-gray-400">{t('section-testimonials-subtitle')}</h3>
                     </div>
@@ -226,7 +226,7 @@ export default function LandingPage() {
                 </section>
 
                 <section id='price' className="w-full gap-12 flex flex-col justify-start items-start max-w-5xl">
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="w-full flex flex-col gap-12">
                         <h2 className="text-center font-handwriting text-5xl lg:text-7xl text-balance">{t('section-price-title')}</h2>
                         <h3 className="text-center text-md md:text-2xl text-gray-400 text-balance">{t('section-price-subtitle')}</h3>
                     </div>
@@ -264,9 +264,9 @@ export default function LandingPage() {
                                 <div className="flex flex-col items-center justify-center gap-3 w-full">
                                     <h4 className='font-handwriting text-gray-300 text-3xl w-full'>Premium</h4>
                                     <p className="text-gray-200">
-                                        <span
-                                            className="font-handwriting text-5xl text-foreground">1,99 €</span> /{t('month')}
+                                        <span className="font-handwriting text-5xl text-foreground">9,99 €</span>
                                     </p>
+                                    <p className="text-sm text-gray-100 text-center text-balance">{t('one-time-purchase-for-life')}</p>
                                     <p className="text-gray-300 text-sm text-center">{t('subtitle-card-premium')}</p>
                                 </div>
                                 <ul>
@@ -291,7 +291,6 @@ export default function LandingPage() {
                                     <Button size="lg" className="w-full" onClick={() => signIn("google")}>
                                         {t('start-premium')}
                                     </Button>
-                                    <p className="text-xs text-gray-200 text-center text-balance">{t('automatic_renewal_no_commitment')}</p>
                                 </div>
                             </div>
                             <div className="w-full h-full flex items-center justify-center p-4">
