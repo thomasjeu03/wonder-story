@@ -15,6 +15,7 @@ import step2 from   "../../public/img/landingPage/step2.png";
 import step3 from   "../../public/img/landingPage/step3.png";
 import google from   "../../public/img/google.png";
 import apple from   "../../public/img/apple.png";
+import appStore from   "../../public/img/white.svg";
 import Image from "next/image";
 import {useLocale} from "@/app/contexts/LocaleContext";
 import {Sparkles, XIcon, CheckIcon, Timer, Globe} from "lucide-react";
@@ -86,7 +87,7 @@ export default function LandingPage() {
                         {t('create-story')}
                         <Sparkles/>
                     </Button>
-                    <div className="flex gap-4 flex-wrap items-center justify-center">
+                    <div className="flex gap-12 flex-wrap items-center justify-center">
                         <Button variant="secondary"
                             onClick={() => {
                                 setGoogleLoading(true)
@@ -101,7 +102,10 @@ export default function LandingPage() {
                                 </>
                             )}
                         </Button>
-
+                        <a href="https://apple.co/48dFCDd" target='_blank' rel="noopener">
+                            <Image src={appStore} height={'49'} width={'148'} priority quality={80}
+                                   alt='Download Wonder Studio on the AppStore'/>
+                        </a>
                         {/*TODO: apple auth*/}
                         {/*<Button variant="secondary"*/}
                         {/*    onClick={() => {*/}
