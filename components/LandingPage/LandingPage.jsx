@@ -104,7 +104,7 @@ export default function LandingPage() {
                         </Button>
                         <a href="https://apple.co/48dFCDd" target='_blank' rel="noopener">
                             <Image src={appStore} height={'49'} width={'148'} priority quality={80}
-                                   alt='Download Wonder Studio on the AppStore'/>
+                                   alt='Download Wonder Story on the AppStore'/>
                         </a>
                         {/*TODO: apple auth*/}
                         {/*<Button variant="secondary"*/}
@@ -264,7 +264,6 @@ export default function LandingPage() {
                             <Image src={bgPremiumCard} priority quality={100}
                                    className="absolute h-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 -z-10 saturate-150"
                                    alt='Wonder Story premium price'/>
-                                   
                             <div className="flex flex-col gap-12 w-full p-6">
                                 <div className="flex flex-col items-center justify-center gap-3 w-full">
                                     <h4 className='font-handwriting text-gray-300 text-3xl w-full'>Premium</h4>
