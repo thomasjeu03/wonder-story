@@ -1213,10 +1213,64 @@
     {
       "tag": "landing-hero-title",
       "t": {
-        "en": "Create magical stories for your children with AI",
+        "en": "Make bedtime magical with AI-powered stories",
         "fr": "Créez des histoires magiques pour vos enfants avec l'IA",
         "it": "Crea storie magiche per i tuoi bambini con l'intelligenza artificiale",
         "de": "Erstellen Sie mit KI magische Geschichten für Ihre Kinder"
+      }
+    },
+    {
+      "tag": "testimonial1",
+      "t": {
+        "en": "Wonder Story has completely transformed our bedtime routine! My kids love being the stars of their own stories, and I save so much time every night.",
+        "fr": "Wonder Story a complètement transformé notre rituel du coucher ! Mes enfants adorent être les héros de leurs propres histoires, et je gagne tellement de temps chaque soir.",
+        "it": "Wonder Story ha trasformato completamente la nostra routine della buonanotte! I miei bambini adorano essere i protagonisti delle loro storie, e io risparmio così tanto tempo ogni sera.",
+        "de": "Wonder Story hat unsere Zubettgeh-Routine komplett verändert! Meine Kinder lieben es, die Hauptfiguren ihrer eigenen Geschichten zu sein, und ich spare jede Nacht so viel Zeit."
+      }
+    },
+    {
+      "tag": "testimonial1-author",
+      "t": {
+        "en": "Emma, 34, busy mom of two",
+        "fr": "Emma, 34 ans, maman occupée de deux enfants",
+        "it": "Emma, 34 anni, mamma indaffarata di due bambini",
+        "de": "Emma, 34, beschäftigte Mutter von zwei Kindern"
+      }
+    },
+    {
+      "tag": "testimonial2",
+      "t": {
+        "en": "The stories are so creative and unique! It feels like they were made just for my child. We look forward to bedtime now.",
+        "fr": "Les histoires sont tellement créatives et uniques ! On a l'impression qu'elles ont été faites juste pour mon enfant. Nous attendons le coucher avec impatience maintenant.",
+        "it": "Le storie sono così creative e uniche! Sembra che siano fatte apposta per il mio bambino. Ora aspettiamo con ansia l'ora di andare a letto.",
+        "de": "Die Geschichten sind so kreativ und einzigartig! Es fühlt sich an, als wären sie nur für mein Kind gemacht worden. Jetzt freuen wir uns auf die Schlafenszeit."
+      }
+    },
+    {
+      "tag": "testimonial2-author",
+      "t": {
+        "en": "David, 37, father of a 5-year-old",
+        "fr": "David, 37 ans, papa d'une fille de 5 ans",
+        "it": "David, 37 anni, papà di una bambina di 5 anni",
+        "de": "David, 37, Vater einer 5-Jährigen"
+      }
+    },
+    {
+      "tag": "testimonial3",
+      "t": {
+        "en": "My daughter loves her personalized stories! I’m amazed by how quickly Wonder Story generates new adventures each night.",
+        "fr": "Ma fille adore ses histoires personnalisées ! Je suis étonnée de voir à quel point Wonder Story génère rapidement de nouvelles aventures chaque soir.",
+        "it": "Mia figlia adora le sue storie personalizzate! Sono stupita di quanto velocemente Wonder Story crei nuove avventure ogni sera.",
+        "de": "Meine Tochter liebt ihre personalisierten Geschichten! Ich bin erstaunt, wie schnell Wonder Story jede Nacht neue Abenteuer generiert."
+      }
+    },
+    {
+      "tag": "testimonial3-author",
+      "t": {
+        "en": "Sophia, 29, mom of a 4-year-old",
+        "fr": "Sophia, 29 ans, maman d'une fille de 4 ans",
+        "it": "Sophia, 29 anni, mamma di una bambina di 4 anni",
+        "de": "Sophia, 29, Mutter einer 4-Jährigen"
       }
     },
     {

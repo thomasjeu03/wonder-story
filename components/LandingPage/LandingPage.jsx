@@ -215,15 +215,15 @@ export default function LandingPage() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="price-card testimonial-card flex flex-col items-center p-6 gap-2 max-w-96 m-auto">
-                            <p className="text-xl text-center">{t('testimonial1')}</p>
+                            <p className="text-md text-center">"{t('testimonial1')}"</p>
                             <span className="text-center text-gray-400">{t('testimonial1-author')}</span>
                         </div>
                         <div className="price-card testimonial-card flex flex-col items-center p-6 gap-2 max-w-96 m-auto">
-                            <p className="text-xl text-center">{t('testimonial2')}</p>
+                            <p className="text-md text-center">"{t('testimonial2')}"</p>
                             <span className="text-center text-gray-400">{t('testimonial2-author')}</span>
                         </div>
                         <div className="price-card testimonial-card flex flex-col items-center p-6 gap-2 max-w-96 m-auto">
-                            <p className="text-xl text-center">{t('testimonial3')}</p>
+                            <p className="text-md text-center">"{t('testimonial3')}"</p>
                             <span className="text-center text-gray-400">{t('testimonial3-author')}</span>
                         </div>
                     </div>
