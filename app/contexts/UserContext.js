@@ -6,6 +6,7 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
     const { data: session, status } = useSession();
+    
     const [user, setUser] = useState(null);
     const [isPremium, setIsPremium] = useState(false);
     const [canGenerate, setCanGenerate] = useState(false);
