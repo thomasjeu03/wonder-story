@@ -1525,12 +1525,12 @@
       }
     },
     {
-      "tag": "your-reached-the-3-free-trials",
+      "tag": "your-reached-the-10-free-trials",
       "t": {
-        "en": "You have reached the 3 free trials",
-        "fr": "Vous avez atteint les 3 essais gratuits",
-        "it": "Hai raggiunto le 3 prove gratuite",
-        "de": "Sie haben die 3 kostenlosen Testversionen erreicht"
+        "en": "You have reached the 10 free trials",
+        "fr": "Vous avez atteint les 10 essais gratuits",
+        "it": "Hai raggiunto le 10 prove gratuite",
+        "de": "Sie haben die 10 kostenlosen Testversionen erreicht"
       }
     },
     {

@@ -21,7 +21,7 @@ export const UserProvider = ({ children }) => {
                         const userData = response.data.user;
                         setUser(userData);
                         setIsPremium(userData?.plan === 'PREMIUM');
-                        setCanGenerate(userData?.plan === 'PREMIUM' || userData?.storiesGenerated < 3 );
+                        setCanGenerate(userData?.plan === 'PREMIUM' || userData?.storiesGenerated < 10 );
                         localStorage.setItem('user', JSON.stringify(userData));
                     } else {
                         console.error('Failed to fetch user');

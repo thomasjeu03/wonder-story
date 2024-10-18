@@ -228,14 +228,14 @@ export default function HomeContent() {
                                         </Button>
                                         {!isPremium && (
                                             <>
-                                                <p className="text-sm text-gray-500 text-center">{t('you-have-already-generated')} {user?.storiesGenerated}/3 {t('stories')}</p>
+                                                <p className="text-sm text-gray-500 text-center">{t('you-have-already-generated')} {user?.storiesGenerated}/10 {t('stories')}</p>
                                                 <BuyButton varient="secondary" size="default"/>
                                             </>
                                         )}
                                     </div>
                                 ): (
                                     <div className="flex flex-col items-center gap-3">
-                                        <p className="text-amber-500 text-center">{t('your-reached-the-3-free-trials')}</p>
+                                        <p className="text-amber-500 text-center">{t('your-reached-the-10-free-trials')}</p>
                                         <BuyButton/>
                                     </div>
                                 )}
@@ -296,7 +296,7 @@ export default function HomeContent() {
                                                     {loading ? t('loading') : t('create')}
                                                 </>
                                             ):(
-                                                t('your-reached-the-3-free-trials')
+                                                t('your-reached-the-10-free-trials')
                                             )}
                                         </motion.p>
                                         {loading ? <Skeleton className="h-6 w-6 bg-gray-800 rounded-full" /> : <Sparkles/>}
