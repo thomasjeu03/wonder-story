@@ -1338,10 +1338,10 @@
     {
       "tag": "section-price-subtitle",
       "t": {
-        "en": "Enjoy 3 free story generations, then unlock unlimited tales for only €9.99 with our premium offer.",
-        "fr": "Profitez de 3 générations gratuites pour tester, puis débloquez des récits illimités pour seulement 9,99 € avec notre offre premium.",
-        "it": "Approfitta di 3 generazioni gratuite per provare, poi sblocca racconti illimitati per soli 9,99 € con la nostra offerta premium.",
-        "de": "Genießen Sie 3 kostenlose Geschichtengenerationen und schalten Sie unbegrenzte Geschichten für nur 9,99 € mit unserem Premium-Angebot frei."
+        "en": "Enjoy 10 free story generations, then unlock unlimited tales for only €9.99 with our premium offer.",
+        "fr": "Profitez de 10 générations gratuites pour tester, puis débloquez des récits illimités pour seulement 9,99 € avec notre offre premium.",
+        "it": "Approfitta di 10 generazioni gratuite per provare, poi sblocca racconti illimitati per soli 9,99 € con la nostra offerta premium.",
+        "de": "Genießen Sie 10 kostenlose Geschichtengenerationen und schalten Sie unbegrenzte Geschichten für nur 9,99 € mit unserem Premium-Angebot frei."
       }
     },
     {
@@ -1491,10 +1491,10 @@
     {
       "tag": "up_to_three_stories_generated",
       "t": {
-        "en": "Up to 3 stories generated",
-        "fr": "Jusqu'à 3 histoires générées",
-        "it": "Fino a 3 storie generate",
-        "de": "Bis zu 3 Geschichten generiert"
+        "en": "Up to 10 stories generated",
+        "fr": "Jusqu'à 10 histoires générées",
+        "it": "Fino a 10 storie generate",
+        "de": "Bis zu 10 Geschichten generiert"
       }
     },
     {
