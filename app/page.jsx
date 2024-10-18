@@ -8,7 +8,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="w-full max-w-2xl">
+            <div className="w-full max-w-2xl mb-10">
                 <AdBanner
                     dataAdFormat="auto"
                     dataFullWidthResponsive={true}

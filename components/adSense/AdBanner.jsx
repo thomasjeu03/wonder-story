@@ -1,8 +1,6 @@
 "use client";
 import {useEffect} from "react";
 
-const pId = process.env.ADSENSE_PUBLISHER_ID
-
 const AdBanner = ({
   dataAdSlot,
   dataAdFormat,
@@ -20,7 +18,7 @@ const AdBanner = ({
         <ins
             className="adsbygoogle"
             style={{ display: "block" }}
-            data-ad-client={pId}
+            data-ad-client="ca-pub-9229130087883846"
             data-ad-slot={dataAdSlot}
             data-ad-format={dataAdFormat}
             data-full-width-responsive={dataFullWidthResponsive.toString()}
