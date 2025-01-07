@@ -8,13 +8,13 @@ export default function Home() {
 
     return (
         <>
-            <div className="w-full max-w-2xl">
-                <AdBanner
-                    dataAdFormat="auto"
-                    dataFullWidthResponsive={true}
-                    dataAdSlot="8653074776"
-                />
-            </div>
+            {/*<div className="w-full max-w-2xl">*/}
+            {/*    <AdBanner*/}
+            {/*        dataAdFormat="auto"*/}
+            {/*        dataFullWidthResponsive={true}*/}
+            {/*        dataAdSlot="8653074776"*/}
+            {/*    />*/}
+            {/*</div>*/}
             
             <HomeContent />
         </>

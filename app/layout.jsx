@@ -14,9 +14,9 @@ import AdSense from "@/components/adSense/AdSense";
 export default function RootLayout({ children, session }) {
     return (
         <html lang="fr" className="dark">
-            <head>
-                <AdSense />
-            </head>
+            {/*<head>*/}
+            {/*    <AdSense />*/}
+            {/*</head>*/}
             <body className={cn("min-h-dvh bg-background text-foreground font-sans antialiased p-3 pb-9")}>
                 <SessionProvider session={session}>
                     <ThemeProvider
