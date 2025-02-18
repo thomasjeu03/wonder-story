@@ -7,13 +7,35 @@ export const dynamic = 'force-dynamic';
 
 // TODO : optimiser les promptes
 export async function POST(request) {
-    const { data, userId } = await request.json();
+    const { data, userId, provider = 'openai', model = 'gpt-4o-mini' } = await request.json();
+
+    let aiProviderURL;
+    let apiKey;
+
+    switch (provider) {
+        case 'openai':
+            aiProviderURL = 'openai.com/v1';
+            apiKey = process.env.OPENAI_API_KEY;
+            break;
+        case 'deepseek':
+            aiProviderURL = 'deepseek.com';
+            apiKey = process.env.DEEPSEEK_API_KEY;
+            break;
+        default:
+            return new Response(
+                JSON.stringify({ error: `Provider ${provider} non supporté.` }),
+                {
+                    status: 400,
+                    headers: { 'Content-Type': 'application/json' },
+                }
+            );
+    }
 
     try {
         const response = await axios.post(
-            'https://api.openai.com/v1/chat/completions',
+            `https://api.${aiProviderURL}/chat/completions`,
             {
-                model: 'gpt-4o-mini',
+                model: model,
                 messages: [
                     {
                         role: 'system',
@@ -39,7 +61,7 @@ export async function POST(request) {
             },
             {
                 headers: {
-                    'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+                    'Authorization': `Bearer ${apiKey}`,
                     'Content-Type': 'application/json',
                 },
             }

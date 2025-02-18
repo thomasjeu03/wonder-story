@@ -157,7 +157,13 @@ export default function HomeContent() {
             setError('');
             setLoading(true);
             try {
-                const response = await axios.post('/api/generate', { data, userId: user?.id });
+                // TODO: utiliser Deepseek quand l'API sera disponible
+                const response = await axios.post('/api/generate', {
+                    data,
+                    userId: user?.id,
+                    // provider: 'deepseek',
+                    // model: 'deepseek-chat'
+                });
                 router.push(`/story/${response.data.id}`);
             } catch (err) {
                 setError('Error processing the data');
