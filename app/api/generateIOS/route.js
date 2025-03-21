@@ -49,7 +49,7 @@ export async function POST(request) {
         const fullContent = response.data.choices[0].message.content;
         const [storyTitle, storyContent] = fullContent.split('[TITLE_END]').map(part => part.trim());
 
-        return NextResponse.json({ storyTitle, storyContent, data }, { status: 200 });
+        return NextResponse.json({ storyTitle, storyContent }, { status: 200 });
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });

@@ -71,7 +71,7 @@ export async function POST(request) {
 
         const newStory = await prisma.story.create({
             data: {
-                userId: userId,
+                userId,
                 content: storyContent,
                 ageRange: data.ageRange,
                 caracters: data.caracters,
@@ -84,14 +84,16 @@ export async function POST(request) {
             },
         });
 
-        await prisma.user.update({
-            where: { id: userId },
-            data: {
-                storiesGenerated: {
-                    increment: 1,
+        if (userId){
+            await prisma.user.update({
+                where: { id: userId },
+                data: {
+                    storiesGenerated: {
+                        increment: 1,
+                    },
                 },
-            },
-        });
+            });
+        }
 
         return NextResponse.json({ id: newStory.id });
     } catch (error) {
