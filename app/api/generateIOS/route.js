@@ -26,7 +26,10 @@ export async function POST(request) {
                         role: 'user',
                         content: 'Crée une histoire pour un enfant de ' + data.ageRange + ' ans. ' +
                             'Les personnages sont : ' + data.caracters.join(', ') + '. ' +
-                            'Le temps de lecture est : ' + data.time + ' minutes. ' +
+                            'Le personnage principal sera donc ' + data.mainCaracter + '. ' +
+                            'Cette histoire se déroulera à travers les lieux suivant: ' + data.places.join(', ') + '. ' +
+                            'Cette histoire aura un temps de lecture de: ' + data.time + 'min. ' +
+                            'Cette histoire se basera sur les thèmes suivants: ' + data.genres.join(', ') + '. ' +
                             'La morale de l\'histoire est nécessaire si le champ "moral" est égal à true : "moral" = ' + (data.moral ? 'true' : 'false') + ' . ' +
                             'Sépare le titre de l\'histoire avec cette balise : "[TITLE_END]".' +
                             'Ne rajoute surtout pas de balise "[TITLE]" au début du titre.' +
@@ -46,7 +49,7 @@ export async function POST(request) {
         const fullContent = response.data.choices[0].message.content;
         const [storyTitle, storyContent] = fullContent.split('[TITLE_END]').map(part => part.trim());
 
-        return NextResponse.json({ storyTitle, storyContent }, { status: 200 });
+        return NextResponse.json({ storyTitle, storyContent, data }, { status: 200 });
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
