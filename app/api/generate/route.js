@@ -95,7 +95,7 @@ export async function POST(request) {
             });
         }
 
-        return NextResponse.json({ id: newStory.id });
+        return NextResponse.json({ id: newStory.id, story: storyContent });
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
