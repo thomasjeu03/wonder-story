@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 
 // TODO : optimiser les promptes
 export async function POST(request) {
-    const { data, userId, provider = 'openai', model = 'gpt-4o-mini' } = await request.json();
+    const { data, userId, provider = 'openai', model = 'gpt-4.1-nano' } = await request.json();
 
     let aiProviderURL;
     let apiKey;
@@ -40,9 +40,9 @@ export async function POST(request) {
                     {
                         role: 'system',
                         content: 'Tu es un assistant pour creer des histoires et contes pour enfants. ' +
-                            'Répond moi toujours en créant une histoire sous format markdown. Pour avoir un titre et des sous-titres' +
-                            'Tu es un expert dans la mise en forme MarkDown pour ces histoires. Tu as l habitude de raconter des histoires à de nombreux enfant, qui sont adaptée à leur age au niveau du vocabulaire. ' +
-                            'Je ne veux que le contenu de l histoire en incorporant toutes les données du prompte. ' +
+                            'Répond moi toujours en créant une histoire sous forme textuel, avec un titre et des sous-titres markdown.' +
+                            'Tu as l habitude de raconter des histoires à de nombreux enfant, qui sont adaptée à leur age au niveau du vocabulaire. ' +
+                            'Je ne veux que le contenu de l histoire, en incorporant toutes les données du prompte. Pas de texte avant ou apres l histoire, je veux seulemnt l histoire.' +
                             'ATTENTION: Tu sais faire attention à choisir la bonne traduction en fonction du local situé en fin de prompt, il est obligatoire de prendre cela en compte',
                     },
                     {

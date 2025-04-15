@@ -157,7 +157,6 @@ export default function HomeContent() {
             setError('');
             setLoading(true);
             try {
-                // TODO: utiliser Deepseek quand l'API sera disponible
                 const response = await axios.post('/api/generate', {
                     data,
                     userId: user?.id,
