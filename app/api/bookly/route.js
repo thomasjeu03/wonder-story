@@ -5,7 +5,7 @@ export const maxDuration = 40;
 export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
-    const { myBooks, provider = 'openai', model = 'gpt-4.1-nano' } = await request.json();
+    const { myBooks, locale, provider = 'openai', model = 'gpt-4.1-nano' } = await request.json();
 
     let aiProviderURL;
     let apiKey;
@@ -50,12 +50,7 @@ export async function POST(request) {
                         Le résultat attendu est un tableau JSON exactement dans le même format que celui-ci :
                         [
                             {
-                                "id": "string",
-                                "title": "string",
-                                "authors": ["string"],
-                                "categories": ["string"],
-                                "thumbnail": "string",
-                                "description": "string"
+                                "title": "string"
                             }
                         ]
 
@@ -74,7 +69,43 @@ export async function POST(request) {
 
         const books = JSON.parse(response.data.choices[0].message.content)
 
-        return NextResponse.json({ books })
+
+        let resultToSend = [];
+
+        for (const book of books) {
+            try {
+                const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
+                    params: {
+                        q: `intitle:${book?.title}`,
+                        maxResults: 10,
+                        langRestrict: locale,
+                        printType: 'books',
+                    },
+                });
+
+                const items = response.data.items || [];
+
+                const results = items.map((item) => ({
+                    id: item.id,
+                    title: item?.volumeInfo?.title || '',
+                    authors: item?.volumeInfo?.authors || [],
+                    description: item?.volumeInfo?.description || '',
+                    publishedDate: item?.volumeInfo?.publishedDate || '',
+                    pageCount: item?.volumeInfo?.pageCount || 0,
+                    language: item?.volumeInfo?.language || '',
+                    categories: item?.volumeInfo?.categories || [],
+                    infoLink: item?.volumeInfo?.infoLink || '',
+                    mainCategory: item?.volumeInfo?.mainCategory || '',
+                    thumbnail: item?.volumeInfo?.imageLinks?.thumbnail?.replace('http://', 'https://') || '',
+                }));
+
+                resultToSend.push(...results);
+            } catch (error) {
+                console.error(`Erreur lors de la recherche du livre : ${book?.title}`, error);
+            }
+        }
+
+        return NextResponse.json({ books: resultToSend });
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
