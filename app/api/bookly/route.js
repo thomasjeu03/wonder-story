@@ -45,7 +45,7 @@ export async function POST(request) {
                         role: 'user',
                         content: `Voici mes livres déjà lus : ${JSON.stringify(myBooks, null, 2)}
                         
-                        En te basant sur ces livres, recommande-moi 6 livres à lire absolument, triés du meilleur au moins pertinent pour moi.
+                        En te basant sur ces livres, recommande-moi 6 livres à lire absolument, triés du meilleur au moins pertinent pour moi, ne me redonne absolument pas de livres deja lus.
                         
                         Le résultat attendu est un tableau JSON exactement dans le même format que celui-ci :
                         [
