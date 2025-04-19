@@ -29,8 +29,6 @@ export async function POST(request) {
             );
     }
 
-    // TODO: donner un format de reponse pour GPT
-
     try {
         const response = await axios.post(
             `https://api.${aiProviderURL}/chat/completions`,
@@ -39,26 +37,44 @@ export async function POST(request) {
                 messages: [
                     {
                         role: 'system',
-                        content: 'Tu es un assistant pour les meuilleurs choix de livre a lire par rapport aux livre déjà lus de quelqu un.'
+                        content: `Tu es un moteur de recommandation de livres très intelligent. 
+                        Tu analyses les titres, auteurs, et catégories des livres déjà lus par l'utilisateur pour proposer de nouveaux livres parfaitement adaptés à ses goûts. 
+                        Tu ne réponds qu'en JSON pur, sans texte explicatif.`
                     },
                     {
                         role: 'user',
-                        content: 'Donne moi de suggestion de livre a lire en fonction de mes livres deja lus. Mes livres deja lus sont ' + JSON.stringify(myBooks)
+                        content: `Voici mes livres déjà lus : ${JSON.stringify(myBooks, null, 2)}
+                        
+                        En te basant sur ces livres, recommande-moi 6 livres à lire absolument, triés du meilleur au moins pertinent pour moi.
+                        
+                        Le résultat attendu est un tableau JSON exactement dans le même format que celui-ci :
+                        [
+                            {
+                                "id": "string",
+                                "title": "string",
+                                "authors": ["string"],
+                                "categories": ["string"],
+                                "thumbnail": "string",
+                                "description": "string"
+                            }
+                        ]
+
+                        Respecte **strictement** ce format et n'ajoute **aucun autre champ**.`
                     },
                 ],
-                max_tokens: 4500,
+                max_tokens: 2000,
             },
             {
                 headers: {
-                    'Authorization': `Bearer ${apiKey}`,
+                    Authorization: `Bearer ${apiKey}`,
                     'Content-Type': 'application/json',
                 },
             }
-        );
+        )
 
-        const books = response.data.choices[0].message.content;
+        const books = JSON.parse(response.data.choices[0].message.content)
 
-        return NextResponse.json({ books });
+        return NextResponse.json({ books })
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
