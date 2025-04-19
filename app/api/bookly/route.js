@@ -70,14 +70,16 @@ export async function POST(request) {
         const books = JSON.parse(response.data.choices[0].message.content)
 
 
-        let resultToSend = [];
+        if (!books || books.length === 0) {
+            return NextResponse.json({ books: [] });
+        }
 
-        for (const book of books) {
+        const requests = books.map(async (book) => {
             try {
                 const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
                     params: {
                         q: `intitle:${book?.title}`,
-                        maxResults: 10,
+                        maxResults: 1,
                         langRestrict: locale,
                         printType: 'books',
                     },
@@ -85,7 +87,7 @@ export async function POST(request) {
 
                 const items = response.data.items || [];
 
-                const results = items.map((item) => ({
+                return items.map((item) => ({
                     id: item.id,
                     title: item?.volumeInfo?.title || '',
                     authors: item?.volumeInfo?.authors || [],
@@ -98,12 +100,15 @@ export async function POST(request) {
                     mainCategory: item?.volumeInfo?.mainCategory || '',
                     thumbnail: item?.volumeInfo?.imageLinks?.thumbnail?.replace('http://', 'https://') || '',
                 }));
-
-                resultToSend.push(...results);
             } catch (error) {
                 console.error(`Erreur lors de la recherche du livre : ${book?.title}`, error);
+                return []; // En cas d’erreur, retourne un tableau vide pour ne pas casser le reste
             }
-        }
+        });
+
+        const allResults = await Promise.all(requests);
+
+        const resultToSend = allResults.flat();
 
         return NextResponse.json({ books: resultToSend });
     } catch (error) {
