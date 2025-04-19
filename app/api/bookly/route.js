@@ -51,9 +51,11 @@ export async function POST(request) {
                         [
                             {
                                 "title": "string"
+                                "inspiratedBy": "string"
                             }
                         ]
 
+                        Le "inspiratedBy" est le titre du livre qui m'a inspiré pour lire ce livre.
                         Respecte **strictement** ce format et n'ajoute **aucun autre champ**.`
                     },
                 ],
@@ -99,6 +101,7 @@ export async function POST(request) {
                     infoLink: item?.volumeInfo?.infoLink || '',
                     mainCategory: item?.volumeInfo?.mainCategory || '',
                     thumbnail: item?.volumeInfo?.imageLinks?.thumbnail?.replace('http://', 'https://') || '',
+                    inspiratedBy: book?.inspiratedBy
                 }));
             } catch (error) {
                 console.error(`Erreur lors de la recherche du livre : ${book?.title}`, error);
